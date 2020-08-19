@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import Counselling from "./Counselling";
 import SignIn from "./SignIn";
 
-function NavBar() {
+export default function Navbar() {
   return (
-    <div className="navBar">
+    <div className="navbar">
       <Link to="/">RESILLIENCE</Link>
-      <div>
-        <Link to="/home">Home</Link>
+      <div className="navbar-right">
+        <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
+        <Link to="/features">Features</Link>
         <Link to="/blogs">Blogs</Link>
         <Counselling />
         <Link to="/career">Career</Link>
@@ -20,5 +21,3 @@ function NavBar() {
     </div>
   );
 }
-
-export default NavBar;

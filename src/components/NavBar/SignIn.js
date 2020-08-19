@@ -1,7 +1,7 @@
 import React from "react";
 
-function Counselling() {
+function SignIn() {
   return <div></div>;
 }
 
-export default Counselling;
+export default SignIn;

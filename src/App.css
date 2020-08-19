@@ -1,0 +1,36 @@
+body {
+  /* background-color: brown; */
+  font-family: muli, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.MuiTypography-h1 .MuiTypography-h5 {
+  /* font-size: 26px; */
+  font-family: 'Rubik', sans-serif;
+}
+
+.MuiTypography-body1 {
+  /* font-size: 16px; */
+  font-family: muli, sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+  display: flex;
+}
+
+/* Home */
+
+.feature-image {
+  padding: 10%
+}
+
+.headings {
+  margin: "7%"
+}
