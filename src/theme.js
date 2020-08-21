@@ -2,7 +2,7 @@ export default {
   palette: {
     primary: {
       light: "#33c9dc",
-      main: "#3f3f3f", //F5DEB3 (wheat)
+      main: "#232127", //F5DEB3 (wheat) #3f3f3f
       dark: "#008394",
       contrastText: "#fff"
     },

@@ -3,6 +3,7 @@ body {
   font-family: muli, sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 .MuiTypography-h1 .MuiTypography-h5 {
@@ -16,7 +17,10 @@ body {
 }
 
 .navbar {
+  /* background-color: #0F7DC2; */
   background-color: white;
+  height: "60px";
+  /*TODO: Not getting applied */
   display: flex;
 }
 
@@ -25,12 +29,70 @@ body {
   display: flex;
 }
 
-/* Home */
+.landing-section {
+  position: relative;
+  left: 20px;
+}
 
+.logo-image {
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+
+.personalized {
+  font-family: 'Rubik', sans-serif;
+  font-size: 80px;
+  color: #0F7DC2;
+  top: 100px;
+  position: absolute;
+}
+
+.learning,
+.iitians {
+  position: absolute;
+  font-size: 64px;
+  font-family: muli, sans-serif;
+  top: 200px
+}
+
+.iitians {
+  top: 260px;
+}
+
+.first-line {
+  position: absolute;
+  top: 360px;
+}
+
+.second-line {
+  position: absolute;
+  top: 400px;
+}
+
+/* .section-bg {
+  background-image: url("./images/bggg.png")
+} */
+
+/* Home */
 .feature-image {
   padding: 10%
 }
 
 .headings {
   margin: "7%"
+}
+
+/*Test */
+.MuiCardContent-root:last-child {
+  padding-bottom: 24px;
+  padding: 24px;
+}
+
+.subjectGrid:hover {
+  background-color: #0F7DC2;
+  position: "relative";
+  top: "-5px";
 }

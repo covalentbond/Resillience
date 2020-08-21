@@ -15,6 +15,7 @@ import Blogs from "./components/Blogs";
 import Features from "./components/Features";
 import Career from "./components/Navbar/Career";
 import Tests from "./components/Tests";
+import Room from "./components/Room";
 
 const theme = createMuiTheme(themeObject);
 
@@ -32,6 +33,7 @@ function App() {
               <Route path="/blogs" component={Blogs} />
               <Route path="/career" component={Career} />
               <Route path="/tests" component={Tests} />
+              <Route path="/room" component={Room} />
             </Switch>
           </div>
         </Router>
