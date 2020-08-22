@@ -7,13 +7,14 @@ function LandingPage() {
   return (
     <div>
       <section style={{ position: "relative" }}>
-        <img className="home-image" src={HomePage} alt="homepagemain" />
+        <img className="home-image" src={HomePage} alt="Home Page Main" />
         <div className="content">
-          <img src={logo} className="logo-image p-20" />
+          <img src={logo} className="logo-image p-20" alt="Logo" />
           <h1 className="personalized p-20">Personalized</h1>
           <h2 className="learning p-20">learning with</h2>
           <div>
             <img
+              alt="Bg Design"
               className="p-20"
               src={rectangle}
               style={{ marginTop: "350px", top: "0", position: "absolute" }}
