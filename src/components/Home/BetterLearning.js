@@ -2,7 +2,7 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-import BetterLearningImage from "../images/better_learning_illustration.png";
+import BetterLearningImage from "../../images/better_learning_illustration.png";
 
 const styles = () => ({
   BetterLearningSection: {
@@ -11,7 +11,6 @@ const styles = () => ({
     height: "900px",
     width: "1036px",
     margin: "0 auto",
-    position: "relative",
     marginTop: "72px"
   },
   BetterLearningImage: {
@@ -64,7 +63,11 @@ function BetterLearning(props) {
       >
         Our approach to better learning
       </Typography>
-      <img src={BetterLearningImage} className={classes.BetterLearningImage} />
+      <img
+        src={BetterLearningImage}
+        className={classes.BetterLearningImage}
+        alt="Better Learning Path"
+      />
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
           <div className={classes.Title}>

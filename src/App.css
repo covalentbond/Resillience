@@ -1,9 +1,12 @@
+html {
+  font-size: 100%;
+}
+
 body {
   /* background-color: brown; */
   font-family: muli, sans-serif;
   font-weight: 400;
   font-style: normal;
-  overflow-x: hidden;
 }
 
 .MuiTypography-h1 .MuiTypography-h5 {
@@ -16,22 +19,13 @@ body {
   font-family: muli, sans-serif;
 }
 
-.navbar {
-  /* background-color: #0F7DC2; */
-  background-color: white;
-  height: "60px";
-  /*TODO: Not getting applied */
-  display: flex;
+.p-20 {
+  margin-left: 20px;
 }
 
-.navbar-right {
-  justify-content: flex-end;
-  display: flex;
-}
-
-.landing-section {
-  position: relative;
-  left: 20px;
+.home-image {
+  height: 110vh;
+  margin-left: 42.1%
 }
 
 .logo-image {
@@ -44,7 +38,7 @@ body {
 
 .personalized {
   font-family: 'Rubik', sans-serif;
-  font-size: 80px;
+  font-size: 500%;
   color: #0F7DC2;
   top: 100px;
   position: absolute;
@@ -63,11 +57,13 @@ body {
 }
 
 .first-line {
+  font-size: 1rem;
   position: absolute;
   top: 360px;
 }
 
 .second-line {
+  font-size: 1rem;
   position: absolute;
   top: 400px;
 }
@@ -85,6 +81,17 @@ body {
   margin: "7%"
 }
 
+.root {
+  width: 70%;
+  margin: auto;
+  background: #d3d3d3;
+  /* background: -webkit-linear-gradient(left, #d3d3d3, #0f7dc2);
+  background: -moz-linear-gradient(left, #d3d3d3, #0f7dc2);
+  background: -ms-linear-gradient(left, #d3d3d3, #0f7dc2);
+  background: -o-linear-gradient(left, #d3d3d3, #0f7dc2);
+  background: linear-gradient(to right, #d3d3d3, #0f7dc2); */
+}
+
 /*Test */
 .MuiCardContent-root:last-child {
   padding-bottom: 24px;
@@ -96,3 +103,32 @@ body {
   position: "relative";
   top: "-5px";
 }
+
+.milestones {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background: #0f7dc2;
+}
+
+.slick-slide iframe {
+  margin: auto;
+}
+
+/* @media (min-width: 640px) {
+
+}
+
+@media (min-width:960px) {
+  .home-image {
+    margin-left: 72%
+  }
+} */
+
+/* @media (min-width:1100px) {
+  .home-image {
+    margin-left: 72%
+  }
+}  */

@@ -1,9 +1,9 @@
 import React from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 
-import Online1to1 from "../images/online1to1.svg";
-import OnlineGroup from "../images/teacher.svg";
-import HomeTuition from "../images/hometuition.svg";
+import Online1to1 from "../../images/online1to1.svg";
+import OnlineGroup from "../../images/teacher.svg";
+import HomeTuition from "../../images/hometuition.svg";
 
 //MUI
 import Grid from "@material-ui/core/Grid";
@@ -27,7 +27,7 @@ function HomeFeatures() {
         </Typography>
         <Grid
           container
-          style={{ justifyContent: "center", alignItems: "center" }}
+          style={{ justifyContent: "center", alignItems: "center", width: "100%" }}
           spacing={5}
         >
           <Grid item sm={3} xs={12}>
@@ -43,10 +43,10 @@ function HomeFeatures() {
                 color="primary"
                 style={{ marginBottom: "7%" }}
               >
-                Online One to One
+                Online Individual classes.
               </Typography>
-              <Typography variant="body-1" color="primary">
-                Online One to One
+              <Typography variant="body1" color="primary">
+                Read More
               </Typography>
             </Paper>
           </Grid>
@@ -70,8 +70,8 @@ function HomeFeatures() {
               >
                 Online Group Classes
               </Typography>
-              <Typography variant="body-1" color="primary">
-                Online One to One
+              <Typography variant="body1" color="primary">
+                Read More
               </Typography>
             </Paper>
           </Grid>
@@ -90,8 +90,8 @@ function HomeFeatures() {
               >
                 Personalized Home Classes
               </Typography>
-              <Typography variant="body-1" color="primary">
-                Online One to One
+              <Typography variant="body1" color="primary">
+                Read More
               </Typography>
             </Paper>
           </Grid>

@@ -9,7 +9,7 @@ import themeObject from "./theme";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import AboutUs from "./components/AboutUs";
 import Blogs from "./components/Blogs";
 import Features from "./components/Features";
