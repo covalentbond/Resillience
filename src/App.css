@@ -15,7 +15,7 @@ body {
 }
 
 .MuiTypography-body1 {
-  /* font-size: 16px; */
+  font-size: 206px;
   font-family: muli, sans-serif;
 }
 
@@ -57,13 +57,13 @@ body {
 }
 
 .first-line {
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: absolute;
-  top: 360px;
+  top: 370px;
 }
 
 .second-line {
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: absolute;
   top: 400px;
 }

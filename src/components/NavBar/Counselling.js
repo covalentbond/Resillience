@@ -7,7 +7,16 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CounsellingImage from "../../images/counselling.png";
 
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  paper: {
+    backgroundColor: "transparent"
+  }
+});
+
 function Counselling() {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -19,8 +28,8 @@ function Counselling() {
   };
 
   return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+    <div div style={{ position: "absolute", top: "455px", left: "20px" }}>
+      <Button variant="outlined" color="secondary" onClick={handleClickOpen}>
         Free Counselling
       </Button>
       <Dialog
@@ -28,25 +37,34 @@ function Counselling() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        classes={{
+          paper: classes.paper
+        }}
       >
-        <img src={CounsellingImage}></img>
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Disagree
-          </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
+        <img src={CounsellingImage} style={{ visibility: "initial" }}></img>
+
+        <div style={{ position: "absolute", margin: "auto" }}>
+          <h1>Hello</h1>
+          <DialogTitle id="alert-dialog-title">
+            {"Use Google's location service?"}
+          </DialogTitle>
+          <DialogContent
+            style={{ backgroundColor: "transparent", boxShadow: "none" }}
+          >
+            <DialogContentText id="alert-dialog-description">
+              Let Google help apps determine location. This means sending anonymous
+              location data to Google, even when no apps are running.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Disagree
+            </Button>
+            <Button onClick={handleClose} color="primary" autoFocus>
+              Agree
+            </Button>
+          </DialogActions>
+        </div>
       </Dialog>
     </div>
   );

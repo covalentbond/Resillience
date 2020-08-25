@@ -1,4 +1,13 @@
 export default {
+  overrides: {
+    // Style sheet name ⚛️
+    MuiPaper: {
+      // Name of the rule
+      elevation24: {
+        boxShadow: "none"
+      }
+    }
+  },
   palette: {
     primary: {
       light: "#33c9dc",
@@ -7,9 +16,9 @@ export default {
       contrastText: "#fff"
     },
     secondary: {
-      light: "#ff6333",
-      main: "#ff3d00",
-      dark: "#b22a00",
+      light: "",
+      main: "#0F7DC2",
+      dark: "",
       contrastText: "#fff"
     }
   },

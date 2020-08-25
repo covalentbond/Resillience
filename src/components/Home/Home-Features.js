@@ -17,12 +17,17 @@ function HomeFeatures() {
         className="section-bg"
         style={{
           height: "100vh",
-          textAlign: "center"
+          textAlign: "center",
+          marginTop: "35vh"
           // position: "relative"
           // backgroundColor: "#cee7f5"
         }}
       >
-        <Typography variant="h3" color="primary" style={{ margin: "5%" }}>
+        <Typography
+          variant="h3"
+          color="primary"
+          style={{ margin: "5%", marginBottom: "2%" }}
+        >
           Features.
         </Typography>
         <Grid

@@ -8,6 +8,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Divider from "@material-ui/core/Divider";
 
 const styles = () => ({
+  faqSection: {
+    marginTop: "15vh",
+    marginBottom: "10vh"
+  },
   topHeading: {
     // backgroundColor: "white",
     textAlign: "center",
@@ -17,7 +21,7 @@ const styles = () => ({
   },
   big: {
     position: "absolute",
-    top: "-40px",
+    top: "-15px",
     left: "0",
     right: "0",
     fontSize: "70px",
@@ -48,7 +52,7 @@ function Faqs(props) {
   };
 
   return (
-    <div>
+    <div className={classes.faqSection}>
       <div className={classes.topHeading}>
         <Typography variant="h3" color="primary" className={classes.big}>
           F.A.Q

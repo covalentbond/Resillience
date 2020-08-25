@@ -2,11 +2,12 @@ import React from "react";
 import logo from "../../images/Resillience-Logo.png";
 import HomePage from "../../images/NewHomeFinal.svg";
 import rectangle from "../../images/Rectangle.png";
+import Counselling from "../../components/Navbar/Counselling";
 
 function LandingPage() {
   return (
     <div>
-      <section style={{ position: "relative" }}>
+      <section style={{ position: "relative", marginTop: "40px" }}>
         <img className="home-image" src={HomePage} alt="Home Page Main" />
         <div className="content">
           <img src={logo} className="logo-image p-20" alt="Logo" />
@@ -25,6 +26,7 @@ function LandingPage() {
             with a single goal to provide perfect and result oriented
           </p>
           <p className="second-line p-20">solution for IIT/NEET preperation</p>
+          <Counselling />
         </div>
       </section>
     </div>

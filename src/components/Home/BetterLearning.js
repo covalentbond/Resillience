@@ -104,7 +104,7 @@ function BetterLearning(props) {
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItemR}>
           <div className={classes.Title}>
-            They learn with videos, concepts, tests and stories for free
+            They learn with live videos, concepts, tests and stories for free
           </div>
           <div className={classes.Content}>
             Whether they want to start a new chapter or revise an old one, students
@@ -118,8 +118,8 @@ function BetterLearning(props) {
             Students experience all round academic growth
           </div>
           <div className={classes.Content}>
-            Our four modules work seamlessly to boost every student’s all-round
-            academic growth, helping them learn better.
+            Our teachers work seamlessly to boost every student’s all-round academic
+            growth, helping them learn better.
           </div>
         </div>
       </div>
