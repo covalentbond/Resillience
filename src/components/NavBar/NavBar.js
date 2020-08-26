@@ -37,10 +37,10 @@ function Navbar(props) {
       <Link to="/">Home</Link>
       <Link to="/about">About Us</Link>
       <Link to="/features">Features</Link>
-      <Link to="/blogs">Blogs</Link>
+      <Link to="/faqs">FAQ's</Link>
       {/* <Counselling /> */}
-      <Link to="/career">Career</Link>
-      <Link to="/tests">Tests</Link>
+      {/* <Link to="/career">Career</Link> */}
+      {/* <Link to="/tests">Tests</Link> */}
       {/* <SignIn /> */}
       {/* </div> */}
     </AppBar>

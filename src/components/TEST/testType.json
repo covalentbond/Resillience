@@ -1,0 +1,10 @@
+[{
+  "typeName": "ChapterWise",
+  "subjects": []
+
+}, {
+  "typeName": "Full Test",
+  "fullTest": []
+}, {
+  "typeName": "Part Test"
+}]

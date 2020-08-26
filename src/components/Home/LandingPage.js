@@ -12,15 +12,21 @@ function LandingPage() {
         <div className="content">
           <img src={logo} className="logo-image p-20" alt="Logo" />
           <h1 className="personalized p-20">Personalized</h1>
-          <h2 className="learning p-20">learning with</h2>
+          <h2 className="learning p-20">learning with IITians</h2>
           <div>
             <img
               alt="Bg Design"
               className="p-20"
               src={rectangle}
-              style={{ marginTop: "350px", top: "0", position: "absolute" }}
+              style={{
+                zIndex: "-1",
+                marginTop: "290px",
+                marginLeft: "445px",
+                top: "0",
+                position: "absolute"
+              }}
             />
-            <h2 className="iitians p-20">IITians</h2>
+            {/* <h2 className="iitians p-20">IITians</h2> */}
           </div>
           <p className="first-line p-20">
             with a single goal to provide perfect and result oriented

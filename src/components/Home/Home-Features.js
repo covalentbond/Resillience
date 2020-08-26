@@ -39,6 +39,26 @@ function HomeFeatures() {
             <Paper elevation={4}>
               <img
                 className="feature-image"
+                src={HomeTuition}
+                style={{ width: "250px", height: "260px", objectFit: "contain" }}
+                alt="Home Tuition"
+              />
+              <Typography
+                variant="h5"
+                color="primary"
+                style={{ marginBottom: "7%" }}
+              >
+                Personalized Home Classes
+              </Typography>
+              <Typography variant="body1" color="primary">
+                Read More
+              </Typography>
+            </Paper>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Paper elevation={4}>
+              <img
+                className="feature-image"
                 style={{ objectFit: "contain" }}
                 src={Online1to1}
                 alt="Online one to one Tuition"
@@ -74,26 +94,6 @@ function HomeFeatures() {
                 style={{ marginBottom: "7%" }}
               >
                 Online Group Classes
-              </Typography>
-              <Typography variant="body1" color="primary">
-                Read More
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item sm={3} xs={12}>
-            <Paper elevation={4}>
-              <img
-                className="feature-image"
-                src={HomeTuition}
-                style={{ width: "250px", height: "260px", objectFit: "contain" }}
-                alt="Home Tuition"
-              />
-              <Typography
-                variant="h5"
-                color="primary"
-                style={{ marginBottom: "7%" }}
-              >
-                Personalized Home Classes
               </Typography>
               <Typography variant="body1" color="primary">
                 Read More

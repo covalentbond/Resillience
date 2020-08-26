@@ -6,12 +6,14 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CounsellingImage from "../../images/counselling.png";
-
+import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
+import Tick from "../../images/tick.svg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   paper: {
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    maxWidth: "753px"
   }
 });
 
@@ -28,7 +30,7 @@ function Counselling() {
   };
 
   return (
-    <div div style={{ position: "absolute", top: "455px", left: "20px" }}>
+    <div style={{ position: "absolute", top: "455px", left: "20px" }}>
       <Button variant="outlined" color="secondary" onClick={handleClickOpen}>
         Free Counselling
       </Button>
@@ -37,33 +39,102 @@ function Counselling() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth="md"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
         classes={{
           paper: classes.paper
         }}
       >
         <img src={CounsellingImage} style={{ visibility: "initial" }}></img>
 
-        <div style={{ position: "absolute", margin: "auto" }}>
-          <h1>Hello</h1>
-          <DialogTitle id="alert-dialog-title">
-            {"Use Google's location service?"}
-          </DialogTitle>
-          <DialogContent
-            style={{ backgroundColor: "transparent", boxShadow: "none" }}
+        <div
+          style={{
+            position: "absolute",
+            top: "14%",
+            left: "12%",
+            right: "40%",
+            bottom: "10%",
+            textAlign: "center"
+          }}
+        >
+          <h2>GET FREE</h2>
+          <h2>MENTOR COUNSELLING</h2>
+          <div
+            style={{
+              position: "relative",
+              height: "30px",
+              width: "280px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              display: "flex",
+              alignItems: "center",
+              // justifyContent: "space-around",
+              border: "1px solid",
+              borderRadius: "8px"
+            }}
           >
-            <DialogContentText id="alert-dialog-description">
-              Let Google help apps determine location. This means sending anonymous
-              location data to Google, even when no apps are running.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose} color="primary">
-              Disagree
-            </Button>
-            <Button onClick={handleClose} color="primary" autoFocus>
-              Agree
-            </Button>
-          </DialogActions>
+            <PhoneInTalkIcon color="secondary" />
+            <input
+              type="tel"
+              name="number"
+              id="mobileNumber"
+              className="form-control"
+              placeholder="Enter Mobile number"
+              autoComplete="off"
+              maxLength="10"
+              required="required"
+              style={{
+                paddingLeft: "75px",
+                borderTopStyle: "hidden",
+                borderRightStyle: "hidden",
+                borderLeftStyle: "hidden",
+                borderBottomStyle: "hidden"
+              }}
+            />
+          </div>
+
+          <div style={{ marginLeft: "30px", marginTop: "30px" }}>
+            <div
+              style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
+            >
+              <img src={Tick} />
+              <h4 style={{ margin: "auto", marginLeft: "10px" }}>
+                Identify strengths and weaknesses
+              </h4>
+            </div>
+            <div
+              style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
+            >
+              <img src={Tick} />
+              <h4 style={{ margin: "auto", marginLeft: "10px" }}>
+                Create a study plan for you
+              </h4>
+            </div>
+            <div
+              style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
+            >
+              <img src={Tick} />
+              <h4 style={{ margin: "auto", marginLeft: "10px" }}>
+                Recommend Solutions
+              </h4>
+            </div>
+            <div
+              style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
+            >
+              <img src={Tick} />
+              <h4 style={{ margin: "auto", marginLeft: "10px" }}>
+                Regular updates of students
+              </h4>
+            </div>
+          </div>
+          <Button
+            variant="contained"
+            color="secondary"
+            disableElevation
+            style={{ marginTop: "15px" }}
+          >
+            Proceed
+          </Button>
         </div>
       </Dialog>
     </div>
