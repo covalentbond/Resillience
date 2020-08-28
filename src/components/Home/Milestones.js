@@ -1,8 +1,22 @@
 import React from "react";
+import withStyles from "@material-ui/core/styles/withStyles";
 
-function Milestones() {
+const styles = () => ({
+  milestones: {
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    textAlign: "center",
+    background: "#0f7dc2",
+    position: "relative"
+  }
+});
+
+function Milestones(props) {
+  const { classes } = props;
   return (
-    <div className="milestones" style={{ height: "30vh" }}>
+    <div className={classes.milestones} style={{ height: "30vh" }}>
       <div>
         <h1>125+</h1>
         <h1>Total registered students</h1>
@@ -15,12 +29,12 @@ function Milestones() {
         <h1>7200+</h1>
         <h1>Hours at home</h1>
       </div>
-      <div>
+      {/* <div>
         <h1>200+</h1>
         <h1>Guidance on call</h1>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export default Milestones;
+export default withStyles(styles)(Milestones);

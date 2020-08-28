@@ -2,7 +2,8 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-import BetterLearningImage from "../../images/better_learning_illustration.png";
+import BetterLearningImageWeb from "../../images/better_learning_illustration_web.png";
+import BetterLearningImagePhone from "../../images/BetterLearningImagePhone.png";
 
 const styles = () => ({
   BetterLearningSection: {
@@ -11,29 +12,58 @@ const styles = () => ({
     height: "900px",
     width: "1036px",
     margin: "0 auto",
-    marginTop: "72px"
+    marginTop: "72px",
+    "@media only screen and (max-width: 767px)": {
+      width: "320px",
+      marginTop: "40px"
+    }
   },
-  BetterLearningImage: {
+  BetterLearningImageWeb: {
     // height: "130vh",
     textAlign: "right",
     position: "absolute",
     marginLeft: "392px",
     marginTop: "10px",
-    height: "877px"
+    height: "877px",
+    "@media only screen and (max-width: 767px)": {
+      display: "none"
+    }
+  },
+  BetterLearningImagePhone: {
+    // height: "130vh",
+    textAlign: "right",
+    position: "absolute",
+    marginLeft: "35px",
+    marginTop: "0",
+    height: "auto",
+    width: "250px",
+    "@media only screen and (min-width: 767px)": {
+      display: "none"
+    }
   },
   LearningBody: {
     position: "relative",
     display: "flex",
-    height: "163px"
+    height: "163px",
+    "@media only screen and (max-width: 767px)": {
+      height: "165px"
+    }
   },
   DescriptionItem: {
     width: "360px",
-    textAlign: "right"
+    textAlign: "right",
+    "@media only screen and (max-width: 767px)": {
+      width: "204px",
+      textAlign: "left"
+    }
   },
   DescriptionItemR: {
     width: "360px",
     textAlign: "left",
-    marginLeft: "auto"
+    marginLeft: "auto",
+    "@media only screen and (max-width: 767px)": {
+      width: "204px"
+    }
   },
 
   Title: {
@@ -41,14 +71,22 @@ const styles = () => ({
     fontSize: "24px",
     color: "#000",
     letterSpacing: "-.5px",
-    lineHeight: "36px"
+    lineHeight: "36px",
+    "@media only screen and (max-width: 767px)": {
+      fontSize: "14px",
+      lineHeight: "21px"
+    }
   },
   Content: {
     opacity: ".5",
     fontSize: "14px",
     color: "#000",
     lineHeight: "24px",
-    marginTop: "5px"
+    marginTop: "5px",
+    "@media only screen and (max-width: 767px)": {
+      fontSize: "12px",
+      lineHeight: "18px"
+    }
   }
 });
 
@@ -59,13 +97,18 @@ function BetterLearning(props) {
       <Typography
         variant="h3"
         color="primary"
-        style={{ margin: "5%", textAlign: "center" }}
+        style={{ margin: "5%", textAlign: "center", letterSpacing: "-1px" }}
       >
         Our approach to better learning
       </Typography>
       <img
-        src={BetterLearningImage}
-        className={classes.BetterLearningImage}
+        src={BetterLearningImageWeb}
+        className={classes.BetterLearningImageWeb}
+        alt="Better Learning Path"
+      />
+      <img
+        src={BetterLearningImagePhone}
+        className={classes.BetterLearningImagePhone}
         alt="Better Learning Path"
       />
       <div className={classes.LearningBody}>

@@ -10,9 +10,10 @@ import themeObject from "./theme";
 //Components
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/AboutUs/AboutUs";
 import Blogs from "./components/Blogs";
-import Features from "./components/Features";
+import Features from "./components/Features/Features";
+import Faqs from "./components/Faqs";
 import Career from "./components/Navbar/Career";
 import Tests from "./components/Tests";
 import Room from "./components/Room";
@@ -30,6 +31,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={AboutUs} />
               <Route path="/features" component={Features} />
+              <Route path="/faqs" component={Faqs} />
               <Route path="/blogs" component={Blogs} />
               <Route path="/career" component={Career} />
               <Route path="/tests" component={Tests} />

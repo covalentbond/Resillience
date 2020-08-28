@@ -30,9 +30,15 @@ function Counselling() {
   };
 
   return (
-    <div style={{ position: "absolute", top: "455px", left: "20px" }}>
-      <Button variant="outlined" color="secondary" onClick={handleClickOpen}>
-        Free Counselling
+    <div>
+      {/* style={{ position: "absolute", top: "455px", left: "20px" }} */}
+      <Button
+        variant="outlined"
+        color="secondary"
+        style={{ marginLeft: "20px" }}
+        onClick={handleClickOpen}
+      >
+        Mentoring Session
       </Button>
       <Dialog
         open={open}

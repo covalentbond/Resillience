@@ -1,0 +1,66 @@
+.BetterLearningSection {
+  position: "relative";
+  /* // height: "100vh"; */
+  height: "900px";
+  width: "1036px";
+  /* //320px */
+  margin: "0 auto";
+  margin-top: "72px";
+  /* //40px */
+}
+
+.BetterLearningImage {
+  /* //display: none */
+  /* // height: "130vh; */
+  text-align: "right";
+  position: "absolute";
+  min-height: "350px";
+  margin-left: "392px";
+  margin-top: "10px";
+  height: "877px";
+}
+
+
+.learningBody {
+  position: "relative";
+  display: "flex";
+  height: "163px";
+  /* //165px */
+  ;
+}
+
+
+.DescriptionItem {
+  width: "360px";
+  text-align: "right";
+}
+
+
+.DescriptionItemR {
+  width: "360px";
+  /* //204px */
+  text-align: "left";
+  margin-left: "auto";
+}
+
+
+.Title {
+  font-weight: "700";
+  font-size: "24px";
+  /* //14px */
+  color: "#000";
+  letter-spacing: "-.5px";
+  line-height: "36px";
+  /* //21px */
+}
+
+
+.Content {
+  opacity: ".5";
+  font-size: "14px";
+  /* //12px */
+  color: "#000";
+  line-height: "24px";
+  /* //18px */
+  margin-top: "5px";
+}
