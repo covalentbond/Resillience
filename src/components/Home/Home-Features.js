@@ -21,6 +21,13 @@ const styles = () => ({
       paddingTop: "90%"
     }
   },
+  grid: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    marginLeft: "0",
+    marginRight: "0"
+  },
   homeTuition: {
     width: "70%",
     height: "240px",
@@ -32,7 +39,7 @@ const styles = () => ({
   },
   oneToOne: {
     objectFit: "contain",
-    padding: "10%",
+    height: "240px",
     width: "70%",
     padding: "3.5%",
     "@media only screen and (max-width: 767px)": {
@@ -40,12 +47,20 @@ const styles = () => ({
     }
   },
   onlineGroup: {
-    padding: "5%",
+    padding: "3.5%",
     width: "90%",
-    height: "265px",
+    height: "240px",
     objectFit: "contain",
     "@media only screen and (max-width: 767px)": {
       maxWidth: "80%"
+    }
+  },
+  fHeading: { padding: "0 7% 7% 7%" },
+  readMore: {
+    paddingBottom: "5%",
+    "&:hover": {
+      color: "#6b6b6b",
+      letterSpacing: "1.2px"
     }
   }
 });
@@ -58,21 +73,11 @@ function HomeFeatures(props) {
         <Typography
           variant="h3"
           color="primary"
-          style={{ margin: "5%", marginBottom: "2%" }}
+          style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}
         >
           Features.
         </Typography>
-        <Grid
-          container
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            marginLeft: "0",
-            marginRight: "0"
-          }}
-          spacing={5}
-        >
+        <Grid container className={classes.grid} spacing={5}>
           <Grid item sm={3} xs={12}>
             <Paper elevation={4}>
               <img
@@ -81,15 +86,15 @@ function HomeFeatures(props) {
                 className={classes.homeTuition}
                 alt="Home Tuition"
               />
-              <Typography
-                variant="h5"
-                color="primary"
-                style={{ marginBottom: "7%" }}
-              >
-                Personalized Home Classes
+              <Typography variant="h6" color="primary" className={classes.fHeading}>
+                One on One home tuition throughout Mumbai
               </Typography>
-              <Typography variant="body1" color="primary">
-                Read More
+              <Typography
+                variant="body1"
+                color="primary"
+                className={classes.readMore}
+              >
+                READ MORE -
               </Typography>
             </Paper>
           </Grid>
@@ -101,15 +106,15 @@ function HomeFeatures(props) {
                 src={Online1to1}
                 alt="Online one to one Tuition"
               />
-              <Typography
-                variant="h5"
-                color="primary"
-                style={{ marginBottom: "7%" }}
-              >
-                Online Individual classes.
+              <Typography variant="h6" color="primary" className={classes.fHeading}>
+                One on One live online tuition
               </Typography>
-              <Typography variant="body1" color="primary">
-                Read More
+              <Typography
+                variant="body1"
+                color="primary"
+                className={classes.readMore}
+              >
+                READ MORE -
               </Typography>
             </Paper>
           </Grid>
@@ -121,15 +126,15 @@ function HomeFeatures(props) {
                 className={classes.onlineGroup}
                 alt="Online Group Study"
               />
-              <Typography
-                variant="h5"
-                color="primary"
-                style={{ marginBottom: "7%" }}
-              >
-                Online Group Classes
+              <Typography variant="h6" color="primary" className={classes.fHeading}>
+                Mastering a specific chapter
               </Typography>
-              <Typography variant="body1" color="primary">
-                Read More
+              <Typography
+                variant="body1"
+                color="primary"
+                className={classes.readMore}
+              >
+                READ MORE -
               </Typography>
             </Paper>
           </Grid>

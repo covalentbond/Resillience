@@ -13,7 +13,7 @@ function AboutUs() {
         allowFullScreen=""
         aria-hidden="false"
         tabIndex="0"
-      ></iframe>
+      />
     </div>
   );
 }

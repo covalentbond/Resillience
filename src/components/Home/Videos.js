@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import withStyles from "@material-ui/core/styles/withStyles";
+import Typography from "@material-ui/core/Typography";
 
 import VideoAreaBg from "../../images/video-area-bg.png";
 
@@ -60,7 +61,13 @@ class Videos extends React.Component {
       <div style={{ padding: "40px", position: "relative" }}>
         {/* , backgroundColor: "#419be0" */}
         {/* <img src={VideoAreaBg} style={{ width: "80vw" }} /> */}
-        <h1 style={{ textAlign: "center" }}>Watch our teachers in action</h1>
+        <Typography
+          variant="h3"
+          color="primary"
+          style={{ margin: "5%", textAlign: "center", letterSpacing: "-1.5px" }}
+        >
+          Watch our teachers in action
+        </Typography>
         <Slider {...settings}>
           <div>
             <iframe

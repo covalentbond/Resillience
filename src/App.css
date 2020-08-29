@@ -116,6 +116,12 @@ body {
   margin: auto;
 }
 
+.active {
+  padding: 14px;
+  border-bottom: 6px solid #0F7DC2;
+  pointer-events: none;
+}
+
 /* @media (min-width: 640px) {
 
 }
