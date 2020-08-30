@@ -30,15 +30,20 @@ function Counselling() {
   };
 
   return (
-    <div>
-      {/* style={{ position: "absolute", top: "455px", left: "20px" }} */}
+    <div style={{ display: "inline" }}>
       <Button
-        variant="outlined"
-        color="secondary"
-        style={{ marginLeft: "20px" }}
+        variant="contained"
+        color="#EE2B2F"
+        style={{
+          letterSpacing: "0.5px",
+          lineHeight: "1.5",
+          fontSize: "1.2rem",
+          borderRadius: "20px",
+          color: "black"
+        }}
         onClick={handleClickOpen}
       >
-        Mentoring Session
+        Demo cum Mentoring Session
       </Button>
       <Dialog
         open={open}

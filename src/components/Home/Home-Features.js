@@ -28,6 +28,12 @@ const styles = () => ({
     marginLeft: "0",
     marginRight: "0"
   },
+  card: {
+    // "&:hover": {
+    //   paddingTop: "10px",
+    //   paddingBottom: "10px"
+    // }
+  },
   homeTuition: {
     width: "70%",
     height: "240px",
@@ -78,7 +84,7 @@ function HomeFeatures(props) {
           Features.
         </Typography>
         <Grid container className={classes.grid} spacing={5}>
-          <Grid item sm={3} xs={12}>
+          <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
                 className="feature-image"
@@ -98,7 +104,7 @@ function HomeFeatures(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item sm={3} xs={12}>
+          <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
                 className="feature-image"
@@ -118,7 +124,7 @@ function HomeFeatures(props) {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item sm={3} xs={12}>
+          <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
                 className="feature-image"
@@ -127,7 +133,7 @@ function HomeFeatures(props) {
                 alt="Online Group Study"
               />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                Mastering a specific chapter
+                Group live online tuitions anywhere
               </Typography>
               <Typography
                 variant="body1"

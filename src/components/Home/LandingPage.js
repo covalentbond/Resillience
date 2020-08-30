@@ -3,10 +3,11 @@ import Button from "@material-ui/core/Button";
 import withStyles from "@material-ui/core/styles/withStyles";
 import logo from "../../images/Resillience-Logo.png";
 // import HomePageWeb from "../../images/NewHomeFinalFinall.svg";
-import HomePageWeb from "../../images/ravi.svg";
+import HomePageWeb from "../../images/ravi2.svg";
 import HomePagePhone from "../../images/homePhone.svg";
 import rectangle from "../../images/Rectangle.png";
 import Counselling from "../../components/Navbar/Counselling";
+import Typography from "@material-ui/core/Typography";
 
 const styles = () => ({
   homeImageWeb: {
@@ -126,8 +127,18 @@ function LandingPage(props) {
           </div>
         </div>
         <div className={classes.firstLine}>
-          <p style={{ marginBottom: "0" }}>Book a free demo</p>
-          <div
+          <Typography
+            variant="h4"
+            style={{
+              marginBottom: "0",
+              fontWeight: "bold",
+              color: "#0F7DC2",
+              paddingTop: "16px"
+            }}
+          >
+            Book a Free <Counselling />
+          </Typography>
+          {/* <div
             className={classes.secondLine}
             style={{
               display: "flex",
@@ -135,9 +146,7 @@ function LandingPage(props) {
               justifyContent: "space-between"
             }}
           >
-            <p>cum </p>
-            <Counselling />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

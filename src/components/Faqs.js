@@ -7,6 +7,9 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Divider from "@material-ui/core/Divider";
 
+//Images
+import FAQS from "../images/faqs.svg";
+
 const styles = () => ({
   faqSection: {
     marginTop: "15vh",
@@ -62,6 +65,7 @@ function Faqs(props) {
         {/* <Typography variant="h5" color="primary" className={classes.qs}>
           Questions?
         </Typography> */}
+        <img src={FAQS}></img>
       </div>
       <div className="root">
         <Accordion

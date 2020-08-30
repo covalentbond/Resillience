@@ -53,14 +53,14 @@ function Features(props) {
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            One to one home classes
+            One on One home Tuition for proper understanding
           </Typography>
         </div>
       </div>
       <div className={classes.featureSection}>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Mastering single chapters
+            Mastering single chapters as when needed
           </Typography>
         </div>
         <div className={classes.fImage}>
@@ -73,14 +73,14 @@ function Features(props) {
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            One to one online classes
+            One on One live online Tuition
           </Typography>
         </div>
       </div>
       <div className={classes.featureSection}>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Online group classes
+            Online group classes for more accountability
           </Typography>
         </div>
         <div className={classes.fImage}>IMAGE</div>
@@ -91,7 +91,7 @@ function Features(props) {
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Get an instant solution to every doubt
+            Get an instant solution to every doubt via Chat & Call
           </Typography>
         </div>
       </div>

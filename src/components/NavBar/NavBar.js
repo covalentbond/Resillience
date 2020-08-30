@@ -68,6 +68,14 @@ class Navbar extends React.Component {
         >
           FAQ's
         </NavLink>
+        <NavLink
+          exact
+          activeClassName="active"
+          style={{ color: "#3672c0", textDecoration: "none", fontWeight: "bolder" }}
+          to="/tests"
+        >
+          TEST
+        </NavLink>
 
         <SignIn />
       </AppBar>
