@@ -39,7 +39,7 @@ const styles = () => ({
 function Features(props) {
   const { classes } = props;
   return (
-    <div style={{ marginTop: "70px" }}>
+    <div style={{ marginTop: "80px" }}>
       <Typography
         variant="h3"
         color="primary"
@@ -49,7 +49,7 @@ function Features(props) {
       </Typography>
       <div className={classes.featureSection}>
         <div className={classes.fImage}>
-          <img src={oneToOne} />
+          <img alt="One to One" src={oneToOne} />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
@@ -64,12 +64,12 @@ function Features(props) {
           </Typography>
         </div>
         <div className={classes.fImage}>
-          <img src={masteringChapter} />
+          <img alt="Mastering Chapter" src={masteringChapter} />
         </div>
       </div>
       <div className={classes.featureSection}>
         <div className={classes.fImage}>
-          <img src={onlineOneToOne} />
+          <img alt="Online One to One Classes" src={onlineOneToOne} />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
@@ -87,7 +87,7 @@ function Features(props) {
       </div>
       <div className={classes.featureSection}>
         <div className={classes.fImage}>
-          <img src={liveDoubts} />
+          <img alt="Live doubts" src={liveDoubts} />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>

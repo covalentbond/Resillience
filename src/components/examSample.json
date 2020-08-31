@@ -11,7 +11,13 @@
           "chapters": [{
             "chapterName": "Electric Charges and Fields.",
             "testName": [{
-              "name": "Electric Charges Test 1"
+              "name": "Electric Charges Test 1",
+              "totalNoOfQues": 3,
+              "questionPaper": [{
+                "q1": "STRING",
+                "q2": "STRING",
+                "q3": "STRING"
+              }]
             }, {
               "name": "Electric Charges Test 2"
             }, {

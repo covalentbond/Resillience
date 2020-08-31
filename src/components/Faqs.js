@@ -65,7 +65,7 @@ function Faqs(props) {
         {/* <Typography variant="h5" color="primary" className={classes.qs}>
           Questions?
         </Typography> */}
-        <img src={FAQS}></img>
+        <img alt="FAQ'S" src={FAQS}></img>
       </div>
       <div className="root">
         <Accordion

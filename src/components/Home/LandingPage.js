@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import withStyles from "@material-ui/core/styles/withStyles";
 import logo from "../../images/Resillience-Logo.png";
 // import HomePageWeb from "../../images/NewHomeFinalFinall.svg";
-import HomePageWeb from "../../images/ravi2.svg";
+import HomePageWeb from "../../images/ravi3.svg";
 import HomePagePhone from "../../images/homePhone.svg";
 import rectangle from "../../images/Rectangle.png";
 import Counselling from "../../components/Navbar/Counselling";
@@ -65,16 +65,9 @@ const styles = () => ({
   firstLine: {
     fontSize: "1.55rem",
     position: "absolute",
-    top: "370px"
+    top: "383px"
   },
 
-  secondLine: {
-    display: "flex"
-    /* flex-direction: "row", */
-    /* font-size: 1.55rem, */
-    /* position: absolute, */
-    /* top: 400px, */
-  },
   content: {
     "@media only screen and (max-width: 767px)": {
       display: "none"
@@ -128,25 +121,15 @@ function LandingPage(props) {
         </div>
         <div className={classes.firstLine}>
           <Typography
-            variant="h4"
+            variant="inherit"
             style={{
               marginBottom: "0",
               fontWeight: "bold",
-              color: "#0F7DC2",
-              paddingTop: "16px"
+              color: "#0F7DC2"
             }}
           >
             Book a Free <Counselling />
           </Typography>
-          {/* <div
-            className={classes.secondLine}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between"
-            }}
-          >
-          </div> */}
         </div>
       </div>
     </div>

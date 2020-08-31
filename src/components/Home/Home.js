@@ -22,7 +22,7 @@ export default function Home() {
       <Milestones />
       <Videos />
       <Testimonials />
-      <Footer />
+      {/* <Footer /> */}
       {/* <Mission /> */}
     </div>
   );

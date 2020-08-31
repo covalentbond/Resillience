@@ -66,7 +66,11 @@ function Footer(props) {
   const { classes } = props;
   return (
     <div className={classes.footerSection}>
-      <img src={DesignFooterrr} className={classes.designImage} />
+      <img
+        src={DesignFooterrr}
+        className={classes.designImage}
+        alt="Design Footer"
+      />
       <div>
         <Grid
           container

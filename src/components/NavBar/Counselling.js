@@ -108,7 +108,7 @@ function Counselling() {
             <div
               style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
             >
-              <img src={Tick} />
+              <img src={Tick} alt="tick" />
               <h4 style={{ margin: "auto", marginLeft: "10px" }}>
                 Identify strengths and weaknesses
               </h4>
@@ -116,7 +116,7 @@ function Counselling() {
             <div
               style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
             >
-              <img src={Tick} />
+              <img src={Tick} alt="tick" />
               <h4 style={{ margin: "auto", marginLeft: "10px" }}>
                 Create a study plan for you
               </h4>
@@ -124,7 +124,7 @@ function Counselling() {
             <div
               style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
             >
-              <img src={Tick} />
+              <img src={Tick} alt="tick" />
               <h4 style={{ margin: "auto", marginLeft: "10px" }}>
                 Recommend Solutions
               </h4>
@@ -132,7 +132,7 @@ function Counselling() {
             <div
               style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
             >
-              <img src={Tick} />
+              <img src={Tick} alt="tick" />
               <h4 style={{ margin: "auto", marginLeft: "10px" }}>
                 Regular updates of students
               </h4>
