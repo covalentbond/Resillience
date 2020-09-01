@@ -11,16 +11,25 @@ import Divider from "@material-ui/core/Divider";
 import FAQS from "../images/faqs.svg";
 
 const styles = () => ({
+  root: {
+    width: "70%",
+    margin: "auto",
+    background: "#d3d3d3"
+  },
   faqSection: {
     marginTop: "15vh",
     marginBottom: "10vh"
   },
+  accordion: {
+    padding: "8px 10px"
+  },
   topHeading: {
-    // backgroundColor: "white",
     textAlign: "center",
     position: "relative"
-    // opacity: "0",
-    // visibility: "hidden"
+  },
+  q: {
+    fontSize: "25px",
+    opacity: "0.6"
   },
   big: {
     position: "absolute",
@@ -39,9 +48,11 @@ const styles = () => ({
     color: "black",
     letterSpacing: "0"
   },
+  answer: {
+    fontSize: "18px"
+  },
   heading: {
-    // fontSize: theme.typography.pxToRem(15),
-    flexBasis: "33.33%",
+    fontSize: "1.2rem",
     flexShrink: 0
   }
 });
@@ -60,30 +71,30 @@ function Faqs(props) {
         <Typography variant="h3" color="primary" className={classes.big}>
           F.A.Q
         </Typography>
-        {/* <h1 >F.A.Q</h1> */}
         <h1 className={classes.qs}>Questions?</h1>
-        {/* <Typography variant="h5" color="primary" className={classes.qs}>
-          Questions?
-        </Typography> */}
         <img alt="FAQ'S" src={FAQS}></img>
       </div>
-      <div className="root">
+      <div className={classes.root}>
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
+          className={classes.accordion}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography className={classes.heading}>
-              Q: How will we start?
+            <Typography color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              How will we start?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer:
+            <Typography variant="inherit" className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
               <br />
               For home tuition:
               <br />
@@ -93,8 +104,8 @@ function Faqs(props) {
               curriculum.
               <br />
               3. Meeting and finalization.
-            </Typography>
-            <Typography>
+              <br />
+              <br />
               For online classes:
               <br />
               1. Just call on the given number and send your enquiry we will get back
@@ -109,20 +120,26 @@ function Faqs(props) {
         <Accordion
           expanded={expanded === "panel2"}
           onChange={handleChange("panel2")}
+          className={classes.accordion}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2bh-content"
             id="panel2bh-header"
           >
-            <Typography className={classes.heading}>
-              Q: Where do you work?
+            <Typography color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              Where do you work?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: Currently we are providing home tutition in Mumbai only, But
-              the services can be availed anywhere through online live tuition at our
+            <Typography variant="inherit" className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              Currently we are providing home tutition in Mumbai only, But the
+              services can be availed anywhere through online live tuition at our
               platform.
             </Typography>
           </AccordionDetails>
@@ -130,57 +147,77 @@ function Faqs(props) {
         <Accordion
           expanded={expanded === "panel3"}
           onChange={handleChange("panel3")}
+          className={classes.accordion}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Typography className={classes.heading}>
-              Q: What is the Fee structure of the program?
+            <Typography color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              What is the Fee structure of the program?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: The Fee structure will depend on the need and duration of the
-              program. We will figure it out in the meeting.
+            <Typography variant="inherit" className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              The Fee structure will depend on the need and duration of the program.
+              We will figure it out in the meeting.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
           expanded={expanded === "panel4"}
           onChange={handleChange("panel4")}
+          className={classes.accordion}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography className={classes.heading}>
-              Q: How much qualified the faculties are?
+            <Typography color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              How much qualified the faculties are?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Answer: All the faculties are IIT graduates. They are expert in their
-              subjects, experienced, passionate in teaching, motivating,
-              understanding and friendly Mentors.
+            <Typography variant="inherit" className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              All the faculties are IIT graduates. They are expert in their subjects,
+              experienced, passionate in teaching, motivating, understanding and
+              friendly Mentors.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
           expanded={expanded === "panel5"}
           onChange={handleChange("panel5")}
+          className={classes.accordion}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography className={classes.heading}>Q: How we work?</Typography>
+            <Typography color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              How we work?
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography variant="inherit" className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
               1. Regular sessions as per student’s requirements. 2. Regular updates
               of sessions regarding Home Work and completion status of previous home
               Work. 3. Relevant and effective study materials will be suggested and

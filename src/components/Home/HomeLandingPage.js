@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import withStyles from "@material-ui/core/styles/withStyles";
 import logo from "../../images/Resillience-Logo.png";
 // import HomePageWeb from "../../images/NewHomeFinalFinall.svg";
+// import HomePagePhone from "../../images/homePhone.svg";
 import HomePageWeb from "../../images/ravi3.svg";
-import HomePagePhone from "../../images/homePhone.svg";
-import rectangle from "../../images/Rectangle.png";
-import Counselling from "../../components/Navbar/Counselling";
+import HomePagePhone from "../../images/ravi3Phone.svg";
+import rectangleStroke from "../../images/rectangleStroke.svg";
+import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
 
 const styles = () => ({
@@ -34,13 +34,14 @@ const styles = () => ({
     top: "30px",
     left: "5px",
     position: "absolute"
+    // visibility: "hidden"
   },
 
   personalized: {
     fontFamily: "Rubik,sans-serif",
     fontSize: "500%",
     color: "#0F7DC2",
-    top: "117px",
+    top: "109px",
     position: "absolute"
   },
 
@@ -48,13 +49,13 @@ const styles = () => ({
     position: "absolute",
     fontSize: "64px",
     fontFamily: "muli, sans-serif",
-    top: "207px"
+    top: "199px"
   },
 
   iitians: {
     display: "flex",
     justifyContent: "space-between",
-    top: "320px",
+    top: "308px",
     left: "3px",
     width: "20%",
     position: "absolute",
@@ -65,7 +66,7 @@ const styles = () => ({
   firstLine: {
     fontSize: "1.55rem",
     position: "absolute",
-    top: "383px"
+    top: "375px"
   },
 
   content: {
@@ -98,7 +99,7 @@ function LandingPage(props) {
           <span>
             <img
               alt="Bg Design"
-              src={rectangle}
+              src={rectangleStroke}
               style={{
                 zIndex: "-1",
                 marginTop: "38px",

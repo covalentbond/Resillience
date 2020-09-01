@@ -28,12 +28,7 @@ const styles = () => ({
     marginLeft: "0",
     marginRight: "0"
   },
-  card: {
-    // "&:hover": {
-    //   paddingTop: "10px",
-    //   paddingBottom: "10px"
-    // }
-  },
+  card: {},
   homeTuition: {
     width: "70%",
     height: "240px",
@@ -61,7 +56,12 @@ const styles = () => ({
       maxWidth: "80%"
     }
   },
-  fHeading: { padding: "0 7% 7% 7%" },
+  fHeading: {
+    padding: "0 7% 7% 7%",
+    "&:hover": {
+      color: "#6b6b6b"
+    }
+  },
   readMore: {
     paddingBottom: "5%",
     "&:hover": {
@@ -87,7 +87,6 @@ function HomeFeatures(props) {
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
-                className="feature-image"
                 src={HomeTuition}
                 className={classes.homeTuition}
                 alt="Home Tuition"
@@ -107,7 +106,6 @@ function HomeFeatures(props) {
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
-                className="feature-image"
                 className={classes.oneToOne}
                 src={Online1to1}
                 alt="Online one to one Tuition"
@@ -127,7 +125,6 @@ function HomeFeatures(props) {
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img
-                className="feature-image"
                 src={OnlineGroup}
                 className={classes.onlineGroup}
                 alt="Online Group Study"

@@ -3,9 +3,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
 //Images
-// import onlineOneToOne from "../../images/onlineOneToOne.svg";
 import onlineOneToOne from "../../images/online-classes.png";
 import liveDoubts from "../../images/Questions.svg";
+import strokeFeatures from "../../images/strokeAboutUs.svg";
 
 import masteringChapter from "../../images/masteringChapters.svg";
 import oneToOne from "../../images/oneToOne.svg";
@@ -40,13 +40,25 @@ function Features(props) {
   const { classes } = props;
   return (
     <div style={{ marginTop: "80px" }}>
-      <Typography
-        variant="h3"
-        color="primary"
-        style={{ margin: "5%", textAlign: "center", letterSpacing: "-1px" }}
-      >
-        Features
-      </Typography>
+      <span>
+        <img
+          alt="Bg Design"
+          src={strokeFeatures}
+          style={{
+            zIndex: "-1",
+            marginTop: "38px",
+            marginLeft: "4px",
+            position: "absolute"
+          }}
+        />
+        <Typography
+          variant="h3"
+          color="primary"
+          style={{ margin: "5%", textAlign: "center", letterSpacing: "-1px" }}
+        >
+          Features
+        </Typography>
+      </span>
       <div className={classes.featureSection}>
         <div className={classes.fImage}>
           <img alt="One to One" src={oneToOne} />

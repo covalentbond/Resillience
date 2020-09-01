@@ -1,13 +1,10 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import CounsellingImage from "../../images/counselling.png";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import Tick from "../../images/tick.svg";
+import mentoringStroke from "../../images/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -31,20 +28,45 @@ function Counselling() {
 
   return (
     <div style={{ display: "inline" }}>
-      <Button
-        variant="contained"
-        color="#EE2B2F"
+      {/* <Button
+        variant="outlined"
+        color="primary"
         style={{
           letterSpacing: "0.5px",
           lineHeight: "1.5",
           fontSize: "1.2rem",
-          borderRadius: "20px",
-          color: "black"
+          borderRadius: "6px",
+          color: "#014e43",
+          backgroundColor: "#EEEEEE"
         }}
         onClick={handleClickOpen}
       >
-        Demo cum Mentoring Session
-      </Button>
+        Mentoring Session
+      </Button> */}
+      <span onClick={handleClickOpen} style={{ top: "-18px", position: "absolute" }}>
+        <img
+          src={mentoringStroke}
+          alt="Stroke"
+          style={{
+            width: "340px",
+            position: "absolute",
+            zIndex: "-1"
+          }}
+        />
+        <h1
+          style={{
+            letterSpacing: "0.5px",
+            fontSize: "1.7rem",
+            color: "black",
+            width: "260px",
+            marginLeft: "42px",
+            marginTop: "27px",
+            cursor: "pointer"
+          }}
+        >
+          Mentoring Session
+        </h1>
+      </span>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -56,8 +78,11 @@ function Counselling() {
           paper: classes.paper
         }}
       >
-        <img src={CounsellingImage} style={{ visibility: "initial" }}></img>
-
+        <img
+          alt="Counselling"
+          src={CounsellingImage}
+          style={{ visibility: "initial" }}
+        />
         <div
           style={{
             position: "absolute",
