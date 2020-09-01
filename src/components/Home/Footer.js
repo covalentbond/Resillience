@@ -43,7 +43,7 @@ const styles = () => ({
   companyInfo: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "12% 40px 1.5% 40px"
+    padding: "12% 2.9% 1.5% 2.9%"
   },
   articles: {
     display: "flex",

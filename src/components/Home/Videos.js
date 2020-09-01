@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-import VideoAreaBg from "../../images/video-area-bg.png";
-
 const styles = () => ({
   iframe: {
     width: "400px",
@@ -59,8 +57,6 @@ class Videos extends React.Component {
     };
     return (
       <div style={{ padding: "40px", position: "relative" }}>
-        {/* , backgroundColor: "#419be0" */}
-        {/* <img src={VideoAreaBg} style={{ width: "80vw" }} /> */}
         <Typography
           variant="h3"
           color="primary"
@@ -75,9 +71,9 @@ class Videos extends React.Component {
               aria-hidden="true"
               className={classes.iframe}
               src="https://www.youtube.com/embed/sh0EGUheef8/"
-              frameBZzorder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -90,7 +86,7 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/1H72tRzG5TU"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -103,7 +99,7 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/cbBB-unybLA"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -116,7 +112,7 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/lv-YIJC1xWo"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -129,7 +125,7 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/PBwslCZRnaU"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -142,7 +138,7 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/w2zQ4lMFoMg"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -155,7 +151,8 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/gwNaLLQUHgs"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+                          allowFullScreen
+
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>
@@ -168,7 +165,8 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/ubWLlaTN3Fw"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+                          allowFullScreen
+
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
 
@@ -183,7 +181,8 @@ class Videos extends React.Component {
               src="https://www.youtube.com/embed/s6mvwNxPJ6g"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+                          allowFullScreen
+
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
             ></iframe>

@@ -11,12 +11,15 @@ function Error() {
       <Typography
         variant="h4"
         color="primary"
-        alt="Error 404 Image"
         style={{ position: "absolute", marginTop: "8%", marginLeft: "16%" }}
       >
         Page not found
       </Typography>
-      <img src={ErrorPage} style={{ height: "100vh", width: "98vw" }} />
+      <img
+        src={ErrorPage}
+        alt="Error 404"
+        style={{ height: "100vh", width: "98vw" }}
+      />
     </div>
   );
 }

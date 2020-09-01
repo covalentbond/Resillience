@@ -81,23 +81,9 @@ body {
 } */
 
 /* Home */
-.feature-image {
-  padding: 10%
-}
 
 .headings {
   margin: "7%"
-}
-
-.root {
-  width: 70%;
-  margin: auto;
-  background: #d3d3d3;
-  /* background: -webkit-linear-gradient(left, #d3d3d3, #0f7dc2);
-  background: -moz-linear-gradient(left, #d3d3d3, #0f7dc2);
-  background: -ms-linear-gradient(left, #d3d3d3, #0f7dc2);
-  background: -o-linear-gradient(left, #d3d3d3, #0f7dc2);
-  background: linear-gradient(to right, #d3d3d3, #0f7dc2); */
 }
 
 /*Test */
