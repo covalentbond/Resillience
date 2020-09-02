@@ -129,7 +129,7 @@ function LandingPage(props) {
               color: "#0F7DC2"
             }}
           >
-            Book a Free <Counselling />
+            Book a FREE <Counselling />
           </Typography>
         </div>
       </div>

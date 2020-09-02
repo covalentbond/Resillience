@@ -3,6 +3,7 @@ import React from "react";
 //Components
 import LandingPage from "./AboutLandingPage";
 import Vision from "./Vision";
+import Story from "./Story";
 
 function AboutUs() {
   return (
@@ -15,7 +16,7 @@ function AboutUs() {
     >
       <LandingPage />
       <Vision />
-      <Vision />
+      <Story />
     </div>
   );
 }

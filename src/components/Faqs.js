@@ -14,14 +14,25 @@ const styles = () => ({
   root: {
     width: "70%",
     margin: "auto",
-    background: "#d3d3d3"
+    background: "#d3d3d3",
+    "@media only screen and (max-width: 767px)": {
+      width: "90%"
+    }
+  },
+  faqImage: {
+    "@media only screen and (max-width: 767px)": {
+      width: "75%"
+    }
   },
   faqSection: {
     marginTop: "15vh",
     marginBottom: "10vh"
   },
   accordion: {
-    padding: "8px 10px"
+    padding: "8px 10px",
+    "@media only screen and (max-width: 767px)": {
+      padding: "0px"
+    }
   },
   topHeading: {
     textAlign: "center",
@@ -29,7 +40,10 @@ const styles = () => ({
   },
   q: {
     fontSize: "25px",
-    opacity: "0.6"
+    opacity: "0.6",
+    "@media only screen and (max-width: 767px)": {
+      fontSize: "20px"
+    }
   },
   big: {
     position: "absolute",
@@ -49,11 +63,17 @@ const styles = () => ({
     letterSpacing: "0"
   },
   answer: {
-    fontSize: "18px"
+    fontSize: "18px",
+    "@media only screen and (max-width: 768px)": {
+      fontSize: "16px"
+    }
   },
   heading: {
     fontSize: "1.2rem",
-    flexShrink: 0
+    flexShrink: 0,
+    "@media only screen and (max-width:768px)": {
+      fontSize: "1rem"
+    }
   }
 });
 
@@ -72,7 +92,7 @@ function Faqs(props) {
           F.A.Q
         </Typography>
         <h1 className={classes.qs}>Questions?</h1>
-        <img alt="FAQ'S" src={FAQS}></img>
+        <img alt="FAQ'S" src={FAQS} className={classes.faqImage}></img>
       </div>
       <div className={classes.root}>
         <Accordion
