@@ -2,9 +2,44 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-const styles = () => ({});
+const styles = () => ({
+  vision: {
+    marginTop: "5%",
+    position: "relative",
+    fontStyle: "italic",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    fontSize: "22px",
+    "@media only screen and (max-width: 1024px)": {
+      fontSize: "20px"
+    },
+    "@media only screen and (max-width: 767px)": {
+      fontSize: "16px"
+    }
+  },
+  eachVision: {
+    marginTop: "1.5%",
+    display: "flex"
+  },
+  visionContent: {
+    fontStyle: "italic",
+    flexDirection: "column",
+    margin: "auto",
+    width: "70%",
+    "@media only screen and (max-width: 770px)": {
+      width: "90%"
+    }
+  },
+  visionText: {
+    letterSpacing: "0.02px",
+    lineHeight: "1.2",
+    opacity: "0.8",
+    paddingLeft: "2%"
+  }
+});
 
-function Vision(props) {
+function Story(props) {
   const { classes } = props;
 
   return (
@@ -19,7 +54,6 @@ function Vision(props) {
       </Typography>
       <div className={classes.visionContent}>
         <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
           <Typography
             variant="inherit"
             className={classes.visionText}
@@ -30,7 +64,6 @@ function Vision(props) {
           </Typography>
         </div>
         <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
           <Typography
             variant="inherit"
             className={classes.visionText}
@@ -41,7 +74,6 @@ function Vision(props) {
           </Typography>
         </div>
         <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
           <Typography
             variant="inherit"
             className={classes.visionText}
@@ -53,7 +85,6 @@ function Vision(props) {
           </Typography>
         </div>
         <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
           <Typography
             variant="inherit"
             className={classes.visionText}
@@ -65,7 +96,6 @@ function Vision(props) {
           </Typography>
         </div>
         <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
           <Typography
             variant="inherit"
             className={classes.visionText}
@@ -81,4 +111,4 @@ function Vision(props) {
   );
 }
 
-export default withStyles(styles)(Vision);
+export default withStyles(styles)(Story);

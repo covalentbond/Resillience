@@ -13,7 +13,7 @@ body {
 
 .MuiTypography-h1 .MuiTypography-h5 {
   /* font-size: 26px; */
-  font-family: 'Rubik', sans-serif;
+  font-family: muli, sans-serif;
 }
 
 .MuiTypography-body1 {
@@ -76,11 +76,9 @@ body {
   /* top: 400px; */
 }
 
-/* .section-bg {
-  background-image: url("./images/bggg.png")
-} */
-
-/* Home */
+.MuiAccordionSummary-root {
+  padding: "0px 8px"
+}
 
 .headings {
   margin: "7%"

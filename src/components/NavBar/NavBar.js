@@ -36,7 +36,7 @@ const styles = () => ({
     /*TODO: Not getting applied */
 
     "@media only screen and (max-width: 767px)": {
-      fontSize: "8px"
+      display: "none"
     }
   }
 });
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
             fontSize: "26px"
           }}
         >
-          RESSILLIENCE
+          RESILLIENCE
         </h1>
         {/* <img
           src={logoSmall}

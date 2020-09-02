@@ -11,7 +11,7 @@ const styles = () => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    fontSize: "24px",
+    fontSize: "22px",
     "@media only screen and (max-width: 1024px)": {
       fontSize: "20px"
     },
@@ -57,64 +57,25 @@ function Vision(props) {
         </span>
       </Typography>
       <div className={classes.visionContent}>
-        <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
-          <Typography
-            variant="inherit"
-            className={classes.visionText}
-            color="primary"
-            style={{ textAlign: "left" }}
-          >
-            Provides talent based skill development opportunities.
-          </Typography>
-        </div>
-        <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
-          <Typography
-            variant="inherit"
-            className={classes.visionText}
-            color="primary"
-            style={{ textAlign: "left" }}
-          >
-            Personal guidance of field experts
-          </Typography>
-        </div>
-        <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
-          <Typography
-            variant="inherit"
-            className={classes.visionText}
-            color="primary"
-            style={{ textAlign: "left" }}
-          >
-            Provide perfect solutions to growing challenges in the current education
-            system
-          </Typography>
-        </div>
-        <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
-          <Typography
-            variant="inherit"
-            className={classes.visionText}
-            color="primary"
-            style={{ textAlign: "left" }}
-          >
-            Backing the personalized learning system with appropriate and advanced
-            technological support
-          </Typography>
-        </div>
-        <div className={classes.eachVision}>
-          <CheckRoundedIcon color="secondary" />
-          <Typography
-            variant="inherit"
-            className={classes.visionText}
-            color="primary"
-            style={{ textAlign: "left" }}
-          >
-            Provide perfect solutions to growing challenges in the current education
-            system and whosoever will be responsible, have to do the work
-          </Typography>
-        </div>
+        {[
+          "Provides talent based skill development opportunities.",
+          "Personal guidance of field experts",
+          "Provide perfect solutions to growing challenges in the current education system",
+          "Backing the personalized learning system with appropriate and advanced technological support",
+          "Provide perfect solutions to growing challenges in the current education system and whosoever will be responsible, have to do the work"
+        ].map((vision) => (
+          <div className={classes.eachVision}>
+            <CheckRoundedIcon color="secondary" />
+            <Typography
+              variant="inherit"
+              className={classes.visionText}
+              color="primary"
+              style={{ textAlign: "left" }}
+            >
+              {vision}
+            </Typography>
+          </div>
+        ))}
       </div>
     </div>
   );

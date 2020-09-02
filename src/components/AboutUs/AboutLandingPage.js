@@ -13,7 +13,7 @@ const styles = () => ({
     height: "100vh",
     width: "100%",
     display: "flex",
-    fontSize: "24px",
+    fontSize: "22px",
     "@media only screen and (max-width: 1024px)": {
       fontSize: "20px"
     },
