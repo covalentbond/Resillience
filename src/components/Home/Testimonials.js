@@ -55,8 +55,8 @@ function Testimonials(props) {
         Our students & parents love us
       </Typography>
       <Slider {...settings}>
-        {list.map((eachTestimonial) => (
-          <div className={classes.tEach}>
+        {list.map((eachTestimonial, index) => (
+          <div className={classes.tEach} key={index}>
             <div className={classes.tImage}>
               <img
                 src={eachTestimonial.image}
