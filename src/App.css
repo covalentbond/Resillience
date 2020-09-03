@@ -21,53 +21,6 @@ body {
   font-family: muli, sans-serif;
 }
 
-/* .p-20 {
-  margin-left: 20px;
-}
-
-.home-image-web {
-  height: 110vh;
-  margin-left: 42.6%;
-}
-
-.logo-image {
-  height: 100px;
-  width: 100px;
-  top: 20px;
-  left: 20px;
-  position: absolute;
-}
-
-.personalized {
-  font-family: 'Rubik', sans-serif;
-  font-size: 500%;
-  color: #0F7DC2;
-  top: 100px;
-  position: absolute;
-}
-
-.learning {
-  position: absolute;
-  font-size: 64px;
-  font-family: muli, sans-serif;
-  top: 200px
-}
-
-.iitians {
-  display: flex;
-  justify-content: space-between;
-  top: 330px;
-  width: "20%";
-  position: absolute;
-  font-family: muli, sans-serif;
-}
-
-.first-line {
-  font-size: 1.55rem;
-  position: absolute;
-  top: 370px;
-} */
-
 .second-line {
   display: "flex";
   /* flex-direction: "row"; */
@@ -101,23 +54,15 @@ body {
 }
 
 .active {
-  padding: 14px;
+  padding: 16px;
   border-bottom: 6px solid #0F7DC2;
   pointer-events: none;
 }
 
-/* @media (min-width: 640px) {
-
+@media only screen and (max-width: 767px) {
+  .active {
+    font-weight: bold !important;
+    color: #0F7DC2 !important;
+    border-bottom: 0px;
+  }
 }
-
-@media (min-width:960px) {
-  .home-image {
-    margin-left: 72%
-  }
-} */
-
-/* @media (min-width:1100px) {
-  .home-image {
-    margin-left: 72%
-  }
-}  */

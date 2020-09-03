@@ -120,8 +120,8 @@ function Counselling() {
               "Create a study plan for you",
               "Recommend Solutions",
               "Regular updates of students"
-            ].map((message) => (
-              <div className={classes.message}>
+            ].map((message, index) => (
+              <div className={classes.message} key={index}>
                 <img src={Tick} alt="tick" />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>
               </div>

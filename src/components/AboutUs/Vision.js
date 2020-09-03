@@ -63,8 +63,8 @@ function Vision(props) {
           "Provide perfect solutions to growing challenges in the current education system",
           "Backing the personalized learning system with appropriate and advanced technological support",
           "Provide perfect solutions to growing challenges in the current education system and whosoever will be responsible, have to do the work"
-        ].map((vision) => (
-          <div className={classes.eachVision}>
+        ].map((vision, index) => (
+          <div className={classes.eachVision} key={index}>
             <CheckRoundedIcon color="secondary" />
             <Typography
               variant="inherit"

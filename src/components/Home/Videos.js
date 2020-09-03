@@ -73,8 +73,8 @@ class Videos extends React.Component {
             "https://www.youtube.com/embed/lv-YIJC1xWo",
             "https://www.youtube.com/embed/PBwslCZRnaU",
             "https://www.youtube.com/embed/w2zQ4lMFoMg"
-          ].map((value) => (
-            <div>
+          ].map((value, index) => (
+            <div key={index}>
               <iframe
                 title="Youtube"
                 aria-hidden="true"

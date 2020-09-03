@@ -12,7 +12,7 @@ import Typography from "@material-ui/core/Typography";
 const styles = () => ({
   homeImageWeb: {
     height: "110vh",
-    marginLeft: "41.7%",
+    marginLeft: "41.45%",
     "@media only screen and (max-width: 767px)": {
       display: "none"
     }
@@ -79,7 +79,7 @@ const styles = () => ({
 function LandingPage(props) {
   const { classes } = props;
   return (
-    <div style={{ position: "relative", marginTop: "40px", marginLeft: "20px" }}>
+    <div style={{ position: "relative", marginTop: "40px", marginLeft: "2%" }}>
       <img
         className={classes.homeImageWeb}
         src={HomePageWeb}
