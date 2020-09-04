@@ -13,9 +13,10 @@ import oneToOne from "../../images/oneToOne.svg";
 
 const styles = () => ({
   featureSection: {
+    paddingTop: "5%",
     height: "70%",
     display: "flex",
-    marginBottom: "5%",
+    // marginBottom: "5%", //As it was not getting alligned properly on referred link
     paddingLeft: "11.5%",
     paddingRight: "11.5%",
     fontSize: "22px",
@@ -24,8 +25,17 @@ const styles = () => ({
       flexDirection: "column",
       paddingLeft: "3%",
       paddingRight: "3%",
-      marginBottom: "0%",
+      // marginBottom: "0%",
       alignItems: "center"
+    }
+  },
+  featuresText: {
+    margin: "5%",
+    textAlign: "center",
+    letterSpacing: "-1px",
+    marginBottom: "0",
+    "@media only screen and (max-width: 767px)": {
+      marginBottom: "5%"
     }
   },
   fImageSection: {
@@ -80,7 +90,7 @@ const styles = () => ({
 function Features(props) {
   const { classes } = props;
   return (
-    <div style={{ marginTop: "80px" }}>
+    <div className="page" style={{ marginTop: "80px" }}>
       <span>
         <img
           alt="Bg Design"
@@ -93,15 +103,11 @@ function Features(props) {
             position: "absolute"
           }}
         />
-        <Typography
-          variant="h3"
-          color="primary"
-          style={{ margin: "5%", textAlign: "center", letterSpacing: "-1px" }}
-        >
+        <Typography variant="h3" color="primary" className={classes.featuresText}>
           Features
         </Typography>
       </span>
-      <div className={classes.featureSection}>
+      <div className={classes.featureSection} id="oneToOneHomeClasses">
         <div className={classes.fImageSection}>
           <img className={classes.fImage} alt="One to One" src={oneToOne} />
         </div>
@@ -143,7 +149,7 @@ function Features(props) {
         </div>
       </div>
       <Divider variant="middle" className={classes.divider} />
-      <div className={classes.featureSection}>
+      <div className={classes.featureSection} id="oneToOneOnlineClasses">
         <div className={classes.fImageSection}>
           <img
             className={classes.fImage}
@@ -166,7 +172,7 @@ function Features(props) {
         </div>
       </div>
       <Divider variant="middle" className={classes.divider} />
-      <div className={classes.featureSection}>
+      <div className={classes.featureSection} id="groupLiveClasses">
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
             Online group classes for more accountability

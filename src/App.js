@@ -1,11 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import { Switch, Route, withRouter } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 
 //MUI
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import themeObject from "./theme";
+
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+import "./ReactTransitions.css";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
@@ -32,30 +37,71 @@ const theme = createMuiTheme(themeObject);
 //   },
 // };
 
-function App() {
-  return (
-    <MuiThemeProvider theme={theme}>
-      <div className="App">
-        <Router>
-          <div className="container">
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={AboutUs} />
-              <Route path="/features" component={Features} />
-              <Route path="/faqs" component={Faqs} />
-              <Route path="/blogs" component={Blogs} />
-              <Route path="/career" component={Career} />
-              <Route path="/tests" component={Tests} />
-              <Route path="/room" component={Room} />
-              <Route component={Error} />
-            </Switch>
-            <Footer />
-          </div>
-        </Router>
-      </div>
-    </MuiThemeProvider>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      prevDepth: this.getPathDepth(this.props.location)
+    };
+  }
+
+  UNSAFE_componentWillReceiveProps() {
+    this.setState({ prevDepth: this.getPathDepth(this.props.location) });
+  }
+
+  getPathDepth(location) {
+    let pathArr = location.pathname.split("/");
+    pathArr = pathArr.filter((n) => n !== "");
+    return pathArr.length;
+  }
+
+  render() {
+    const { location } = this.props;
+
+    const currentKey = location.pathname.split("/")[1] || "/";
+    // console.log(currentKey);
+    // console.log("this.getPathDepth(location): ", this.getPathDepth(location));
+    // console.log("this.state.prevDepth: ", this.state.prevDepth);
+    // console.log(this.getPathDepth(location) - this.state.prevDepth);
+    const timeout = { enter: 800, exit: 800 };
+
+    return (
+      <MuiThemeProvider theme={theme}>
+        <TransitionGroup component="div" className="App">
+          <CSSTransition
+            key={currentKey}
+            timeout={timeout}
+            classNames="pageSlider"
+            mountOnEnter={false}
+            unmountOnExit={true}
+          >
+            <div
+              className={
+                this.getPathDepth(location) - this.state.prevDepth >= 0
+                  ? "left" //left means right to left
+                  : "right" //right means towards right
+              }
+            >
+              <Navbar />
+              <ScrollToTop />
+              <Switch location={location}>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={AboutUs} />
+                <Route path="/features" component={Features} />
+                <Route path="/faqs" component={Faqs} />
+                <Route path="/blogs" component={Blogs} />
+                <Route path="/career" component={Career} />
+                <Route path="/tests" component={Tests} />
+                <Route path="/room" component={Room} />
+                <Route component={Error} />
+              </Switch>
+              <Footer />
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      </MuiThemeProvider>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);

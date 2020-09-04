@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 import Online1to1 from "../../images/online1to1.svg";
@@ -94,13 +95,15 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One home tuition throughout Mumbai
               </Typography>
-              <Typography
-                variant="body1"
-                color="primary"
-                className={classes.readMore}
-              >
-                READ MORE -
-              </Typography>
+              <Link to="features/#oneToOneHomeClasses">
+                <Typography
+                  variant="body1"
+                  color="primary"
+                  className={classes.readMore}
+                >
+                  READ MORE -
+                </Typography>
+              </Link>
             </Paper>
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
@@ -113,13 +116,15 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One live online tuition
               </Typography>
-              <Typography
-                variant="body1"
-                color="primary"
-                className={classes.readMore}
-              >
-                READ MORE -
-              </Typography>
+              <Link to="features/#oneToOneOnlineClasses">
+                <Typography
+                  variant="body1"
+                  color="primary"
+                  className={classes.readMore}
+                >
+                  READ MORE -
+                </Typography>
+              </Link>
             </Paper>
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
@@ -132,13 +137,15 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 Group live online tuitions anywhere
               </Typography>
-              <Typography
-                variant="body1"
-                color="primary"
-                className={classes.readMore}
-              >
-                READ MORE -
-              </Typography>
+              <Link to="features/#groupLiveClasses">
+                <Typography
+                  variant="body1"
+                  color="primary"
+                  className={classes.readMore}
+                >
+                  READ MORE -
+                </Typography>
+              </Link>
             </Paper>
           </Grid>
         </Grid>
