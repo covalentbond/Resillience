@@ -29,10 +29,10 @@ function Milestones(props) {
         <h1>7200+</h1>
         <h1>Hours at home</h1>
       </div>
-      {/* <div>
+      <div>
         <h1>200+</h1>
         <h1>Guidance on call</h1>
-      </div> */}
+      </div>
     </div>
   );
 }

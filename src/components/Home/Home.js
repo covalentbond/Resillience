@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 export default function Home() {
   return (
     <div
+      className="page"
       style={{
         display: "flex",
         flexDirection: "column"

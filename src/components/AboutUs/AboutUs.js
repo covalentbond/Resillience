@@ -8,6 +8,7 @@ import Story from "./Story";
 function AboutUs() {
   return (
     <div
+      className="page"
       style={{
         marginTop: "10%",
         display: "flex",

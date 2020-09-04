@@ -86,7 +86,7 @@ function Faqs(props) {
   };
 
   return (
-    <div className={classes.faqSection}>
+    <div className={`page ${classes.faqSection}`}>
       <div className={classes.topHeading}>
         <Typography variant="h3" color="primary" className={classes.big}>
           F.A.Q
