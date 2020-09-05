@@ -69,7 +69,7 @@ const styles = () => ({
     }
   },
   heading: {
-    fontSize: "1.2rem",
+    // fontSize: "1.2rem",
     flexShrink: 0,
     "@media only screen and (max-width:768px)": {
       fontSize: "1rem"
@@ -105,13 +105,13 @@ function Faqs(props) {
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography color="primary" className={classes.heading}>
+            <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
               How will we start?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="inherit" className={classes.answer} color="primary">
+            <Typography className={classes.answer} color="primary">
               <Typography variant="h5" className={classes.q}>
                 Answer:
               </Typography>
@@ -147,13 +147,13 @@ function Faqs(props) {
             aria-controls="panel2bh-content"
             id="panel2bh-header"
           >
-            <Typography color="primary" className={classes.heading}>
+            <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
               Where do you work?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="inherit" className={classes.answer} color="primary">
+            <Typography className={classes.answer} color="primary">
               <Typography variant="h5" className={classes.q}>
                 Answer:
               </Typography>
@@ -174,13 +174,13 @@ function Faqs(props) {
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Typography color="primary" className={classes.heading}>
+            <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
               What is the Fee structure of the program?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="inherit" className={classes.answer} color="primary">
+            <Typography className={classes.answer} color="primary">
               <Typography variant="h5" className={classes.q}>
                 Answer:
               </Typography>
@@ -200,13 +200,13 @@ function Faqs(props) {
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography color="primary" className={classes.heading}>
+            <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
               How much qualified the faculties are?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="inherit" className={classes.answer} color="primary">
+            <Typography className={classes.answer} color="primary">
               <Typography variant="h5" className={classes.q}>
                 Answer:
               </Typography>
@@ -227,13 +227,13 @@ function Faqs(props) {
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography color="primary" className={classes.heading}>
+            <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
               How we work?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="inherit" className={classes.answer} color="primary">
+            <Typography className={classes.answer} color="primary">
               <Typography variant="h5" className={classes.q}>
                 Answer:
               </Typography>

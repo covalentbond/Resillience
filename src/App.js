@@ -27,6 +27,10 @@ import Error from "./components/Error";
 
 const theme = createMuiTheme(themeObject);
 
+// theme.typography.h3 = {
+//   fontSize: "1.2rem",
+// };
+
 // theme.typography.body1 = {
 //   fontSize: '1.2rem',
 //   '@media (min-width:600px)': {
