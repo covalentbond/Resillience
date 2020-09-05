@@ -23,6 +23,27 @@ export default {
     }
   },
   typography: {
-    fontFamily: ["Rubik", "sans-serif"].join(",")
+    fontFamily: ["muli", "sans-serif"].join(","),
+    h1: {
+      fontFamily: "Rubik"
+    },
+    h2: {
+      fontFamily: "Rubik"
+    },
+    h3: {
+      fontFamily: "Rubik"
+    },
+    h4: {
+      fontFamily: "Rubik"
+    },
+    h5: {
+      fontFamily: "Rubik"
+    },
+    h6: {
+      fontFamily: "Rubik"
+    },
+    button: {
+      fontFamily: "Rubik"
+    }
   }
 };
