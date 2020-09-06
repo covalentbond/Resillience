@@ -12,8 +12,7 @@ const styles = () => ({
     padding: "2% 8% 2% 8%",
     fontSize: "16px",
     "@media only screen and (max-width: 767px)": {
-      marginBottom: "20%",
-      paddingTop: "90%"
+      marginBottom: "20%"
     },
     backgroundColor: "#D3D3D3"
   },

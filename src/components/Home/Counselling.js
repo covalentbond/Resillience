@@ -8,6 +8,31 @@ import mentoringStroke from "../../images/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
+  counselling: {
+    display: "inline",
+    "@media only screen and (max-width: 767px)": {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  },
+  designedText: {
+    position: "absolute",
+    marginTop: "-25px",
+    "@media only screen and (max-width: 767px)": {
+      position: "initial",
+      marginTop: "0px"
+    }
+  },
+  blueImage: {
+    width: "340px",
+    position: "absolute",
+    zIndex: "-1",
+    "@media only screen and (max-width: 767px)": {
+      position: "initial",
+      marginTop: "-10px"
+    }
+  },
   paper: {
     backgroundColor: "transparent",
     maxWidth: "753px"
@@ -19,7 +44,12 @@ const useStyles = makeStyles({
     width: "260px",
     marginLeft: "42px",
     marginTop: "27px",
-    cursor: "pointer"
+    cursor: "pointer",
+    "@media only screen and (max-width: 767px)": {
+      width: "auto",
+      marginTop: "-19%",
+      marginLeft: "0px"
+    }
   },
   section: {
     position: "absolute",
@@ -63,21 +93,13 @@ function Counselling() {
   useEffect(() => {
     setTimeout(() => {
       setOpen(true);
-    }, 10000);
+    }, 20000);
   }, []);
 
   return (
-    <div style={{ display: "inline" }}>
-      <span onClick={handleClickOpen} style={{ top: "-18px", position: "absolute" }}>
-        <img
-          src={mentoringStroke}
-          alt="Stroke"
-          style={{
-            width: "340px",
-            position: "absolute",
-            zIndex: "-1"
-          }}
-        />
+    <div className={classes.counselling}>
+      <span onClick={handleClickOpen} className={classes.designedText}>
+        <img src={mentoringStroke} alt="Stroke" className={classes.blueImage} />
         <h1 className={classes.heading}>Mentoring Session</h1>
       </span>
       <Dialog

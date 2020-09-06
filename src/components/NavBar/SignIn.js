@@ -6,6 +6,8 @@ import loginBg from "../../images/loginBg.svg";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 
+import axios from "axios";
+
 const styles = () => ({
   paper: {
     backgroundColor: "transparent"
@@ -36,17 +38,12 @@ class SignIn extends React.Component {
     this.state = {
       email: "",
       password: "",
-      open: false
+      open: false,
+      errors: {}
     };
   }
 
   handleChange = (event) => {
-    // const { name, value } = event.target
-
-    // const value = event.target.value;
-    // const name = event.target.name;
-
-    // this.setState({ [name]: value })
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -58,6 +55,18 @@ class SignIn extends React.Component {
       email: this.state.email,
       password: this.state.password
     };
+    axios
+      .post("/", userData)
+      .then((res) => {
+        console.log(res.data);
+        this.props.history.push("/student");
+        //This just pushes the state and Url , go to it
+      })
+      .catch((err) => {
+        this.setState({
+          errors: err.response.data
+        });
+      });
   };
 
   handleClickOpen = () => {
@@ -73,6 +82,7 @@ class SignIn extends React.Component {
   };
   render() {
     const { classes } = this.props;
+    const { errors } = this.state;
     return (
       <div style={{ fontStyle: "23px" }}>
         <Button variant="contained" color="secondary" onClick={this.handleClickOpen}>
@@ -105,6 +115,8 @@ class SignIn extends React.Component {
                 label="Email"
                 variant="outlined"
                 color="secondary"
+                helperText={errors.email} //error was defined in the backend
+                error={errors.email ? true : false}
                 className={classes.textField}
                 value={this.state.email}
                 onChange={this.handleChange}
@@ -118,18 +130,25 @@ class SignIn extends React.Component {
                 label="Password"
                 variant="outlined"
                 color="secondary"
+                helperText={errors.password} //error was defined in the backend
+                error={errors.password ? true : false}
                 className={classes.textField}
                 value={this.state.password}
                 onChange={this.handleChange}
                 fullWidth
               />
+              {errors.error && (
+                <Typography variant="body2" className={classes.customError}>
+                  {errors.general}
+                </Typography>
+              )}
               <Button
                 type="submit"
                 variant="contained"
                 color="secondary"
                 className={classes.button}
                 size="large"
-                fullWidth="true"
+                fullWidth
               >
                 Login
               </Button>
