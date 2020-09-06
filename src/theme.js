@@ -31,7 +31,10 @@ export default {
       fontFamily: "Rubik"
     },
     h3: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik",
+      "@media only screen and (max-width: 767px)": {
+        fontSize: "2rem"
+      }
     },
     h4: {
       fontFamily: "Rubik"

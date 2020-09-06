@@ -12,10 +12,11 @@ const styles = () => ({
     height: "900px",
     width: "1036px",
     margin: "0 auto",
-    marginTop: "72px",
+    // marginTop: "72px",
+    marginTop: "25%",
     "@media only screen and (max-width: 767px)": {
       width: "320px",
-      marginTop: "40px"
+      marginTop: "25%"
     }
   },
   BetterLearningImageWeb: {

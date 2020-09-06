@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
+import axios from "axios";
 
 //MUI
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
@@ -27,19 +28,7 @@ import Error from "./components/Error";
 
 const theme = createMuiTheme(themeObject);
 
-// theme.typography.h3 = {
-//   fontSize: "1.2rem",
-// };
-
-// theme.typography.body1 = {
-//   fontSize: '1.2rem',
-//   '@media (min-width:600px)': {
-//     fontSize: '1.5rem',
-//   },
-//   [theme.breakpoints.up('md')]: {
-//     fontSize: '2rem',
-//   },
-// };
+axios.defaults.baseURL = "http://localhost:5000";
 
 class App extends Component {
   constructor(props) {
@@ -63,10 +52,6 @@ class App extends Component {
     const { location } = this.props;
 
     const currentKey = location.pathname.split("/")[1] || "/";
-    // console.log(currentKey);
-    // console.log("this.getPathDepth(location): ", this.getPathDepth(location));
-    // console.log("this.state.prevDepth: ", this.state.prevDepth);
-    // console.log(this.getPathDepth(location) - this.state.prevDepth);
     const timeout = { enter: 800, exit: 800 };
 
     return (
@@ -109,3 +94,17 @@ class App extends Component {
 }
 
 export default withRouter(App);
+
+// theme.typography.h3 = {
+//   "@media (max-width:767px)": {
+//     fontSize: "2rem"
+//   }
+// };
+
+// theme.typography.body1 = {
+//   fontSize: '1.2rem',
+
+//   [theme.breakpoints.up('md')]: {
+//     fontSize: '2rem',
+//   },
+// };
