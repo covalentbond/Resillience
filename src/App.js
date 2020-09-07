@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
-import axios from "axios";
+// import jwtDecode from "jwt-decode";
+// import axios from "axios";
 
 //MUI
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
@@ -28,7 +29,9 @@ import Error from "./components/Error";
 
 const theme = createMuiTheme(themeObject);
 
-axios.defaults.baseURL = "http://localhost:5000";
+//Proxy only works in developmemt so need to tell this
+// axios.defaults.baseURL =
+//   "https://us-central1-social-media-app-132cc.cloudfunctions.net/api";
 
 class App extends Component {
   constructor(props) {
