@@ -90,11 +90,11 @@ function Counselling() {
     setOpen(false);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, 20000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setOpen(true);
+  //   }, 20000);
+  // }, []);
 
   return (
     <div className={classes.counselling}>

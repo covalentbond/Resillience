@@ -29,6 +29,10 @@ const styles = () => ({
     marginTop: "2%",
     marginBottom: "4%",
     fontFamily: "muli"
+  },
+  customError: {
+    color: "red",
+    marginBottom: "2%"
   }
 });
 
@@ -36,10 +40,13 @@ class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // name: "",
       email: "",
       password: "",
       open: false,
-      errors: {}
+      errors: {},
+      message: "",
+      token: ""
     };
   }
 
@@ -52,17 +59,31 @@ class SignIn extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const userData = {
+      // name: this.state.name,
       email: this.state.email,
       password: this.state.password
     };
+    console.log(userData);
     axios
-      .post("/", userData)
+      .post("/signin", userData)
       .then((res) => {
+        console.log(res);
         console.log(res.data);
-        this.props.history.push("/student");
+        // res.data: {token: "eyJhbGciOiJI…", message: "User signed in successfully"}
+        this.setState({
+          email: "",
+          password: "",
+          open: false,
+          message: res.data.message
+        });
+        const token = res.data.token;
+        localStorage.setItem("jwt", token);
+        axios.defaults.headers.common["Authorization"] = token;
+        // this.props.history.push("/");
         //This just pushes the state and Url , go to it
       })
       .catch((err) => {
+        console.log(err);
         this.setState({
           errors: err.response.data
         });
@@ -85,9 +106,27 @@ class SignIn extends React.Component {
     const { errors } = this.state;
     return (
       <div style={{ fontStyle: "23px" }}>
-        <Button variant="contained" color="secondary" onClick={this.handleClickOpen}>
-          Sign In
-        </Button>
+        {this.state.message != "" ? (
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => {
+              localStorage.clear();
+              this.setState({ message: "" });
+            }}
+          >
+            Sign Out
+          </Button>
+        ) : (
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={this.handleClickOpen}
+          >
+            Sign In
+          </Button>
+        )}
+
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
@@ -99,7 +138,11 @@ class SignIn extends React.Component {
             paper: classes.paper
           }}
         >
-          <img alt="loginBg" src={loginBg} style={{ visibility: "initial" }} />
+          <img
+            alt="loginBg"
+            src={loginBg}
+            style={{ visibility: "initial", width: "580px" }}
+          />
           <div className={classes.login}>
             <Typography variant="h4" color="primary" className={classes.signIn}>
               User Log in
@@ -139,7 +182,12 @@ class SignIn extends React.Component {
               />
               {errors.error && (
                 <Typography variant="body2" className={classes.customError}>
-                  {errors.general}
+                  {errors.error}
+                </Typography>
+              )}
+              {errors.message && (
+                <Typography variant="body2" className={classes.customError}>
+                  {errors.message}
                 </Typography>
               )}
               <Button
