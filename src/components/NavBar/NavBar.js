@@ -14,7 +14,7 @@ import SignIn from "./SignIn";
 
 const styles = () => ({
   hamburgerMenu: {
-    "@media only screen and (min-width: 767px)": {
+    "@media only screen and (min-width: 770px)": {
       display: "none"
     }
   },
@@ -23,7 +23,7 @@ const styles = () => ({
     justifyContent: "space-between",
     marginRight: "20%",
     alignItems: "center",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginRight: "2%"
     }
   },
@@ -31,7 +31,7 @@ const styles = () => ({
     textTransform: "capitalize",
     fontFamily: "rubik",
     fontSize: "26px",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       paddingLeft: "5%",
       marginTop: "8.5px",
       marginBottom: "8.5px"
@@ -48,7 +48,7 @@ const styles = () => ({
     paddingLeft: "5%",
     paddingRight: "5%",
     color: "#3672c0",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       flexDirection: "column",
       paddingLeft: "0",
       textTransform: "capitalize",
@@ -62,7 +62,7 @@ const styles = () => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       flexDirection: "column",
       justifyContent: "start",
       height: "auto",
@@ -70,8 +70,7 @@ const styles = () => ({
       alignItems: "start",
       padding: "10px 20px 16px",
       fontSize: "18px",
-      boxShadow:
-        "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)"
+      boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)"
     }
   },
   vanish: {
@@ -80,7 +79,7 @@ const styles = () => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "none"
     }
   },
@@ -88,7 +87,7 @@ const styles = () => ({
     color: "#3672c0",
     textDecoration: "none",
     fontWeight: "bolder",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       color: "#232127",
       fontFamily: "muli",
       fontWeight: "normal",
@@ -110,37 +109,18 @@ class Navbar extends React.Component {
       <AppBar className={classes.navbar}>
         <div className={classes.smallNavbar}>
           <h1 className={classes.resillience}>RESILLIENCE</h1>
-          {this.state.open === true ? (
-            <CloseIcon
-              onClick={this.handleChange}
-              className={classes.hamburgerMenu}
-            />
-          ) : (
-            <MenuIcon
-              onClick={this.handleChange}
-              className={classes.hamburgerMenu}
-            />
-          )}
+          {this.state.open === true ? <CloseIcon onClick={this.handleChange} className={classes.hamburgerMenu} /> : <MenuIcon onClick={this.handleChange} className={classes.hamburgerMenu} />}
         </div>
 
-        <div
-          className={this.state.open === true ? classes.navLinks : classes.vanish}
-        >
+        <div className={this.state.open === true ? classes.navLinks : classes.vanish}>
           {[
             { route: "/", name: "Home", id: 1 },
-            { route: "/about", name: "About Us", id: 2 },
+            { route: "/about-us", name: "About Us", id: 2 },
             { route: "/features", name: "Features", id: 3 },
             { route: "/faqs", name: "FAQ'S", id: 4 },
             { route: "/test", name: "Test", id: 5 }
           ].map((eachNav) => (
-            <NavLink
-              key={eachNav.id}
-              exact
-              className={classes.navIcons}
-              activeClassName="active"
-              to={eachNav.route}
-              onClick={this.handleChange}
-            >
+            <NavLink key={eachNav.id} exact className={classes.navIcons} activeClassName="active" to={eachNav.route} onClick={this.handleChange}>
               {eachNav.name}
             </NavLink>
           ))}

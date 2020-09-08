@@ -11,7 +11,7 @@ const styles = () => ({
     background: "#0f7dc2",
     position: "relative",
     height: "30vh",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "11px",
       padding: "10%",
       flexDirection: "column",
@@ -20,7 +20,7 @@ const styles = () => ({
   },
   eachMilestone: {
     // width: "25%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       paddingBottom: "2%"
     }
   }

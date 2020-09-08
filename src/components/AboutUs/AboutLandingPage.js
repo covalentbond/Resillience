@@ -17,11 +17,11 @@ const styles = () => ({
     "@media only screen and (max-width: 1024px)": {
       fontSize: "20px"
     },
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       position: "relative",
       flexDirection: "column",
       fontSize: "16px",
-      marginBottom: "30%",
+      marginBottom: "12%",
       marginTop: "10%"
     }
   },
@@ -31,19 +31,19 @@ const styles = () => ({
     height: "104%",
     width: "39.4%",
     top: "33px",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "none"
     }
   },
   teamLandingImagePhone: {
     display: "none",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "inherit",
       margin: "auto"
     }
   },
   aboutUs: {
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "flex",
       marginTop: "5%"
     }
@@ -57,7 +57,7 @@ const styles = () => ({
     "@media only screen and (max-width: 1025px)": {
       width: "55%"
     },
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       order: 1,
       textAlign: "center",
       width: "94%"
@@ -80,7 +80,7 @@ const styles = () => ({
       marginTop: "85px",
       fontSize: "22px"
     },
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "18px",
       marginTop: "25px"
     }
@@ -93,11 +93,7 @@ function LandingPage(props) {
     <div className={classes.teamLanding}>
       <div className={classes.infoAbout}>
         <span className={classes.aboutUs}>
-          <Typography
-            variant="h3"
-            style={{ textAlign: "center", marginBottom: "5%" }}
-            color="primary"
-          >
+          <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
             About Us
           </Typography>
           <img
@@ -115,15 +111,8 @@ function LandingPage(props) {
 
         <div className={classes.title}>
           {/* TODO: style={{ marginTop: "20px" }} */}
-          <Typography
-            variant="inherit"
-            className={classes.text}
-            color="primary"
-            style={{ marginTop: "20px" }}
-          >
-            We are a team of IIT graduate mentors, and dedicated professionals with a
-            single goal to provide perfect and result oriented solution for IIT/NEET
-            preparation.
+          <Typography variant="inherit" className={classes.text} color="primary" style={{ marginTop: "20px" }}>
+            We are a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation.
           </Typography>
           <Typography
             variant="inherit"
@@ -131,8 +120,7 @@ function LandingPage(props) {
             className={classes.text}
             //, marginBottom: "13px"
           >
-            Our vision is to empower India in all the domains by providing talent
-            based skill development opportunities.
+            Our vision is to empower India in all the domains by providing talent based skill development opportunities.
           </Typography>
         </div>
 
@@ -151,32 +139,14 @@ function LandingPage(props) {
       <div
         style={{
           order: "0",
-          "@media only screen and (maxWidth: 767px)": {
+          "@media only screen and (maxWidth: 770px)": {
             order: 1
           }
         }}
       >
-        <img
-          src={TeamLandingImageWeb}
-          alt="Team Landing Page"
-          className={classes.teamLandingImageWeb}
-        />
-        <img
-          src={TeamLandingImagePhone}
-          alt="Team Landing Page"
-          className={classes.teamLandingImagePhone}
-        />
+        <img src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
+        <img src={TeamLandingImagePhone} alt="Team Landing Page" className={classes.teamLandingImagePhone} />
       </div>
-      {/* <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.996033161349!2d72.99782361437727!3d19.107829955937806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1bb77d10f5b%3A0x44110fc0df9a690f!2sRESILLIENCE%20%7CIIT%20JEE%20-%20NEET%20-%20Foundation(8th%2C%209th%20%2610th)%20%7C%20Online%2FHome%20Tuition%20by%20IITians!5e0!3m2!1sen!2sin!4v1598373962132!5m2!1sen!2sin"
-    width="800"
-    height="600"
-    frameBorder="0"
-    // style="border:0;"
-    allowFullScreen=""
-    aria-hidden="false"
-    tabIndex="0"
-  /> */}
     </div>
   );
 }

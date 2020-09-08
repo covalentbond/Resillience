@@ -59,7 +59,7 @@ body {
   pointer-events: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 770px) {
   .active {
     font-weight: bold !important;
     color: #0F7DC2 !important;

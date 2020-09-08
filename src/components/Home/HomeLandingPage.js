@@ -14,14 +14,14 @@ const styles = () => ({
   homeImageWeb: {
     height: "110vh",
     marginLeft: "41.45%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "none"
     }
   },
   homeImagePhone: {
     width: "100%",
     // display: "none",
-    "@media only screen and (min-width: 767px)": {
+    "@media only screen and (min-width: 770px)": {
       display: "none"
     }
   },
@@ -31,7 +31,7 @@ const styles = () => ({
     top: "30px",
     left: "5px",
     position: "absolute",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       height: "80px",
       width: "80px"
     }
@@ -40,7 +40,7 @@ const styles = () => ({
     // disply: "flex",
     flexDirection: "column",
     marginTop: "12.3%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginTop: "0",
       textAlign: "center"
     }
@@ -50,7 +50,7 @@ const styles = () => ({
     fontSize: "500%",
     color: "#0F7DC2",
     margin: "0",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "300%"
     }
   },
@@ -58,7 +58,7 @@ const styles = () => ({
   learning: {
     fontSize: "64px",
     margin: "-4px 0 0 0",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "35px",
       margin: "2%"
     }
@@ -68,7 +68,7 @@ const styles = () => ({
     color: "#6b6b6b",
     lineHeight: "1.6",
     margin: "0",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "20px"
     }
   },
@@ -78,7 +78,7 @@ const styles = () => ({
     marginTop: "38px",
     marginLeft: "4px",
     position: "absolute",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginTop: "19px",
       marginLeft: "-8px",
       width: "125px",
@@ -96,35 +96,20 @@ function LandingPage(props) {
   const { classes } = props;
   return (
     <div style={{ position: "relative", marginTop: "40px", marginLeft: "2%" }}>
-      <img
-        className={classes.homeImageWeb}
-        src={HomePageWeb}
-        alt="Home Page Main"
-        style={{ position: "absolute", right: "0" }}
-      />
-      <img
-        className={classes.homeImagePhone}
-        src={HomePagePhone}
-        alt="Home Page Main"
-      />
+      <img className={classes.homeImageWeb} src={HomePageWeb} alt="Home Page Main" style={{ position: "absolute", right: "0" }} />
+      <img className={classes.homeImagePhone} src={HomePagePhone} alt="Home Page Main" />
       <div className={classes.content}>
         <img src={logo} className={classes.logoImage} alt="Logo" />
         <h1 className={classes.personalized}>Personalized</h1>
         <h2 className={classes.learning}>
           learning with{" "}
           <span>
-            <img
-              alt="Bg Design"
-              src={rectangleStroke}
-              className={classes.rectangleStroke}
-            />
+            <img alt="Bg Design" src={rectangleStroke} className={classes.rectangleStroke} />
             IITians
           </span>
         </h2>
 
-        <h1 className={classes.iitians}>
-          IIT &nbsp; NEET &nbsp; Foundation&nbsp;(8th, 9th & 10th)
-        </h1>
+        <h1 className={classes.iitians}>IIT &nbsp; NEET &nbsp; Foundation&nbsp;(8th, 9th & 10th)</h1>
 
         <div className={classes.firstLine}>
           <Typography

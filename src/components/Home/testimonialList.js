@@ -30,8 +30,7 @@ const list = [
   {
     id: 4,
     image: Testimonial1,
-    message:
-      "Practical and Solution focused approach is really appreciative. Care and Concern for individual students is also highly praiseworthy quality exercised by experienced faculty.",
+    message: "Practical and Solution focused approach is really appreciative. Care and Concern for individual students is also highly praiseworthy quality exercised by experienced faculty.",
     name: "Baisakhi Baid",
     designation: "Class 9, Bangalore"
   },

@@ -11,7 +11,7 @@ const styles = () => ({
     textAlign: "center",
     padding: "2% 8% 2% 8%",
     fontSize: "16px",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginBottom: "20%"
     },
     backgroundColor: "#D3D3D3"
@@ -46,21 +46,14 @@ function Testimonials(props) {
 
   return (
     <div className={classes.sectionBg}>
-      <Typography
-        variant="h3"
-        color="primary"
-        style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}
-      >
+      <Typography variant="h3" color="primary" style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}>
         Our students & parents love us
       </Typography>
       <Slider {...settings}>
         {list.map((eachTestimonial, index) => (
           <div className={classes.tEach} key={index}>
             <div className={classes.tImage}>
-              <img
-                src={eachTestimonial.image}
-                style={{ display: "initial", width: "50%" }}
-              />
+              <img src={eachTestimonial.image} style={{ display: "initial", width: "50%" }} />
             </div>
             <div className={classes.tDesc}>
               <Typography variant="inherit" color="primary">
@@ -80,13 +73,8 @@ function Testimonials(props) {
       <br />
       <br />
       <br />
-      <Typography
-        variant="inherit"
-        color="primary"
-        style={{ padding: "5%", fontStyle: "italic", fontSize: "22px" }}
-      >
-        We are proud to share that we have helped so many students making them
-        achieve their goal
+      <Typography variant="inherit" color="primary" style={{ padding: "5%", fontStyle: "italic", fontSize: "22px" }}>
+        We are proud to share that we have helped so many students making them achieve their goal
       </Typography>
     </div>
   );

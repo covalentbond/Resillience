@@ -10,16 +10,17 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   counselling: {
     display: "inline",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "flex",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
+      fontSize: "1rem !important"
     }
   },
   designedText: {
     position: "absolute",
     marginTop: "-25px",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       position: "initial",
       marginTop: "0px"
     }
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
     width: "340px",
     position: "absolute",
     zIndex: "-1",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       position: "initial",
       marginTop: "-10px"
     }
@@ -45,10 +46,15 @@ const useStyles = makeStyles({
     marginLeft: "42px",
     marginTop: "27px",
     cursor: "pointer",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       width: "auto",
       marginTop: "-19%",
       marginLeft: "0px"
+    }
+  },
+  getFree: {
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "0px"
     }
   },
   section: {
@@ -57,7 +63,17 @@ const useStyles = makeStyles({
     left: "12%",
     right: "40%",
     bottom: "10%",
-    textAlign: "center"
+    textAlign: "center",
+    "@media only screen and (max-width: 770px)": {
+      top: "10%",
+      fontSize: "8px !important"
+    }
+  },
+  image: {
+    visibility: "initial",
+    "@media only screen and (max-width: 770px)": {
+      height: "300px"
+    }
   },
   subSection: {
     position: "relative",
@@ -69,12 +85,48 @@ const useStyles = makeStyles({
     alignItems: "center",
     // justifyContent: "space-around",
     border: "1px solid",
-    borderRadius: "8px"
+    borderRadius: "8px",
+    "@media only screen and (max-width: 770px)": {
+      width: "auto",
+      height: "auto"
+    }
+  },
+  inputPhone: {
+    paddingLeft: "75px",
+    borderTopStyle: "hidden",
+    borderRightStyle: "hidden",
+    borderLeftStyle: "hidden",
+    borderBottomStyle: "hidden",
+    "@media only screen and (max-width: 770px)": {
+      width: "127px",
+      paddingLeft: "6%"
+    }
+  },
+  messages: {
+    marginLeft: "30px",
+    marginTop: "30px",
+    "@media only screen and (max-width: 770px)": {
+      marginLeft: "0px",
+      marginTop: "0px",
+      fontSize: "12px",
+      paddingTop: "9%"
+    }
   },
   message: {
     display: "flex",
     alignItems: "center",
     marginBottom: "10px"
+  },
+  tickImage: {
+    "@media only screen and (max-width: 770px)": {
+      width: "18px"
+    }
+  },
+  button: {
+    marginTop: "15px",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "0px"
+    }
   }
 });
 
@@ -90,11 +142,11 @@ function Counselling() {
     setOpen(false);
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setOpen(true);
-  //   }, 20000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    }, 20000);
+  }, []);
 
   return (
     <div className={classes.counselling}>
@@ -113,13 +165,9 @@ function Counselling() {
           paper: classes.paper
         }}
       >
-        <img
-          alt="Counselling"
-          src={CounsellingImage}
-          style={{ visibility: "initial" }}
-        />
+        <img alt="Counselling" src={CounsellingImage} className={classes.image} />
         <div className={classes.section}>
-          <h2>GET FREE</h2>
+          <h2 className={classes.getFree}>GET FREE</h2>
           <h2>MENTOR COUNSELLING</h2>
           <div className={classes.subSection}>
             <PhoneInTalkIcon color="secondary" />
@@ -127,40 +175,23 @@ function Counselling() {
               type="tel"
               name="number"
               id="mobileNumber"
-              className="form-control"
+              className={`form-control ${classes.inputPhone}`}
               placeholder="Enter Mobile number"
               autoComplete="off"
               maxLength="10"
               required="required"
-              style={{
-                paddingLeft: "75px",
-                borderTopStyle: "hidden",
-                borderRightStyle: "hidden",
-                borderLeftStyle: "hidden",
-                borderBottomStyle: "hidden"
-              }}
             />
           </div>
 
-          <div style={{ marginLeft: "30px", marginTop: "30px" }}>
-            {[
-              "Identify strengths and weaknesses",
-              "Create a study plan for you",
-              "Recommend Solutions",
-              "Regular updates of students"
-            ].map((message, index) => (
+          <div className={classes.messages}>
+            {["Identify strengths and weaknesses", "Create a study plan for you", "Recommend Solutions", "Regular updates of students"].map((message, index) => (
               <div className={classes.message} key={index}>
-                <img src={Tick} alt="tick" />
+                <img src={Tick} alt="tick" className={classes.tickImage} />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>
               </div>
             ))}
           </div>
-          <Button
-            variant="contained"
-            color="secondary"
-            disableElevation
-            style={{ marginTop: "15px" }}
-          >
+          <Button variant="contained" color="secondary" disableElevation className={classes.button}>
             Proceed
           </Button>
         </div>

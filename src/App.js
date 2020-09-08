@@ -21,11 +21,13 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Blogs from "./components/Blogs";
 import Features from "./components/Features/Features";
 import Faqs from "./components/Faqs";
-import Career from "./components/Navbar/Career";
 import Tests from "./components/Tests";
 import Room from "./components/Room";
 import Footer from "./components/Home/Footer";
 import Error from "./components/Error";
+import Blog from "./components/Blogs";
+import ContactUs from "./components/ContactUs/ContactUs";
+import Career from "./components/Career/Career";
 
 const theme = createMuiTheme(themeObject);
 
@@ -60,13 +62,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <TransitionGroup component="div" className="App">
-          <CSSTransition
-            key={currentKey}
-            timeout={timeout}
-            classNames="pageSlider"
-            mountOnEnter={false}
-            unmountOnExit={true}
-          >
+          <CSSTransition key={currentKey} timeout={timeout} classNames="pageSlider" mountOnEnter={false} unmountOnExit={true}>
             <div
               className={
                 this.getPathDepth(location) - this.state.prevDepth >= 0
@@ -78,13 +74,15 @@ class App extends Component {
               <ScrollToTop />
               <Switch location={location}>
                 <Route exact path="/" component={Home} />
-                <Route path="/about" component={AboutUs} />
+                <Route path="/about-us" component={AboutUs} />
                 <Route path="/features" component={Features} />
                 <Route path="/faqs" component={Faqs} />
                 <Route path="/blogs" component={Blogs} />
-                <Route path="/career" component={Career} />
                 <Route path="/tests" component={Tests} />
                 <Route path="/room" component={Room} />
+                <Route path="/blog" component={Blog} />
+                <Route path="/contact-us" component={ContactUs} />
+                <Route path="/career" component={Career} />
                 <Route component={Error} />
               </Switch>
               <Footer />

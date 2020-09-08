@@ -15,7 +15,7 @@ const styles = () => ({
     "@media only screen and (max-width: 1024px)": {
       fontSize: "20px"
     },
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "16px"
     }
   },
@@ -45,12 +45,7 @@ function Vision(props) {
 
   return (
     <div className={classes.vision}>
-      <Typography
-        variant="h4"
-        color="secondary"
-        className={classes.text}
-        style={{ textAlign: "center", marginBottom: "8px", fontStyle: "normal" }}
-      >
+      <Typography variant="h4" color="secondary" className={classes.text} style={{ textAlign: "center", marginBottom: "8px", fontStyle: "normal" }}>
         Our Vision:{" "}
         <span role="img" aria-label="rocket">
           🚀
@@ -66,12 +61,7 @@ function Vision(props) {
         ].map((vision, index) => (
           <div className={classes.eachVision} key={index}>
             <CheckRoundedIcon color="secondary" />
-            <Typography
-              variant="inherit"
-              className={classes.visionText}
-              color="primary"
-              style={{ textAlign: "left" }}
-            >
+            <Typography variant="inherit" className={classes.visionText} color="primary" style={{ textAlign: "left" }}>
               {vision}
             </Typography>
           </div>

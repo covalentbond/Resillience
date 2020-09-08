@@ -20,7 +20,7 @@ const styles = () => ({
     paddingLeft: "11.5%",
     paddingRight: "11.5%",
     fontSize: "22px",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "16px",
       flexDirection: "column",
       paddingLeft: "3%",
@@ -34,7 +34,7 @@ const styles = () => ({
     textAlign: "center",
     letterSpacing: "-1px",
     marginBottom: "0",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginBottom: "5%"
     }
   },
@@ -44,7 +44,7 @@ const styles = () => ({
     display: "flex",
     justifyContent: "center",
     padding: "2%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       fontSize: "16px",
       order: "0",
       width: "60%"
@@ -59,7 +59,7 @@ const styles = () => ({
     width: "60%",
     flexDirection: "column",
     padding: "2%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       order: "1",
       width: "100%"
     }
@@ -79,7 +79,7 @@ const styles = () => ({
   },
   divider: {
     display: "none",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       display: "inherit",
       margin: "auto",
       marginBottom: "15%",
@@ -117,10 +117,8 @@ function Features(props) {
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
           </div>
         </div>
@@ -133,29 +131,19 @@ function Features(props) {
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
           </div>
         </div>
         <div className={classes.fImageSection}>
-          <img
-            className={classes.fImage}
-            alt="Mastering Chapter"
-            src={masteringChapter}
-          />
+          <img className={classes.fImage} alt="Mastering Chapter" src={masteringChapter} />
         </div>
       </div>
       <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection} id="oneToOneOnlineClasses">
         <div className={classes.fImageSection}>
-          <img
-            className={classes.fImage}
-            alt="Online One to One Classes"
-            src={onlineOneToOne}
-          />
+          <img className={classes.fImage} alt="Online One to One Classes" src={onlineOneToOne} />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
@@ -163,10 +151,8 @@ function Features(props) {
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
           </div>
         </div>
@@ -179,19 +165,13 @@ function Features(props) {
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
           </div>
         </div>
         <div className={classes.fImageSection}>
-          <img
-            className={classes.fImage}
-            alt="Online One to One Classes"
-            src={onlineOneToOne}
-          />
+          <img className={classes.fImage} alt="Online One to One Classes" src={onlineOneToOne} />
         </div>
       </div>
       <Divider variant="middle" className={classes.divider} />
@@ -205,10 +185,8 @@ function Features(props) {
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
           </div>
         </div>

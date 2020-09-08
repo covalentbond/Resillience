@@ -17,7 +17,7 @@ const styles = () => ({
     textAlign: "center",
     paddingTop: "14%",
     marginBottom: "10%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       marginBottom: "20%",
       paddingTop: "90%"
     }
@@ -35,7 +35,7 @@ const styles = () => ({
     height: "240px",
     objectFit: "contain",
     padding: "3.5%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       maxWidth: "80%"
     }
   },
@@ -44,7 +44,7 @@ const styles = () => ({
     height: "240px",
     width: "70%",
     padding: "3.5%",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       maxWidth: "80%"
     }
   },
@@ -53,7 +53,7 @@ const styles = () => ({
     width: "90%",
     height: "240px",
     objectFit: "contain",
-    "@media only screen and (max-width: 767px)": {
+    "@media only screen and (max-width: 770px)": {
       maxWidth: "80%"
     }
   },
@@ -77,30 +77,18 @@ function HomeFeatures(props) {
   return (
     <div>
       <section className={classes.sectionBg}>
-        <Typography
-          variant="h3"
-          color="primary"
-          style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}
-        >
+        <Typography variant="h3" color="primary" style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}>
           Features.
         </Typography>
         <Grid container className={classes.grid} spacing={5}>
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img
-                src={HomeTuition}
-                className={classes.homeTuition}
-                alt="Home Tuition"
-              />
+              <img src={HomeTuition} className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One home tuition throughout Mumbai
               </Typography>
-              <Link to="features/#oneToOneHomeClasses">
-                <Typography
-                  variant="body1"
-                  color="primary"
-                  className={classes.readMore}
-                >
+              <Link to="/features/#oneToOneHomeClasses">
+                <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
               </Link>
@@ -108,20 +96,12 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img
-                className={classes.oneToOne}
-                src={Online1to1}
-                alt="Online one to one Tuition"
-              />
+              <img className={classes.oneToOne} src={Online1to1} alt="Online one to one Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One live online tuition
               </Typography>
-              <Link to="features/#oneToOneOnlineClasses">
-                <Typography
-                  variant="body1"
-                  color="primary"
-                  className={classes.readMore}
-                >
+              <Link to="/features/#oneToOneOnlineClasses">
+                <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
               </Link>
@@ -129,20 +109,12 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img
-                src={OnlineGroup}
-                className={classes.onlineGroup}
-                alt="Online Group Study"
-              />
+              <img src={OnlineGroup} className={classes.onlineGroup} alt="Online Group Study" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 Group live online tuitions anywhere
               </Typography>
-              <Link to="features/#groupLiveClasses">
-                <Typography
-                  variant="body1"
-                  color="primary"
-                  className={classes.readMore}
-                >
+              <Link to="/features/#groupLiveClasses">
+                <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
               </Link>
