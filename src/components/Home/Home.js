@@ -7,21 +7,26 @@ import Milestones from "./Milestones";
 import Videos from "./Videos";
 import Testimonials from "./Testimonials";
 
-export default function Home() {
-  return (
-    <div
-      className="page"
-      style={{
-        display: "flex",
-        flexDirection: "column"
-      }}
-    >
-      <LandingPage />
-      <BetterLearning />
-      <HomeFeatures />
-      <Milestones />
-      <Videos />
-      <Testimonials />
-    </div>
-  );
+export default class Home extends React.Component {
+  render() {
+    return (
+      <div
+        className="page"
+        style={{
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <LandingPage />
+        <BetterLearning />
+        <HomeFeatures />
+        <Milestones />
+        <Videos />
+        <Testimonials />
+      </div>
+    );
+  }
+}
+{
+  /* <LinearProgress style={{ paddingTop: "5%" }} color="secondary" /> */
 }

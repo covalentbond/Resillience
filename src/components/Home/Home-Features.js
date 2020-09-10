@@ -85,7 +85,7 @@ function HomeFeatures(props) {
             <Paper elevation={4}>
               <img src={HomeTuition} className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                One on One home tuition throughout Mumbai
+                One on One home tuition across Mumbai
               </Typography>
               <Link to="/features/#oneToOneHomeClasses">
                 <Typography variant="body1" color="primary" className={classes.readMore}>

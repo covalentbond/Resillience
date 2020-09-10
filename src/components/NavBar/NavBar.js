@@ -29,6 +29,7 @@ const styles = () => ({
   },
   resillience: {
     textTransform: "capitalize",
+    cursor: "pointer",
     fontFamily: "rubik",
     fontSize: "26px",
     "@media only screen and (max-width: 770px)": {
@@ -108,7 +109,9 @@ class Navbar extends React.Component {
     return (
       <AppBar className={classes.navbar}>
         <div className={classes.smallNavbar}>
-          <h1 className={classes.resillience}>RESILLIENCE</h1>
+          <h1 className={classes.resillience} onClick={() => (window.location.href = "/")}>
+            RESILLIENCE
+          </h1>
           {this.state.open === true ? <CloseIcon onClick={this.handleChange} className={classes.hamburgerMenu} /> : <MenuIcon onClick={this.handleChange} className={classes.hamburgerMenu} />}
         </div>
 

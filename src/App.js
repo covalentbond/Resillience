@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
+
 import { Switch, Route, withRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
@@ -6,6 +7,7 @@ import "./App.css";
 // import axios from "axios";
 
 //MUI
+import LinearProgress from "@material-ui/core/LinearProgress";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import themeObject from "./theme";
@@ -15,19 +17,20 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./ReactTransitions.css";
 
 //Components
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Blogs from "./components/Blogs";
-import Features from "./components/Features/Features";
-import Faqs from "./components/Faqs";
-import Tests from "./components/Tests";
-import Room from "./components/Room";
-import Footer from "./components/Home/Footer";
-import Error from "./components/Error";
-import Blog from "./components/Blogs";
-import ContactUs from "./components/ContactUs/ContactUs";
-import Career from "./components/Career/Career";
+const Navbar = lazy(() => import("./components/Navbar/Navbar"));
+const Home = lazy(() => import("./components/Home/Home"));
+const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
+const Features = lazy(() => import("./components/Features/Features"));
+const Faqs = lazy(() => import("./components/Faqs"));
+const Tests = lazy(() => import("./components/Tests"));
+const Room = lazy(() => import("./components/Room"));
+const Footer = lazy(() => import("./components/Home/Footer"));
+const Error = lazy(() => import("./components/Error"));
+const Blog = lazy(() => import("./components/Blogs/Blogs"));
+const ShowBlogs = lazy(() => import("./components/Blogs/ShowBlogs"));
+// const SampleBlog = lazy(() => import("./components/Blogs/SampleBlog"));
+const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
+const Career = lazy(() => import("./components/Career/Career"));
 
 const theme = createMuiTheme(themeObject);
 
@@ -61,34 +64,36 @@ class App extends Component {
 
     return (
       <MuiThemeProvider theme={theme}>
-        <TransitionGroup component="div" className="App">
-          <CSSTransition key={currentKey} timeout={timeout} classNames="pageSlider" mountOnEnter={false} unmountOnExit={true}>
-            <div
-              className={
-                this.getPathDepth(location) - this.state.prevDepth >= 0
-                  ? "left" //left means right to left
-                  : "right" //right means towards right
-              }
-            >
-              <Navbar />
-              <ScrollToTop />
-              <Switch location={location}>
-                <Route exact path="/" component={Home} />
-                <Route path="/about-us" component={AboutUs} />
-                <Route path="/features" component={Features} />
-                <Route path="/faqs" component={Faqs} />
-                <Route path="/blogs" component={Blogs} />
-                <Route path="/tests" component={Tests} />
-                <Route path="/room" component={Room} />
-                <Route path="/blog" component={Blog} />
-                <Route path="/contact-us" component={ContactUs} />
-                <Route path="/career" component={Career} />
-                <Route component={Error} />
-              </Switch>
-              <Footer />
-            </div>
-          </CSSTransition>
-        </TransitionGroup>
+        <Suspense fallback={<LinearProgress color="secondary" style={{ paddingTop: "0.2%" }} />}>
+          <TransitionGroup component="div" className="App">
+            <CSSTransition key={currentKey} timeout={timeout} classNames="pageSlider" mountOnEnter={false} unmountOnExit={true}>
+              <div
+                className={
+                  this.getPathDepth(location) - this.state.prevDepth >= 0
+                    ? "left" //left means right to left
+                    : "right" //right means towards right
+                }
+              >
+                <Navbar />
+                <ScrollToTop />
+                <Switch location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/about-us" component={AboutUs} />
+                  <Route path="/features" component={Features} />
+                  <Route path="/faqs" component={Faqs} />
+                  <Route path="/tests" component={Tests} />
+                  <Route path="/room" component={Room} />
+                  <Route path="/contact-us" component={ContactUs} />
+                  <Route path="/career" component={Career} />
+                  <Route path="/admin/createblogs" component={Blog} />
+                  <Route path="/blogs" component={ShowBlogs} />
+                  <Route component={Error} />
+                </Switch>
+                <Footer />
+              </div>
+            </CSSTransition>
+          </TransitionGroup>
+        </Suspense>
       </MuiThemeProvider>
     );
   }

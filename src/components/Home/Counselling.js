@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import CounsellingImage from "../../images/counselling.png";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
+import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import Tick from "../../images/tick.svg";
 import mentoringStroke from "../../images/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
@@ -53,8 +54,11 @@ const useStyles = makeStyles({
     }
   },
   getFree: {
+    marginTop: "0px",
+    marginBottom: "0px",
     "@media only screen and (max-width: 770px)": {
-      marginTop: "0px"
+      marginTop: "0px",
+      marginBottom: "initial"
     }
   },
   section: {
@@ -91,8 +95,11 @@ const useStyles = makeStyles({
       height: "auto"
     }
   },
+  icons: {
+    marginLeft: "5%"
+  },
   inputPhone: {
-    paddingLeft: "75px",
+    paddingLeft: "65px",
     borderTopStyle: "hidden",
     borderRightStyle: "hidden",
     borderLeftStyle: "hidden",
@@ -104,7 +111,7 @@ const useStyles = makeStyles({
   },
   messages: {
     marginLeft: "30px",
-    marginTop: "30px",
+    marginTop: "25px",
     "@media only screen and (max-width: 770px)": {
       marginLeft: "0px",
       marginTop: "0px",
@@ -167,10 +174,14 @@ function Counselling() {
       >
         <img alt="Counselling" src={CounsellingImage} className={classes.image} />
         <div className={classes.section}>
-          <h2 className={classes.getFree}>GET FREE</h2>
-          <h2>MENTOR COUNSELLING</h2>
+          <h2 className={classes.getFree}>GET A FREE DEMO</h2>
+          <h2 style={{ marginBottom: "20px", marginTop: "12px" }}>CUM MENTORING SESSION</h2>
           <div className={classes.subSection}>
-            <PhoneInTalkIcon color="secondary" />
+            <PersonOutlineIcon color="secondary" className={classes.icons} />
+            <input type="text" name="parentName" id="parentName" className={`form-control ${classes.inputPhone}`} placeholder="Parent's Name" autoComplete="off" maxLength="15" required="required" />
+          </div>
+          <div className={classes.subSection} style={{ marginTop: "10px" }}>
+            <PhoneInTalkIcon color="secondary" className={classes.icons} />
             <input
               type="tel"
               name="number"
@@ -184,7 +195,7 @@ function Counselling() {
           </div>
 
           <div className={classes.messages}>
-            {["Identify strengths and weaknesses", "Create a study plan for you", "Recommend Solutions", "Regular updates of students"].map((message, index) => (
+            {["Identify strengths and weaknesses", "Recommends a study plan for you", "One to One home/online tuition", "Mastering a weak chapter"].map((message, index) => (
               <div className={classes.message} key={index}>
                 <img src={Tick} alt="tick" className={classes.tickImage} />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>

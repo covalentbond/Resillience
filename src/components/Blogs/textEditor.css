@@ -1,0 +1,7 @@
+@import '~quill/dist/quill.core.css';
+
+.ql-editor {
+  font-size: "20px"
+}
+
+/* Because CSS files were not getting imported */

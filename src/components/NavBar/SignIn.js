@@ -118,11 +118,7 @@ class SignIn extends React.Component {
             Sign Out
           </Button>
         ) : (
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={this.handleClickOpen}
-          >
+          <Button variant="contained" color="secondary" onClick={this.handleClickOpen}>
             Sign In
           </Button>
         )}
@@ -138,11 +134,7 @@ class SignIn extends React.Component {
             paper: classes.paper
           }}
         >
-          <img
-            alt="loginBg"
-            src={loginBg}
-            style={{ visibility: "initial", width: "580px" }}
-          />
+          <img alt="loginBg" src={loginBg} style={{ visibility: "initial", width: "580px" }} />
           <div className={classes.login}>
             <Typography variant="h4" color="primary" className={classes.signIn}>
               User Log in
@@ -190,14 +182,7 @@ class SignIn extends React.Component {
                   {errors.message}
                 </Typography>
               )}
-              <Button
-                type="submit"
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                size="large"
-                fullWidth
-              >
+              <Button type="submit" variant="contained" color="secondary" className={classes.button} size="large" fullWidth>
                 Login
               </Button>
               <br />

@@ -50,7 +50,7 @@ function AboutUs(props) {
     >
       <LandingPage />
       <Vision />
-      <img alt="Teacher Image" src={TeacherImage} className={classes.teacherImage}></img>
+      <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img>
       <Story />
       {/* <Typography
         variant="h4"
@@ -65,7 +65,7 @@ function AboutUs(props) {
           Arijit Kundu
         </span>{" "}
         &nbsp;&&nbsp;&nbsp;{" "}
-        <span classNmae={classes.hoverName} onClick={() => window.open("https://www.linkedin.com/in/apurv-gupta/", "_blank")}>
+        <span className={classes.hoverName} onClick={() => window.open("https://www.linkedin.com/in/apurv-gupta/", "_blank")}>
           Apurv Gupta
         </span>
       </Typography>
