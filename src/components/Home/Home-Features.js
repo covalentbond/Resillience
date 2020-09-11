@@ -3,7 +3,8 @@ import { HashLink as Link } from "react-router-hash-link";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 import Online1to1 from "../../images/online1to1.svg";
-import OnlineGroup from "../../images/teacher.svg";
+// import OnlineGroup from "../../images/teacher.svg";
+import masteringChapter from "../../images/masteringChapters.svg";
 import HomeTuition from "../../images/hometuition.svg";
 
 //MUI
@@ -78,7 +79,7 @@ function HomeFeatures(props) {
     <div>
       <section className={classes.sectionBg}>
         <Typography variant="h3" color="primary" style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}>
-          Features.
+          Tuitions
         </Typography>
         <Grid container className={classes.grid} spacing={5}>
           <Grid item sm={3} xs={12} className={classes.card}>
@@ -109,9 +110,10 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src={OnlineGroup} className={classes.onlineGroup} alt="Online Group Study" />
+              <img src={masteringChapter} className={classes.onlineGroup} alt="Online Group Study" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                Group live online tuitions anywhere
+                Mastering a weak chapter
+                {/* Group live online tuitions anywhere */}
               </Typography>
               <Link to="/features/#groupLiveClasses">
                 <Typography variant="body1" color="primary" className={classes.readMore}>

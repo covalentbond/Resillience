@@ -1,34 +1,52 @@
 import React, { Component } from "react";
-import withStyles from "@material-ui/core/styles/withStyles";
-import Typography from "@material-ui/core/Typography";
 import "react-quill/dist/quill.snow.css"; // ES6
 import "./textEditor.css";
+import Image from "../../images/blogImage.svg";
+
+//Material Ui
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import withStyles from "@material-ui/core/styles/withStyles";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 import axios from "axios";
 
 const styles = () => ({
+  root: {
+    margin: "0 30% 5% 30%"
+  },
   section: {
-    marginTop: "5%"
+    marginTop: "4.2%"
+  },
+  image: {
+    paddingBottom: "10%"
   },
   blogHeading: {
     textAlign: "center"
+  },
+  description: {
+    fontSize: "20px"
   }
 });
 
 class Blog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      heading: "",
-      description: "",
-      editorHtml: "",
-      date: ""
-    };
-  }
+  state = {
+    heading: "",
+    description: "",
+    date: "",
+    blogArray: []
+  };
 
   componentDidMount = () => {
     axios.get("/blogs").then((res) => {
-      console.log(res.data.blogs);
+      // console.log(res.data.blogs);
+      this.setState({
+        blogArray: res.data.blogs
+      });
     });
   };
 
@@ -36,9 +54,45 @@ class Blog extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.section}>
-        <Typography variant="h3" color="primary" className={classes.blogHeading}>
-          Resillience Blog Section
-        </Typography>
+        <img alt="BlogsBold" src={Image} className={classes.image}></img>
+        <div className={classes.grid}>
+          {this.state.blogArray.map((eachBlog, index) => (
+            <Card className={classes.root} key={index}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Scenery"
+                  height="250"
+                  className={classes.media}
+                  image="https://ae01.alicdn.com/kf/HTB1lRs8HVXXXXXUXFXXq6xXFXXX2/Free-shipping-scenery-wall-tapestry-The-inverted-image-of-woods-classical-design-size-20x25cm-decor-picture.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="h2">
+                    {eachBlog.heading}
+                  </Typography>
+                  <Typography gutterBottom variant="body1" component="h2">
+                    {eachBlog.date}
+                  </Typography>
+                  <Typography className={classes.description} color="textSecondary" component="h2">
+                    {eachBlog.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="large"
+                  color="secondary"
+                  onClick={() => {
+                    window.location.href = `/blogs/${eachBlog._id}`;
+                  }}
+                >
+                  Read More...
+                </Button>
+              </CardActions>
+            </Card>
+          ))}
+        </div>
       </div>
     );
   }

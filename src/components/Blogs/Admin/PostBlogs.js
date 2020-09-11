@@ -5,13 +5,12 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import ReactQuill from "react-quill"; // ES6
 import "react-quill/dist/quill.snow.css"; // ES6
-import "./textEditor.css";
-
+import "../textEditor.css";
 import axios from "axios";
 
 const modules = {
   toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ header: "1" }, { header: "2" }],
     [{ size: [] }],
     ["bold", "italic", "underline", "strike", "blockquote"],
     [{ color: [] }, { background: [] }],
@@ -26,7 +25,7 @@ const modules = {
   }
 };
 
-const formats = ["header", "font", "size", "color", "bold", "italic", "underline", "strike", "blockquote", "color", "background", "align", "list", "bullet", "indent", "link", "image", "video"];
+const formats = ["header", "size", "color", "bold", "italic", "underline", "strike", "blockquote", "color", "background", "align", "list", "bullet", "indent", "link", "image", "video"];
 
 const styles = () => ({
   section: {
@@ -48,16 +47,13 @@ const styles = () => ({
 });
 
 class Blog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      heading: "",
-      description: "",
-      editorHtml: "",
-      date: "",
-      errors: {}
-    };
-  }
+  state = {
+    heading: "",
+    description: "",
+    editorHtml: "",
+    date: "",
+    errors: {}
+  };
 
   handleChangeMeta = (event) => {
     this.setState({
@@ -67,7 +63,7 @@ class Blog extends Component {
 
   handleChange = (html) => {
     this.setState({ editorHtml: html });
-    console.log(this.state.editorHtml);
+    // console.log(this.state.editorHtml);
   };
 
   handleSubmit = (event) => {
@@ -85,9 +81,15 @@ class Blog extends Component {
       .post("/createblogs", blogData)
       .then((res) => {
         console.log(res);
-        console.log(res.data);
+        // console.log(res.data);
+        this.setState({
+          heading: "",
+          description: "",
+          editorHtml: "",
+          date: ""
+        });
         window.alert("Congratulations! Your blog was successfully posted");
-        window.location.href("/blogs");
+        window.location.href = "/blogs";
       })
       .catch((err) => {
         console.log(err);
@@ -104,7 +106,10 @@ class Blog extends Component {
     return (
       <div className={classes.section}>
         <Typography variant="h2" color="primary" className={classes.blogHeading}>
-          Create a fantastic blog ✨
+          Create a fantastic blog{" "}
+          <span role="img" aria-label="star">
+            ✨
+          </span>
         </Typography>
         <form className={classes.form} noValidate onSubmit={this.handleSubmit}>
           <TextField
@@ -169,13 +174,3 @@ class Blog extends Component {
 }
 
 export default withStyles(styles)(Blog);
-
-//delta, content, source
-// const text = editor.getText(html);
-// console.log("Only Text", text);
-// editor.getContents(html);
-// console.log(delta);
-
-// claps: 0,
-// comments: [], //[{"Arijit": "Amazing blog"},{"Apurv": "Enjoyed a lot"}],
-// blogLink: "" //"https://resillience.in/blogs/resillience%20journey"

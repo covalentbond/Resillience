@@ -12,13 +12,11 @@ export default class PersonList extends React.Component {
   handleClickExam = (event) => {
     // this.setState()
     console.log(event.target.id);
-    axios
-      .get(`https://jsonplaceholder.typicode.com/users/${event.target.id}`)
-      .then((res) => {
-        const testTypes = res.data;
-        console.log(testTypes);
-        this.setState({ testTypes });
-      });
+    axios.get(`https://jsonplaceholder.typicode.com/users/${event.target.id}`).then((res) => {
+      const testTypes = res.data;
+      console.log(testTypes);
+      this.setState({ testTypes });
+    });
   };
 
   componentDidMount() {

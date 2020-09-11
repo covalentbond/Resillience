@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import CounsellingImage from "../../images/counselling.png";
+// import CounsellingImage from "../../images/counselling.png";
+import CounsellingImageNew from "../../images/counsellingNew.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import Tick from "../../images/tick.svg";
@@ -172,7 +173,7 @@ function Counselling() {
           paper: classes.paper
         }}
       >
-        <img alt="Counselling" src={CounsellingImage} className={classes.image} />
+        <img alt="Counselling" src={CounsellingImageNew} className={classes.image} />
         <div className={classes.section}>
           <h2 className={classes.getFree}>GET A FREE DEMO</h2>
           <h2 style={{ marginBottom: "20px", marginTop: "12px" }}>CUM MENTORING SESSION</h2>

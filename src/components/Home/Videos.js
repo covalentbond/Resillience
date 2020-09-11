@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
 // import CircularProgress from "@material-ui/core/CircularProgress";
 
@@ -21,8 +21,6 @@ class Videos extends React.Component {
 
 export default Videos;
 
-{
-  /* "https://www.youtube.com/embed/gwNaLLQUHgs",
-"https://www.youtube.com/embed/ubWLlaTN3Fw",
-"https://www.youtube.com/embed/s6mvwNxPJ6g" */
-}
+//  "https://www.youtube.com/embed/gwNaLLQUHgs",
+// "https://www.youtube.com/embed/ubWLlaTN3Fw",
+// "https://www.youtube.com/embed/s6mvwNxPJ6g"

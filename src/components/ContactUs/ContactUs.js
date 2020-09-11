@@ -12,7 +12,6 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 //Images
-import ContactUsLandingImage from "../../images/contactUsLanding.svg";
 import ContactUsPhone from "../../images/phoneContactUs.svg";
 
 const styles = () => ({
@@ -80,7 +79,7 @@ function ContactUs(props) {
       <div className={classes.subSections}>
         {/* <img src={ContactUsLandingImage} className={classes.landingImage}></img> */}
         <div className={classes.landingImage}>
-          <img src={ContactUsPhone}></img>
+          <img alt="ContactUs" src={ContactUsPhone}></img>
         </div>
         <div className={classes.subSectionContent}>
           <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
@@ -140,6 +139,7 @@ function ContactUs(props) {
         width="1220"
         height="400"
         frameBorder="0"
+        title="Registration Form for teachers"
         // style="border:0;"
         allowFullScreen=""
         aria-hidden="false"

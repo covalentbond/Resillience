@@ -8,7 +8,6 @@ import HomePagePhone from "../../images/ravi3Phone.svg";
 import rectangleStroke from "../../images/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
-import { useEffect } from "react";
 
 const styles = () => ({
   homeImageWeb: {

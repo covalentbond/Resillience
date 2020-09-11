@@ -106,7 +106,7 @@ class SignIn extends React.Component {
     const { errors } = this.state;
     return (
       <div style={{ fontStyle: "23px" }}>
-        {this.state.message != "" ? (
+        {this.state.message !== "" ? (
           <Button
             variant="contained"
             color="secondary"

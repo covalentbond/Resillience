@@ -27,6 +27,3 @@ export default class Home extends React.Component {
     );
   }
 }
-{
-  /* <LinearProgress style={{ paddingTop: "5%" }} color="secondary" /> */
-}

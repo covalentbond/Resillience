@@ -119,7 +119,7 @@ class Navbar extends React.Component {
           {[
             { route: "/", name: "Home", id: 1 },
             { route: "/about-us", name: "About Us", id: 2 },
-            { route: "/features", name: "Features", id: 3 },
+            { route: "/features", name: "Tuitions", id: 3 },
             { route: "/faqs", name: "FAQ'S", id: 4 },
             { route: "/test", name: "Test", id: 5 }
           ].map((eachNav) => (
