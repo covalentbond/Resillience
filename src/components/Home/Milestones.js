@@ -1,7 +1,21 @@
 import React from "react";
+// import milestoneImage from "../../images/milestoneImage.svg";
+import milestoneImageDesign from "../../images/milestoneImageDesign.svg";
 import withStyles from "@material-ui/core/styles/withStyles";
+import Typography from "@material-ui/core/Typography";
 
 const styles = () => ({
+  milestoneSection: {
+    textAlign: "center",
+    "@media only screen and (max-width: 770px)": {
+      marginBottom: "40px"
+    }
+  },
+  milestoneImage: {
+    width: "30%",
+    zIndex: "1"
+    // marginBottom: "-35px"
+  },
   milestones: {
     color: "white",
     display: "flex",
@@ -11,6 +25,7 @@ const styles = () => ({
     background: "#0f7dc2",
     position: "relative",
     height: "30vh",
+    zIndex: "-1",
     "@media only screen and (max-width: 770px)": {
       fontSize: "11px",
       padding: "10%",
@@ -29,22 +44,28 @@ const styles = () => ({
 function Milestones(props) {
   const { classes } = props;
   return (
-    <div className={classes.milestones}>
-      <div className={classes.eachMilestone}>
-        <h1>125+</h1>
-        <h1>Total registered students</h1>
-      </div>
-      <div className={classes.eachMilestone}>
-        <h1>500+</h1>
-        <h1>Hours taught online</h1>
-      </div>
-      <div className={classes.eachMilestone}>
-        <h1>7200+</h1>
-        <h1>Hours at home</h1>
-      </div>
-      <div className={classes.eachMilestone}>
-        <h1>200+</h1>
-        <h1>Guidance on call</h1>
+    <div className={classes.milestoneSection}>
+      <img src={milestoneImageDesign} className={classes.milestoneImage} />
+      <Typography variant="h3" color="primary" style={{ marginBottom: "5%", textAlign: "center", letterSpacing: "-1.5px" }}>
+        Milestones
+      </Typography>
+      <div className={classes.milestones}>
+        <div className={classes.eachMilestone}>
+          <h1>150+</h1>
+          <h1>Total registered students</h1>
+        </div>
+        <div className={classes.eachMilestone}>
+          <h1>3700+</h1>
+          <h1>Hours taught online</h1>
+        </div>
+        <div className={classes.eachMilestone}>
+          <h1>3500+</h1>
+          <h1>Hours at home</h1>
+        </div>
+        <div className={classes.eachMilestone}>
+          <h1>300+</h1>
+          <h1>Mentoring Sessions</h1>
+        </div>
       </div>
     </div>
   );

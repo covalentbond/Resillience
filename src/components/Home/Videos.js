@@ -11,16 +11,10 @@ class Videos extends React.Component {
         <Typography variant="h3" color="primary" style={{ margin: "5%", textAlign: "center", letterSpacing: "-1.5px" }}>
           Watch our teachers in action
         </Typography>
-        {/* <Suspense fallback={<CircularProgress />}> */}
         <VideoSub />
-        {/* </Suspense> */}
       </div>
     );
   }
 }
 
 export default Videos;
-
-//  "https://www.youtube.com/embed/gwNaLLQUHgs",
-// "https://www.youtube.com/embed/ubWLlaTN3Fw",
-// "https://www.youtube.com/embed/s6mvwNxPJ6g"

@@ -1,21 +1,14 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/styles/withStyles";
-import TeacherImage from "../../images/teachersNew.svg";
 
 //Components
 import LandingPage from "./AboutLandingPage";
 import Vision from "./Vision";
 import Story from "./Story";
+import OurTeam from "./OurTeam";
 
 const styles = () => ({
-  teacherImage: {
-    paddingTop: "5%",
-    width: "100%",
-    "@media only screen and (max-width: 770px)": {
-      height: "200px"
-    }
-  },
   developers: {
     textAlign: "center",
     marginTop: "8%",
@@ -50,7 +43,7 @@ function AboutUs(props) {
     >
       <LandingPage />
       <Vision />
-      <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img>
+      <OurTeam />
       <Story />
       {/* <Typography
         variant="h4"

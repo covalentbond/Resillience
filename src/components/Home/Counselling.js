@@ -50,7 +50,7 @@ const useStyles = makeStyles({
     cursor: "pointer",
     "@media only screen and (max-width: 770px)": {
       width: "auto",
-      marginTop: "-19%",
+      marginTop: "-20.5%",
       marginLeft: "0px"
     }
   },
@@ -153,7 +153,7 @@ function Counselling() {
   useEffect(() => {
     setTimeout(() => {
       setOpen(true);
-    }, 20000);
+    }, 30000);
   }, []);
 
   return (
@@ -196,7 +196,7 @@ function Counselling() {
           </div>
 
           <div className={classes.messages}>
-            {["Identify strengths and weaknesses", "Recommends a study plan for you", "One to One home/online tuition", "Mastering a weak chapter"].map((message, index) => (
+            {["Identify strengths and weaknesses", "Recommends a study plan for you", "One to One home/online tuition", "Mastering a weak topic"].map((message, index) => (
               <div className={classes.message} key={index}>
                 <img src={Tick} alt="tick" className={classes.tickImage} />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>

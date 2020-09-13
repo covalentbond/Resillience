@@ -21,7 +21,9 @@ import "./ReactTransitions.css";
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Home = lazy(() => import("./components/Home/Home"));
 const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
-const Features = lazy(() => import("./components/Features/Features"));
+const OneOnOneHome = lazy(() => import("./components/Features/OneOnOneHome"));
+const OneOnOneLive = lazy(() => import("./components/Features/OneOnOneLive"));
+const MasteringAChapter = lazy(() => import("./components/Features/MasteringAChapter"));
 const Faqs = lazy(() => import("./components/Faqs"));
 const Footer = lazy(() => import("./components/Home/Footer"));
 const Error = lazy(() => import("./components/Error"));
@@ -31,6 +33,11 @@ const ParticularBlog = lazy(() => import("./components/Blogs/ParticularBlog/Part
 const StudentProfile = lazy(() => import("./components/Student/StudentProfile"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Career = lazy(() => import("./components/Career/Career"));
+const PrivacyPolicy = lazy(() => import("./components/Miscellaneous/PrivacyPolicy"));
+
+// const TermsOfService = lazy(() => import("./components/Miscellaneous/TermsOfService"));
+// const Sitemap = lazy(() => import("./components/Miscellaneous/Sitemap"));
+
 // const Tests = lazy(() => import("./components/Tests"));
 // const Room = lazy(() => import("./components/Room"));
 
@@ -57,7 +64,9 @@ const withTitle = ({ component: Component, title }) => {
 // Adding title
 const HomeComponent = withTitle({ component: Home, title: "RESILLIENCE: Personalized Learning with IITians" });
 const AboutUsComponent = withTitle({ component: AboutUs, title: "About Us | RESILLIENCE" });
-const FeaturesComponent = withTitle({ component: Features, title: "Features | RESILLIENCE" });
+const OneOnOneHomeComponent = withTitle({ component: OneOnOneHome, title: "One On One Home Tuition | RESILLIENCE" });
+const OneOnOneLiveComponent = withTitle({ component: OneOnOneLive, title: "One On One Live Tuition | RESILLIENCE" });
+const MasteringAChapterComponent = withTitle({ component: MasteringAChapter, title: "Mastering a week chapter | RESILLIENCE" });
 const FaqsComponent = withTitle({ component: Faqs, title: "FAQ's | RESILLIENCE" });
 const ContactUsComponent = withTitle({ component: ContactUs, title: "Contact Us | RESILLIENCE" });
 const CareerComponent = withTitle({ component: Career, title: "Career | RESILLIENCE" });
@@ -65,6 +74,10 @@ const PostBlogComponent = withTitle({ component: PostBlog, title: "Post Blog | R
 const ShowBlogsComponent = withTitle({ component: ShowBlogs, title: "Blogs | RESILLIENCE" });
 const ParticularBlogComponent = withTitle({ component: ParticularBlog, title: "Blogs | RESILLIENCE" });
 const StudentProfileComponent = withTitle({ component: StudentProfile, title: "Dashboard | RESILLIENCE" });
+const PrivacyPolicyComponent = withTitle({ component: PrivacyPolicy, title: "Privacy Policy | RESILLIENCE" });
+// const TermsOfServiceComponent = withTitle({ component: TermsOfService, title: "Terms of service | RESILLIENCE" });
+// const SitemapComponent = withTitle({ component: Sitemap, title: "Sitemap | RESILLIENCE" });
+
 const ErrorComponent = withTitle({ component: Error, title: "Not Found | RESILLIENCE" });
 
 class App extends Component {
@@ -107,8 +120,10 @@ class App extends Component {
                 <ScrollToTop />
                 <Switch location={location}>
                   <Route exact path="/" component={HomeComponent} />
-                  <Route path="/about-us" component={AboutUsComponent} />
-                  <Route path="/features" component={FeaturesComponent} />
+                  <Route path="/aboutus" component={AboutUsComponent} />
+                  <Route path="/features/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
+                  <Route path="/features/one-on-one-live-tuitions" component={OneOnOneLiveComponent} />
+                  <Route path="/features/mastering-week-topics" component={MasteringAChapterComponent} />
                   <Route path="/faqs" component={FaqsComponent} />
                   <Route path="/contact-us" component={ContactUsComponent} />
                   <Route path="/career" component={CareerComponent} />
@@ -116,6 +131,9 @@ class App extends Component {
                   <Route exact path="/blogs" component={ShowBlogsComponent} />
                   <Route exact path="/blogs/:id" component={ParticularBlogComponent} />
                   <Route path="/dashboard" component={StudentProfileComponent} />
+                  <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
+                  {/* <Route path="/termsofservice" component={TermsOfService} />
+                  <Route path="/sitemap" component={SitemapComponent} /> */}
                   <Route component={ErrorComponent} />
                   {/* <Route path="/tests" component={TestsComponent} />
                   <Route path="/room" component={RoomComponent} /> */}

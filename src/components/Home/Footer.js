@@ -51,15 +51,24 @@ const styles = () => ({
     flexDirection: "column"
   },
   copyright: {
-    textAlign: "center",
     color: "#cccccc",
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "space-between",
     marginBottom: "0px",
     marginTop: "0px",
-    paddingTop: "1.5%",
-    paddingBottom: "1.5%",
+    padding: "0.5% 3.5% 0.5% 3.5%",
     "@media only screen and (max-width: 770px)": {
       paddingTop: "4.5%",
-      paddingBottom: "4.5%"
+      paddingBottom: "4.5%",
+      flexDirection: "column"
+    }
+  },
+  footerInfo: {
+    display: "flex",
+    "@media only screen and (max-width: 770px)": {
+      margin: "auto",
+      lineHeight: 0
     }
   }
 });
@@ -90,8 +99,12 @@ function Footer(props) {
                 text: "Career"
               },
               {
-                to: "/about-us/#ourstory",
+                to: "/aboutus/#ourstory",
                 text: "Our Story"
+              },
+              {
+                to: "/downloadsection",
+                text: "Download Section"
               }
             ].map((eachElement, index) => (
               <Link style={{ marginTop: "16px", color: "#cccccc", textDecoration: "none" }} key={index} to={eachElement.to}>
@@ -127,9 +140,23 @@ function Footer(props) {
             <p style={{ marginBottom: "0px", color: "#cccccc" }}>+91 93042 28132</p>
           </Grid>
         </Grid>
+        <Divider variant="middle" />
+        <div className={classes.copyright}>
+          <span className={classes.footerInfo}>
+            <p className={classes.clickableIcon} onClick={() => window.open("/sitemap", "_blank")}>
+              Sitemap |
+            </p>
+            <p className={classes.clickableIcon} onClick={() => window.open("/privacypolicy", "_blank")}>
+              &nbsp; Privacy Policy |
+            </p>
+            <p className={classes.clickableIcon} onClick={() => window.open("/termsofservice", "_blank")}>
+              {" "}
+              &nbsp; Terms of service
+            </p>
+          </span>
+          <p>Resillience &copy; Copyright 2020.All rights reserved</p>
+        </div>
       </div>
-      <Divider variant="middle" />
-      <p className={classes.copyright}>Resillience &copy; Copyright 2020.All rights reserved</p>
     </div>
   );
 }

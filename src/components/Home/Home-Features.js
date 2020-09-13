@@ -19,8 +19,8 @@ const styles = () => ({
     paddingTop: "14%",
     marginBottom: "10%",
     "@media only screen and (max-width: 770px)": {
-      marginBottom: "20%",
-      paddingTop: "90%"
+      marginBottom: "20px",
+      paddingTop: "80px"
     }
   },
   grid: {
@@ -88,7 +88,7 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One home tuition across Mumbai
               </Typography>
-              <Link to="/features/#oneToOneHomeClasses">
+              <Link to="/features/one-on-one-home-tuitions">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -101,7 +101,7 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One live online tuition
               </Typography>
-              <Link to="/features/#oneToOneOnlineClasses">
+              <Link to="/features/one-on-one-live-tuitions">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -110,12 +110,12 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item sm={3} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src={masteringChapter} className={classes.onlineGroup} alt="Online Group Study" />
+              <img src={masteringChapter} className={classes.onlineGroup} alt="Mastering a week chapter" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                Mastering a weak chapter
+                Mastering a weak topic as per need
                 {/* Group live online tuitions anywhere */}
               </Typography>
-              <Link to="/features/#groupLiveClasses">
+              <Link to="/features/mastering-week-topics">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>

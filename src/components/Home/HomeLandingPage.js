@@ -3,8 +3,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import logo from "../../images/Resillience-Logo.png";
 // import HomePageWeb from "../../images/NewHomeFinalFinall.svg";
 // import HomePagePhone from "../../images/homePhone.svg";
-import HomePageWeb from "../../images/ravi3.svg";
-import HomePagePhone from "../../images/ravi3Phone.svg";
+import HomePageWeb from "../../images/homeLandingImageWeb.svg";
+import HomePagePhone from "../../images/homeLandingImagePhone.svg";
 import rectangleStroke from "../../images/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
@@ -101,14 +101,15 @@ function LandingPage(props) {
         <img src={logo} className={classes.logoImage} alt="Logo" />
         <h1 className={classes.personalized}>Personalized</h1>
         <h2 className={classes.learning}>
-          learning with{" "}
+          Learning with{" "}
           <span>
             <img alt="Bg Design" src={rectangleStroke} className={classes.rectangleStroke} />
             IITians
           </span>
         </h2>
 
-        <h1 className={classes.iitians}>IIT &nbsp; NEET &nbsp; Foundation&nbsp;(8th, 9th & 10th)</h1>
+        <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
+        <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1>
 
         <div className={classes.firstLine}>
           <Typography

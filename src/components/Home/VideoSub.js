@@ -56,25 +56,18 @@ class VideoSub extends React.Component {
     };
     return (
       <Slider {...settings}>
-        {[
-          "https://www.youtube.com/embed/sh0EGUheef8/",
-          "https://www.youtube.com/embed/1H72tRzG5TU",
-          "https://www.youtube.com/embed/cbBB-unybLA",
-          "https://www.youtube.com/embed/lv-YIJC1xWo",
-          "https://www.youtube.com/embed/PBwslCZRnaU",
-          "https://www.youtube.com/embed/w2zQ4lMFoMg"
-        ].map((value, index) => (
+        {["sh0EGUheef8", "1H72tRzG5TU", "cbBB-unybLA", "lv-YIJC1xWo", "PBwslCZRnaU", "w2zQ4lMFoMg", "gwNaLLQUHgs", "ubWLlaTN3Fw", "s6mvwNxPJ6g"].map((value, index) => (
           <div key={index}>
             <iframe
               title="Youtube"
               aria-hidden="true"
               className={classes.iframe}
-              src={value}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
+              srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${value}/?autoplay=1><img src=https://img.youtube.com/vi/${value}/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
             ></iframe>
           </div>
         ))}

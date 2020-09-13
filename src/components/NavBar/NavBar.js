@@ -117,13 +117,13 @@ class Navbar extends React.Component {
 
         <div className={this.state.open === true ? classes.navLinks : classes.vanish}>
           {[
-            { route: "/", name: "Home", id: 1 },
-            { route: "/about-us", name: "About Us", id: 2 },
-            { route: "/features", name: "Tuitions", id: 3 },
-            { route: "/faqs", name: "FAQ'S", id: 4 },
-            { route: "/test", name: "Test", id: 5 }
-          ].map((eachNav) => (
-            <NavLink key={eachNav.id} exact className={classes.navIcons} activeClassName="active" to={eachNav.route} onClick={this.handleChange}>
+            { route: "/", name: "Home" },
+            { route: "/aboutus", name: "About Us" },
+            { route: "/features", name: "Tuitions" },
+            { route: "/test", name: "Test" },
+            { route: "/faqs", name: "FAQ'S" }
+          ].map((eachNav, index) => (
+            <NavLink key={index} exact className={classes.navIcons} activeClassName="active" to={eachNav.route} onClick={this.handleChange}>
               {eachNav.name}
             </NavLink>
           ))}

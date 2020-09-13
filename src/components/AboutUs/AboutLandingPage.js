@@ -21,7 +21,7 @@ const styles = () => ({
       position: "relative",
       flexDirection: "column",
       fontSize: "16px",
-      marginBottom: "12%",
+      marginBottom: "180px",
       marginTop: "10%"
     }
   },
@@ -71,11 +71,12 @@ const styles = () => ({
   text: {
     letterSpacing: "0.02px",
     lineHeight: "1.5",
-    opacity: "0.8"
+    opacity: "0.8",
+    marginBottom: "35px"
   },
   visionText: {
     fontSize: "27px",
-    marginTop: "110px",
+    // marginTop: "110px",
     "@media only screen and (max-width: 1024px)": {
       marginTop: "85px",
       fontSize: "22px"
@@ -112,7 +113,18 @@ function LandingPage(props) {
         <div className={classes.title}>
           {/* TODO: style={{ marginTop: "20px" }} */}
           <Typography variant="inherit" className={classes.text} color="primary" style={{ marginTop: "20px" }}>
-            We are a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation.
+            We are a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation. We believe:
+          </Typography>
+          <Typography
+            variant="inherit"
+            color="secondary"
+            className={classes.visionText}
+            //, marginBottom: "13px"
+          >
+            “ Everyone can learn and excel but the ways will be different. ”
+          </Typography>
+          <Typography variant="inherit" color="primary" className={classes.text} style={{ margintop: "5px" }}>
+            <i> ~ Team RESILLIENCE</i>
           </Typography>
           <Typography
             variant="inherit"
@@ -120,21 +132,10 @@ function LandingPage(props) {
             className={classes.text}
             //, marginBottom: "13px"
           >
-            Our vision is to empower India in all the domains by providing talent based skill development opportunities.
+            Focusing on each and every student, is not possible in big classrooms. To provide personal attention to each and every student we are here with our solution of "Personalized Learning with
+            IITians" backed with advanced technical support.
           </Typography>
         </div>
-
-        <Typography
-          variant="inherit"
-          color="secondary"
-          className={classes.visionText}
-          //, marginBottom: "13px"
-        >
-          “ Everyone can learn and excel but the ways will be different. ”
-        </Typography>
-        <Typography variant="inherit" color="primary" className={classes.text}>
-          <i> ~ Team Resillience</i>
-        </Typography>
       </div>
       <div
         style={{

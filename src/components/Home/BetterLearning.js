@@ -2,44 +2,38 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-// import BetterLearningImageWeb from "../../images/better_learning_illustration_web.png";
-import BetterLearningChanges from "../../images/betterLearningChanges.svg";
-
-import BetterLearningImagePhone from "../../images/BetterLearningImagePhone.png";
+import BetterLearningChanges from "../../images/BetterLeaningImage.svg";
+import BetterLearningImagePhone from "../../images/BetterLearningImagePhone.svg";
 
 const styles = () => ({
   BetterLearningSection: {
     position: "relative",
-    // height: "100vh",
     height: "1200px",
     width: "1036px",
     margin: "0 auto",
-    // marginTop: "72px",
-    marginTop: "25%",
+    marginBottom: "50%",
     "@media only screen and (max-width: 770px)": {
       width: "320px",
-      marginTop: "25%"
+      marginTop: "25%",
+      marginBottom: "550px"
     }
   },
   BetterLearningImageWeb: {
-    // height: "130vh",
     textAlign: "right",
     position: "absolute",
-    marginLeft: "360px",
-    // marginTop: "10px",
-    height: "1222px",
+    marginLeft: "365px",
+    height: "1565px",
     "@media only screen and (max-width: 770px)": {
       display: "none"
     }
   },
   BetterLearningImagePhone: {
-    // height: "130vh",
     textAlign: "right",
     position: "absolute",
-    marginLeft: "35px",
+    marginLeft: "20px",
     marginTop: "0",
     height: "auto",
-    width: "250px",
+    width: "290px",
     "@media only screen and (min-width: 770px)": {
       display: "none"
     }
@@ -116,20 +110,33 @@ function BetterLearning(props) {
       </div>
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
+          <div className={classes.Title}>Intensive practice on each concept</div>
+          <div className={classes.Content}>More number of quality questions are practiced, saving time from irrelevant stuff.</div>
+        </div>
+      </div>
+      <div className={classes.LearningBody}>
+        <div className={classes.DescriptionItemR}>
           <div className={classes.Title}>Doubt solving on chat and call by the same teacher</div>
           <div className={classes.Content}>Students are always connected to their teachers, they can ask whenever they are stuck.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>
-        <div className={classes.DescriptionItemR}>
+        <div className={classes.DescriptionItem}>
           <div className={classes.Title}>Regular personalized tests and analysis</div>
-          <div className={classes.Content}>Personalized tests are taken and the analysis is done with the student in class only.</div>
+          <div className={classes.Content}>Regular Personalized tests are taken and the analysis is done with the student in class only.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>
-        <div className={classes.DescriptionItem}>
+        <div className={classes.DescriptionItemR}>
           <div className={classes.Title}>Training on exam strategy and smart ties</div>
-          <div className={classes.Content}>Student learn how to attempt any paper with smart approach to maximize the score under any condition.</div>
+          <div className={classes.Content}>Under personal guidance, student learn how to attempt any paper with smart approach to maximize the score under any condition.</div>
+        </div>
+      </div>
+
+      <div className={classes.LearningBody}>
+        <div className={classes.DescriptionItem}>
+          <div className={classes.Title}>Personalized plan for regular updates</div>
+          <div className={classes.Content}>Our expert faculty periodically checks and plan habits to adopt for every student. It helps them improving daily at practice level.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>

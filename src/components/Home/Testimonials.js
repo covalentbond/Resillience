@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
+import sakshamPhoto from "../../images/sakshamPhoto.png";
 
 import list from "./testimonialList";
 
@@ -12,23 +13,48 @@ const styles = () => ({
     padding: "2% 8% 2% 8%",
     fontSize: "16px",
     "@media only screen and (max-width: 770px)": {
-      marginBottom: "20%"
-    },
-    backgroundColor: "#D3D3D3"
+      marginBottom: "20%",
+      padding: "8% 8% 2% 8%"
+    }
+    // backgroundColor: "#D3D3D3"
+  },
+  tSaksham: {
+    display: "flex",
+    marginTop: "-1%",
+    marginBottom: "7.5%",
+    "@media only screen and (max-width: 770px)": {
+      flexDirection: "column"
+    }
   },
   tEach: {
-    display: "flex",
+    textAlign: "center"
+  },
+  tDesc: {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center"
+    textAlign: "left",
+    width: "100%",
+    lineHeight: "1.8",
+    marginTop: "1%",
+    fontSize: "18px",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "16px",
+      textAlign: "center"
+    }
+  },
+  sakshamMessage: {
+    fontStyle: "italic",
+    fontSize: "22px",
+    color: "#818181",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "16px",
+      lineHeight: "1.2"
+    }
   },
   tImage: {
     width: "100%",
     margin: "auto"
-  },
-  tDesc: {
-    width: "100%"
   }
 });
 
@@ -38,44 +64,83 @@ function Testimonials(props) {
     dots: true,
     autoplay: true,
     infinite: true,
-    speed: 3000,
-    autoplaySpeed: 7000,
+    speed: 4000,
+    autoplaySpeed: 1500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          autoplay: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
     <div className={classes.sectionBg}>
-      <Typography variant="h3" color="primary" style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}>
+      <Typography variant="h3" color="primary" style={{ margin: "5%", letterSpacing: "-1px" }}>
         Our students & parents love us
       </Typography>
+      <div className={classes.tSaksham}>
+        <div className={classes.tImage}>
+          <img src={sakshamPhoto} style={{ display: "initial", width: "75%" }} />
+        </div>
+        <div className={classes.tDesc}>
+          <Typography variant="inherit" className={classes.sakshamMessage}>
+            My experience with Resillience was very good. The teachers were the sole reason for whatever I have achieved. Their efforts were really commendable. They know exactly how to prepare a
+            child for IIT JEE. Studying smart and hard both is their soul mantra. Aiming at improving concepts and practicing of questions was the major advice. I became very comfortable with all the
+            three professors and we developed a very solid bond in short time.
+          </Typography>
+          <Typography variant="h6" color="primary" style={{ marginTop: "2%" }}>
+            Saksham Kamath
+          </Typography>
+          <Typography variant="inherit" color="primary" style={{ fontSize: "20px" }}>
+            Got selected in JEE Adv'19
+          </Typography>
+        </div>
+      </div>
+
       <Slider {...settings}>
         {list.map((eachTestimonial, index) => (
           <div className={classes.tEach} key={index}>
-            <div className={classes.tImage}>
-              <img src={eachTestimonial.image} style={{ display: "initial", width: "50%" }} />
-            </div>
-            <div className={classes.tDesc}>
-              <Typography variant="inherit" color="primary">
+            <div className={classes.tDesc} style={{ textAlign: "center" }}>
+              <Typography variant="inherit" color="primary" style={{ fontStyle: "italic" }}>
                 {eachTestimonial.message}
+              </Typography>
+              <br />
+              <Typography variant="inherit" color="primary">
+                ⭐⭐⭐⭐⭐
               </Typography>
               <Typography variant="h6" color="primary">
                 {eachTestimonial.name}
-              </Typography>
-              <Typography variant="subtitle2" color="primary">
-                {eachTestimonial.designation}
               </Typography>
             </div>
           </div>
         ))}
       </Slider>
-      <br />
-      <br />
-      <br />
-      <br />
-      <Typography variant="inherit" color="primary" style={{ padding: "5%", fontStyle: "italic", fontSize: "22px" }}>
-        We are proud to share that we have helped so many students making them achieve their goal
-      </Typography>
     </div>
   );
 }

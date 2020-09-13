@@ -65,7 +65,7 @@ function Career(props) {
       {/* <Milestones /> */}
       <div style={{ padding: "5%", textAlign: "center" }}>
         <Typography variant="inherit" className={classes.text} color="primary">
-          Come and be a part of Resillience, a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation.
+          Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home
         </Typography>
         <iframe
           title="Career Recruitment Form"

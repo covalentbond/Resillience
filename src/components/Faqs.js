@@ -98,6 +98,33 @@ function Faqs(props) {
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1bh-content" id="panel1bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
+              What is the Mentoring Session?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              1. It is a Free 'Demo cum Mentoring session'. It helps both student and the teacher to understand each other before starting. In the session students also get to know what exactly are
+              they doing wrong so far in the preparation and how to come back.
+              <br />
+              <br />
+              2. Parents get an actual overview about their child's preparation from an IIT graduate faculty and what is the solution to overcome the situation.
+              <br />
+              <br />
+              3. And it helps us figuring out your best suited customized plan to proceed.
+              <br />
+            </Typography>
+            <Divider />
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel2"} onChange={handleChange("panel2")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2bh-content" id="panel2bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
               How will we start?
             </Typography>
           </AccordionSummary>
@@ -107,25 +134,12 @@ function Faqs(props) {
                 Answer:
               </Typography>
               <br />
-              For home tuition:
-              <br />
-              1. Call and get 'Mentoring session' with your IITian Mentor.
-              <br />
-              2. Based on requirement we will sit together and plan out the curriculum.
-              <br />
-              3. Meeting and finalization.
-              <br />
-              <br />
-              For online classes:
-              <br />
-              1. Just call on the given number and send your enquiry we will get back to you.
-              <br />
-              2. We simply want to know your requirement and then we will figure out the customize plan
+              Click on the link and book a Free Mentoring Session. After that we will figure out the personalized plan as per the student's requirement.
             </Typography>
-            <Divider />
           </AccordionDetails>
         </Accordion>
-        <Accordion expanded={expanded === "panel2"} onChange={handleChange("panel2")} className={classes.accordion}>
+
+        <Accordion expanded={expanded === "panel3"} onChange={handleChange("panel3")} className={classes.accordion}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2bh-content" id="panel2bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
@@ -138,27 +152,11 @@ function Faqs(props) {
                 Answer:
               </Typography>
               <br />
-              Currently we are providing home tutition in Mumbai only, But the services can be availed anywhere through online live tuition at our platform.
+              Currently we are providing home tuition in Mumbai only, But the services can be availed anywhere through online live tuition at our platform.
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion expanded={expanded === "panel3"} onChange={handleChange("panel3")} className={classes.accordion}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3bh-content" id="panel3bh-header">
-            <Typography variant="h6" color="primary" className={classes.heading}>
-              <span className={classes.q}>Q: </span>
-              What is the Fee structure of the program?
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className={classes.answer} color="primary">
-              <Typography variant="h5" className={classes.q}>
-                Answer:
-              </Typography>
-              <br />
-              The Fee structure will depend on the need and duration of the program. We will figure it out in the meeting.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+
         <Accordion expanded={expanded === "panel4"} onChange={handleChange("panel4")} className={classes.accordion}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
@@ -172,15 +170,16 @@ function Faqs(props) {
                 Answer:
               </Typography>
               <br />
-              All the faculties are IIT graduates. They are expert in their subjects, experienced, passionate in teaching, motivating, understanding and friendly Mentors.
+              All the faculties are IIT graduates. They are expert in their subjects, experienced, passionate in teaching, motivating, understanding and friendly teachers.
             </Typography>
           </AccordionDetails>
         </Accordion>
+
         <Accordion expanded={expanded === "panel5"} onChange={handleChange("panel5")} className={classes.accordion}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3bh-content" id="panel3bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
-              How we work?
+              What is your fee structure?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -189,10 +188,118 @@ function Faqs(props) {
                 Answer:
               </Typography>
               <br />
-              1. Regular sessions as per student’s requirements. 2. Regular updates of sessions regarding Home Work and completion status of previous home Work. 3. Relevant and effective study
-              materials will be suggested and followed. 4. Students can ask any doubt on chat, any time. 5. They get 2-3 calls/ week from the mentor regarding regular progress and mentoring 6. For
-              peer learning there are students groups under Sir’s guidance. 7. Computer based tests are conducted regularly and test analysis is personally done by the Mentor with students. 8. Regular
-              Monthly meeting for Strength-Weakness analysis and deciding further course of action.
+              It depends on the Duration of the program. After the Mentoring session we figure out how exactly we need to work on the student. It is always beneficial to take the 'Mentoring Session'
+              as it helps students analyze and align their preparation.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel6"} onChange={handleChange("panel6")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              Does student need to join coaching classes along with it?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              Not at all, We provide everything needed to crack the exam with a good rank, Other classes will only cause extra burden and reduce self study time.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel7"} onChange={handleChange("panel7")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              How much classes are there in a week?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              The number of classes/week solely depends on the students pace in covering the assigned Homework. Generally it is 1-2 classes/Sub/Week. The teacher is always reachable where ever they
+              are stuck.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel8"} onChange={handleChange("panel8")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              What is the duration of class?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              It is 2 hours and 10 minutes. Designed to cover doubts, new concepts, question practice in 2 hours. And 10 minutes for regular mentoring on preparation strategy.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel9"} onChange={handleChange("panel9")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              How frequent your Tests are?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              Tests are taken on topic completion in each Subject, then mixed tests after that part tests and full tests are taken.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel10"} onChange={handleChange("panel10")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              Does your Foundation prepare students for exams like KVPY, and Olympiads?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              Yes, our Foundation program is very unique, It can prepare students with all the basics before starting the full fledged IIT/NEET Preparation. We also prepare students for KVPY and
+              Olympiads during the program.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === "panel11"} onChange={handleChange("panel11")} className={classes.accordion}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
+            <Typography variant="h6" color="primary" className={classes.heading}>
+              <span className={classes.q}>Q: </span>
+              Does you also prepare for MHT-CET?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className={classes.answer} color="primary">
+              <Typography variant="h5" className={classes.q}>
+                Answer:
+              </Typography>
+              <br />
+              Yes, we prepare students for MHT-CET and other state level exams along with BITS.
             </Typography>
           </AccordionDetails>
         </Accordion>

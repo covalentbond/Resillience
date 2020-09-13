@@ -18,8 +18,8 @@ export default class Home extends React.Component {
         }}
       >
         <LandingPage />
-        <BetterLearning />
         <HomeFeatures />
+        <BetterLearning />
         <Milestones />
         <Videos />
         <Testimonials />
