@@ -45,7 +45,7 @@ function Milestones(props) {
   const { classes } = props;
   return (
     <div className={classes.milestoneSection}>
-      <img src={milestoneImageDesign} className={classes.milestoneImage} />
+      <img src={milestoneImageDesign} className={classes.milestoneImage} alt="Milestone Design" />
       <Typography variant="h3" color="primary" style={{ marginBottom: "5%", textAlign: "center", letterSpacing: "-1.5px" }}>
         Milestones
       </Typography>

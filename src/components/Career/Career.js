@@ -2,24 +2,25 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-// //Components
-// import Milestones from "../Home/Milestones";
-
+//Components
 import careerImage from "../../images/careerImage.svg";
 import TeacherImage from "../../images/teachersNew.svg";
 
 const styles = () => ({
   careerSection: {
     paddingTop: "4.2%",
-    // backgroundColor: "#EEEEEE",
-    "@media only screen and (max-width: 1024px)": {
-      paddingTop: "14%"
+    "@media only screen and (max-width: 770px)": {
+      paddingTop: "13%"
     }
   },
   careerHeading: {
     position: "absolute",
     marginLeft: "55%",
-    marginTop: "10%"
+    marginTop: "10%",
+    "@media only screen and (max-width: 1024px)": {
+      marginLeft: "45%",
+      fontSize: "2.5rem"
+    }
   },
   content: {
     width: "100%",
@@ -62,7 +63,6 @@ function Career(props) {
         </Typography>
         <img alt="Teacher" className={classes.teacherImage} src={TeacherImage}></img>
       </div>
-      {/* <Milestones /> */}
       <div style={{ padding: "5%", textAlign: "center" }}>
         <Typography variant="inherit" className={classes.text} color="primary">
           Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home

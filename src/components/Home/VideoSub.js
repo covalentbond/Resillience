@@ -5,11 +5,11 @@ import withStyles from "@material-ui/core/styles/withStyles";
 const styles = () => ({
   iframe: {
     width: "400px",
-    height: "200px"
-    // "@media only screen and (max-width: 637px)": {
-    //   width: "300px",
-    //   height: "150px"
-    // }
+    height: "200px",
+    "@media only screen and (max-width: 1025px)": {
+      width: "300px",
+      height: "150px"
+    }
   }
 });
 
@@ -36,7 +36,7 @@ class VideoSub extends React.Component {
           }
         },
         {
-          breakpoint: 800,
+          breakpoint: 720,
           settings: {
             autoplay: true,
             slidesToShow: 1,
@@ -67,7 +67,7 @@ class VideoSub extends React.Component {
               allowFullScreen
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
-              srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${value}/?autoplay=1><img src=https://img.youtube.com/vi/${value}/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+              srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${value}/?autoplay=1><img src=https://img.youtube.com/vi/${value}/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
             ></iframe>
           </div>
         ))}
@@ -77,3 +77,13 @@ class VideoSub extends React.Component {
 }
 
 export default withStyles(styles)(VideoSub);
+{
+  /* <iframe
+  width="853"
+  height="480"
+  src="https://www.youtube.com/embed/"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>; */
+}

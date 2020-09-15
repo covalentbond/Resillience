@@ -12,6 +12,12 @@ const styles = () => ({
     width: "1036px",
     margin: "0 auto",
     marginBottom: "50%",
+    "@media only screen and (max-width: 1050px)": {
+      marginBottom: "60%"
+    },
+    "@media only screen and (max-width: 1000px)": {
+      width: "90%"
+    },
     "@media only screen and (max-width: 770px)": {
       width: "320px",
       marginTop: "25%",
@@ -23,6 +29,16 @@ const styles = () => ({
     position: "absolute",
     marginLeft: "365px",
     height: "1565px",
+    "@media only screen and (max-width: 1000px)": {
+      width: "80%",
+      height: "1582px",
+      marginLeft: "220px"
+    },
+    "@media only screen and (max-width: 900px)": {
+      width: "75%",
+      height: "1582px",
+      marginLeft: "235px"
+    },
     "@media only screen and (max-width: 770px)": {
       display: "none"
     }
@@ -38,6 +54,15 @@ const styles = () => ({
       display: "none"
     }
   },
+  whyResillience: {
+    margin: "5%",
+    textAlign: "center",
+    letterSpacing: "-1px",
+    "@media only screen and (max-width: 770px)": {
+      margin: "4%",
+      marginBottom: "10%"
+    }
+  },
   LearningBody: {
     position: "relative",
     display: "flex",
@@ -49,6 +74,12 @@ const styles = () => ({
   DescriptionItem: {
     width: "360px",
     textAlign: "right",
+    "@media only screen and (max-width: 1000px)": {
+      width: "290px"
+    },
+    "@media only screen and (max-width: 900px)": {
+      width: "240px"
+    },
     "@media only screen and (max-width: 770px)": {
       width: "204px",
       textAlign: "left"
@@ -58,6 +89,12 @@ const styles = () => ({
     width: "360px",
     textAlign: "left",
     marginLeft: "auto",
+    "@media only screen and (max-width: 1000px)": {
+      width: "290px"
+    },
+    "@media only screen and (max-width: 900px)": {
+      width: "240px"
+    },
     "@media only screen and (max-width: 770px)": {
       width: "204px"
     }
@@ -91,7 +128,7 @@ function BetterLearning(props) {
   const { classes } = props;
   return (
     <section className={classes.BetterLearningSection}>
-      <Typography variant="h3" color="primary" style={{ margin: "5%", textAlign: "center", letterSpacing: "-1px" }}>
+      <Typography variant="h3" color="primary" className={classes.whyResillience}>
         Why RESILLIENCE ?
       </Typography>
       <img src={BetterLearningChanges} className={classes.BetterLearningImageWeb} alt="Better Learning Path" />

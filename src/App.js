@@ -24,6 +24,7 @@ const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
 const OneOnOneHome = lazy(() => import("./components/Features/OneOnOneHome"));
 const OneOnOneLive = lazy(() => import("./components/Features/OneOnOneLive"));
 const MasteringAChapter = lazy(() => import("./components/Features/MasteringAChapter"));
+const Tests = lazy(() => import("./components/Tests/Test"));
 const Faqs = lazy(() => import("./components/Faqs"));
 const Footer = lazy(() => import("./components/Home/Footer"));
 const Error = lazy(() => import("./components/Error"));
@@ -38,7 +39,6 @@ const PrivacyPolicy = lazy(() => import("./components/Miscellaneous/PrivacyPolic
 // const TermsOfService = lazy(() => import("./components/Miscellaneous/TermsOfService"));
 // const Sitemap = lazy(() => import("./components/Miscellaneous/Sitemap"));
 
-// const Tests = lazy(() => import("./components/Tests"));
 // const Room = lazy(() => import("./components/Room"));
 
 const theme = createMuiTheme(themeObject);
@@ -67,6 +67,7 @@ const AboutUsComponent = withTitle({ component: AboutUs, title: "About Us | RESI
 const OneOnOneHomeComponent = withTitle({ component: OneOnOneHome, title: "One On One Home Tuition | RESILLIENCE" });
 const OneOnOneLiveComponent = withTitle({ component: OneOnOneLive, title: "One On One Live Tuition | RESILLIENCE" });
 const MasteringAChapterComponent = withTitle({ component: MasteringAChapter, title: "Mastering a week chapter | RESILLIENCE" });
+const TestComponent = withTitle({ component: Tests, title: "Test | RESILLIENCE" });
 const FaqsComponent = withTitle({ component: Faqs, title: "FAQ's | RESILLIENCE" });
 const ContactUsComponent = withTitle({ component: ContactUs, title: "Contact Us | RESILLIENCE" });
 const CareerComponent = withTitle({ component: Career, title: "Career | RESILLIENCE" });
@@ -124,6 +125,7 @@ class App extends Component {
                   <Route path="/features/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
                   <Route path="/features/one-on-one-live-tuitions" component={OneOnOneLiveComponent} />
                   <Route path="/features/mastering-week-topics" component={MasteringAChapterComponent} />
+                  <Route path="/test" component={TestComponent} />
                   <Route path="/faqs" component={FaqsComponent} />
                   <Route path="/contact-us" component={ContactUsComponent} />
                   <Route path="/career" component={CareerComponent} />
@@ -135,8 +137,7 @@ class App extends Component {
                   {/* <Route path="/termsofservice" component={TermsOfService} />
                   <Route path="/sitemap" component={SitemapComponent} /> */}
                   <Route component={ErrorComponent} />
-                  {/* <Route path="/tests" component={TestsComponent} />
-                  <Route path="/room" component={RoomComponent} /> */}
+                  {/* <Route path="/room" component={RoomComponent} /> */}
                 </Switch>
                 <Footer />
               </div>

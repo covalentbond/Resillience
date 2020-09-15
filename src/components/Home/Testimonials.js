@@ -16,13 +16,12 @@ const styles = () => ({
       marginBottom: "20%",
       padding: "8% 8% 2% 8%"
     }
-    // backgroundColor: "#D3D3D3"
   },
   tSaksham: {
     display: "flex",
     marginTop: "-1%",
     marginBottom: "7.5%",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 1000px)": {
       flexDirection: "column"
     }
   },
@@ -106,13 +105,13 @@ function Testimonials(props) {
       </Typography>
       <div className={classes.tSaksham}>
         <div className={classes.tImage}>
-          <img src={sakshamPhoto} style={{ display: "initial", width: "75%" }} />
+          <img src={sakshamPhoto} style={{ display: "initial", width: "75%" }} alt="Saksham Student" />
         </div>
         <div className={classes.tDesc}>
           <Typography variant="inherit" className={classes.sakshamMessage}>
             My experience with Resillience was very good. The teachers were the sole reason for whatever I have achieved. Their efforts were really commendable. They know exactly how to prepare a
             child for IIT JEE. Studying smart and hard both is their soul mantra. Aiming at improving concepts and practicing of questions was the major advice. I became very comfortable with all the
-            three professors and we developed a very solid bond in short time.
+            three professors and we developed a very strong bond in short time.
           </Typography>
           <Typography variant="h6" color="primary" style={{ marginTop: "2%" }}>
             Saksham Kamath
@@ -132,7 +131,9 @@ function Testimonials(props) {
               </Typography>
               <br />
               <Typography variant="inherit" color="primary">
-                ⭐⭐⭐⭐⭐
+                <span alt="Star Emojis" role="Star Merit">
+                  ⭐⭐⭐⭐⭐
+                </span>
               </Typography>
               <Typography variant="h6" color="primary">
                 {eachTestimonial.name}

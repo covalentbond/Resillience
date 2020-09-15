@@ -14,7 +14,10 @@ const styles = () => ({
     display: "flex",
     justifyContent: "space-between",
     width: "60%",
-    marginTop: "3%"
+    marginTop: "3%",
+    "@media only screen and (max-width: 1024px)": {
+      width: "100%"
+    }
   },
   autoSize: {
     marginTop: "2%",

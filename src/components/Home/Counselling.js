@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-// import CounsellingImage from "../../images/counselling.png";
 import CounsellingImageNew from "../../images/counsellingNew.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
@@ -22,6 +21,9 @@ const useStyles = makeStyles({
   designedText: {
     position: "absolute",
     marginTop: "-25px",
+    "@media only screen and (max-width: 900px)": {
+      marginTop: "-16px"
+    },
     "@media only screen and (max-width: 770px)": {
       position: "initial",
       marginTop: "0px"
@@ -31,6 +33,15 @@ const useStyles = makeStyles({
     width: "340px",
     position: "absolute",
     zIndex: "-1",
+    "@media only screen and (max-width: 1100px)": {
+      width: "300px"
+    },
+    "@media only screen and (max-width: 950px)": {
+      width: "250px"
+    },
+    "@media only screen and (max-width: 880px)": {
+      width: "200px"
+    },
     "@media only screen and (max-width: 770px)": {
       position: "initial",
       marginTop: "-10px"
@@ -48,9 +59,21 @@ const useStyles = makeStyles({
     marginLeft: "42px",
     marginTop: "27px",
     cursor: "pointer",
+    "@media only screen and (max-width: 1025px)": {
+      fontSize: "1.35rem"
+    },
+    "@media only screen and (max-width: 950px)": {
+      fontSize: "1.25rem",
+      marginTop: "20px",
+      marginLeft: "35px"
+    },
+    "@media only screen and (max-width: 880px)": {
+      fontSize: "1rem",
+      marginLeft: "28px"
+    },
     "@media only screen and (max-width: 770px)": {
       width: "auto",
-      marginTop: "-20.5%",
+      marginTop: "-21.5%",
       marginLeft: "0px"
     }
   },

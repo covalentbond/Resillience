@@ -30,7 +30,11 @@ const styles = () => ({
     marginLeft: "0",
     marginRight: "0"
   },
-  card: {},
+  card: {
+    "@media only screen and (max-width: 1190px)": {
+      minWidth: "30%"
+    }
+  },
   homeTuition: {
     width: "70%",
     height: "240px",
@@ -82,7 +86,7 @@ function HomeFeatures(props) {
           Tuitions
         </Typography>
         <Grid container className={classes.grid} spacing={5}>
-          <Grid item sm={3} xs={12} className={classes.card}>
+          <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img src={HomeTuition} className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
@@ -95,7 +99,7 @@ function HomeFeatures(props) {
               </Link>
             </Paper>
           </Grid>
-          <Grid item sm={3} xs={12} className={classes.card}>
+          <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img className={classes.oneToOne} src={Online1to1} alt="Online one to one Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
@@ -108,7 +112,7 @@ function HomeFeatures(props) {
               </Link>
             </Paper>
           </Grid>
-          <Grid item sm={3} xs={12} className={classes.card}>
+          <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
               <img src={masteringChapter} className={classes.onlineGroup} alt="Mastering a week chapter" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>

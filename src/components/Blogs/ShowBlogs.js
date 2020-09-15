@@ -20,10 +20,16 @@ const styles = () => ({
     margin: "0 30% 5% 30%"
   },
   section: {
-    marginTop: "4.2%"
+    marginTop: "4.2%",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "13%"
+    }
   },
   image: {
-    paddingBottom: "10%"
+    paddingBottom: "10%",
+    "@media only screen and (max-width: 770px)": {
+      width: "100%"
+    }
   },
   blogHeading: {
     textAlign: "center"

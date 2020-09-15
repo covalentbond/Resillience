@@ -2,9 +2,7 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-// import logo from "../../images/Resillience-Logo.png";
-// import logoSmall from "../../images/Resillience-Logo-Small.svg";
-// import ResillienceNavbar from "../../images/RESILLIENCE-NAVBAR.svg";
+import TuitionDropdown from "./TuitionDropdown";
 
 import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
@@ -88,6 +86,12 @@ const styles = () => ({
     color: "#3672c0",
     textDecoration: "none",
     fontWeight: "bolder",
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
+    "@media only screen and (max-width: 1050px)": {
+      fontSize: "90%"
+    },
     "@media only screen and (max-width: 770px)": {
       color: "#232127",
       fontFamily: "muli",
@@ -118,16 +122,19 @@ class Navbar extends React.Component {
         <div className={this.state.open === true ? classes.navLinks : classes.vanish}>
           {[
             { route: "/", name: "Home" },
-            { route: "/aboutus", name: "About Us" },
-            { route: "/features", name: "Tuitions" },
-            { route: "/test", name: "Test" },
-            { route: "/faqs", name: "FAQ'S" }
+            { route: "/aboutus", name: "About Us" }
           ].map((eachNav, index) => (
             <NavLink key={index} exact className={classes.navIcons} activeClassName="active" to={eachNav.route} onClick={this.handleChange}>
               {eachNav.name}
             </NavLink>
           ))}
-
+          <TuitionDropdown />
+          <NavLink exact className={classes.navIcons} activeClassName="active" to="/test" onClick={this.handleChange}>
+            Test
+          </NavLink>
+          <NavLink exact className={classes.navIcons} activeClassName="active" to="/faqs" onClick={this.handleChange}>
+            FAQ'S
+          </NavLink>
           <SignIn />
         </div>
       </AppBar>

@@ -11,30 +11,8 @@ body {
   /* Margin 0 is important otherwise the elements start behaving by adding margin */
 }
 
-.MuiTypography-h1 .MuiTypography-h5 {
-  /* font-size: 26px; */
-  font-family: muli, sans-serif;
-}
-
-.MuiTypography-body1 {
-  font-size: 206px;
-  font-family: muli, sans-serif;
-}
-
-.second-line {
-  display: "flex";
-  /* flex-direction: "row"; */
-  /* font-size: 1.55rem; */
-  /* position: absolute; */
-  /* top: 400px; */
-}
-
 .MuiAccordionSummary-root {
   padding: "0px 8px"
-}
-
-.headings {
-  margin: "7%"
 }
 
 /*Test */
@@ -43,11 +21,7 @@ body {
   padding: 24px;
 }
 
-.subjectGrid:hover {
-  background-color: #0F7DC2;
-  position: "relative";
-  top: "-5px";
-}
+/* .subjectGrid:hover {} */
 
 .slick-slide iframe {
   margin: auto;

@@ -21,15 +21,32 @@ const styles = () => ({
     justifyContent: "space-between",
     "@media only screen and (max-width: 1024px)": {
       fontSize: "20px"
+    },
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "18px",
+      marginTop: "15%"
     }
   },
   subSections: {
     display: "flex",
-    padding: "2%"
+    padding: "2%",
+    "@media only screen and (max-width: 770px)": {
+      flexDirection: "column !important",
+      textAlign: "center"
+    }
   },
   landingImage: {
     marginRight: "2%",
-    margin: "auto"
+    margin: "auto",
+    "@media only screen and (max-width: 770px)": {
+      marginRight: "auto"
+    }
+  },
+  innerImage: {
+    width: "120%",
+    "@media only screen and (max-width: 770px)": {
+      width: "90%"
+    }
   },
   subSectionContent: {
     display: "flex",
@@ -37,7 +54,11 @@ const styles = () => ({
     textAlign: "left",
     // margin: "auto",
     paddingLeft: "3%",
-    paddingRight: "3%"
+    paddingRight: "3%",
+    "@media only screen and (max-width: 770px)": {
+      paddingLeft: "0%",
+      paddingRight: "0%"
+    }
   },
   withIconSection: {
     display: "flex",
@@ -65,10 +86,17 @@ const styles = () => ({
     "&:hover": {
       color: "#D3D3D3"
     },
-    cursor: "pointer"
+    cursor: "pointer",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "40px"
+    }
   },
   email: {
     textAlign: "left"
+  },
+  areaMap: {
+    width: "90vw",
+    height: "400px"
   }
 });
 
@@ -79,7 +107,7 @@ function ContactUs(props) {
       <div className={classes.subSections}>
         {/* <img src={ContactUsLandingImage} className={classes.landingImage}></img> */}
         <div className={classes.landingImage}>
-          <img alt="ContactUs" src={ContactUsPhone}></img>
+          <img alt="ContactUs" src={ContactUsPhone} className={classes.innerImage}></img>
         </div>
         <div className={classes.subSectionContent}>
           <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
@@ -129,15 +157,13 @@ function ContactUs(props) {
               </Typography>
             </div>
           </div>
-          {/* <WhatsAppIcon className={classes.clickableIcon} onClick={() => window.open("https://wa.me/9304228132?text=Hi,%20I'm%20interested%20in%20enquiring%20about%20`", "_blank")} /> */}
         </div>
       </div>
       <Email />
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.996033161349!2d72.99782361437727!3d19.107829955937806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1bb77d10f5b%3A0x44110fc0df9a690f!2sRESILLIENCE%20%7CIIT%20JEE%20-%20NEET%20-%20Foundation(8th%2C%209th%20%2610th)%20%7C%20Online%2FHome%20Tuition%20by%20IITians!5e0!3m2!1sen!2sin!4v1598373962132!5m2!1sen!2sin"
-        width="1220"
-        height="400"
+        className={classes.areaMap}
         frameBorder="0"
         title="Registration Form for teachers"
         // style="border:0;"

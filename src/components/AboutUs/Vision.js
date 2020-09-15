@@ -11,7 +11,8 @@ const styles = () => ({
       fontSize: "20px"
     },
     "@media only screen and (max-width: 770px)": {
-      fontSize: "16px"
+      fontSize: "16px",
+      paddingBottom: "4%"
     }
   },
   textHeading: {

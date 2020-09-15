@@ -1,7 +1,6 @@
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import Counselling from "./Counselling";
 
@@ -15,7 +14,6 @@ const styles = () => ({
     paddingTop: "5%",
     height: "70%",
     display: "flex",
-    // marginBottom: "5%", //As it was not getting alligned properly on referred link
     paddingLeft: "11.5%",
     paddingRight: "11.5%",
     fontSize: "22px",
@@ -24,7 +22,6 @@ const styles = () => ({
       flexDirection: "column",
       paddingLeft: "3%",
       paddingRight: "3%",
-      // marginBottom: "0%",
       alignItems: "center"
     }
   },
@@ -35,6 +32,15 @@ const styles = () => ({
     marginBottom: "0",
     "@media only screen and (max-width: 770px)": {
       marginBottom: "5%"
+    }
+  },
+  stroke: {
+    zIndex: "-1",
+    marginTop: "38px",
+    marginLeft: "42%",
+    position: "absolute",
+    "@media only screen and (max-width: 1100px)": {
+      display: "none"
     }
   },
   fImageSection: {
@@ -48,7 +54,6 @@ const styles = () => ({
       fontSize: "16px",
       order: "0",
       width: "60%"
-      // visibility: "hidden"
     }
   },
   fImage: {
@@ -105,23 +110,11 @@ function MasteringAChapter(props) {
   return (
     <div className="page" style={{ marginTop: "80px" }}>
       <span>
-        <img
-          alt="Bg Design"
-          src={strokeFeatures}
-          style={{
-            zIndex: "-1",
-            marginTop: "38px",
-            marginLeft: "42%",
-            // marginLeft: "4px",
-            position: "absolute"
-          }}
-        />
+        <img alt="Bg Design" src={strokeFeatures} className={classes.stroke} />
         <Typography variant="h3" color="primary" className={classes.featuresText}>
           Features
         </Typography>
       </span>
-
-      <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection}>
         <div className={classes.fImageSection}>
           <img className={classes.fImage} alt="Mastering Chapter" src={masteringChapter} />

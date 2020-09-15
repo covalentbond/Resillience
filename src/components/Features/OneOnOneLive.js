@@ -6,7 +6,7 @@ import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import Counselling from "./Counselling";
 
 //Images
-import onlineOneToOne from "../../images/online-classes.png";
+import onlineOneToOne from "../../images/onlineOneToOne.svg";
 import liveDoubts from "../../images/Questions.svg";
 import strokeFeatures from "../../images/strokeAboutUs.svg";
 
@@ -35,6 +35,15 @@ const styles = () => ({
     marginBottom: "0",
     "@media only screen and (max-width: 770px)": {
       marginBottom: "5%"
+    }
+  },
+  stroke: {
+    zIndex: "-1",
+    marginTop: "38px",
+    marginLeft: "42%",
+    position: "absolute",
+    "@media only screen and (max-width: 1100px)": {
+      display: "none"
     }
   },
   fImageSection: {
@@ -105,23 +114,11 @@ function OneOnOneLive(props) {
   return (
     <div className="page" style={{ marginTop: "80px" }}>
       <span>
-        <img
-          alt="Bg Design"
-          src={strokeFeatures}
-          style={{
-            zIndex: "-1",
-            marginTop: "38px",
-            marginLeft: "42%",
-            // marginLeft: "4px",
-            position: "absolute"
-          }}
-        />
+        <img alt="Bg Design" src={strokeFeatures} className={classes.stroke} />
         <Typography variant="h3" color="primary" className={classes.featuresText}>
           Features
         </Typography>
       </span>
-
-      <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection} id="oneToOneOnlineClasses">
         <div className={classes.fImageSection}>
           <img className={classes.fImage} alt="Online One to One Classes" src={onlineOneToOne} />

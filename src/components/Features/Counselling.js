@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-// import CounsellingImage from "../../images/counselling.png";
 import CounsellingImageNew from "../../images/counsellingNew.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
