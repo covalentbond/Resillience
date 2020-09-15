@@ -122,9 +122,9 @@ class App extends Component {
                 <Switch location={location}>
                   <Route exact path="/" component={HomeComponent} />
                   <Route path="/aboutus" component={AboutUsComponent} />
-                  <Route path="/features/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
-                  <Route path="/features/one-on-one-live-tuitions" component={OneOnOneLiveComponent} />
-                  <Route path="/features/mastering-week-topics" component={MasteringAChapterComponent} />
+                  <Route path="/tuitions/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
+                  <Route path="/tuitions/one-on-one-live-tuitions" component={OneOnOneLiveComponent} />
+                  <Route path="/tuitions/mastering-week-topics" component={MasteringAChapterComponent} />
                   <Route path="/test" component={TestComponent} />
                   <Route path="/faqs" component={FaqsComponent} />
                   <Route path="/contact-us" component={ContactUsComponent} />

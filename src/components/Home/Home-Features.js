@@ -92,7 +92,7 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One home tuition across Mumbai
               </Typography>
-              <Link to="/features/one-on-one-home-tuitions">
+              <Link to="/tuitions/one-on-one-home-tuitions">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -105,7 +105,7 @@ function HomeFeatures(props) {
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One live online tuition
               </Typography>
-              <Link to="/features/one-on-one-live-tuitions">
+              <Link to="/tuitions/one-on-one-live-tuitions">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -119,7 +119,7 @@ function HomeFeatures(props) {
                 Mastering a weak topic as per need
                 {/* Group live online tuitions anywhere */}
               </Typography>
-              <Link to="/features/mastering-week-topics">
+              <Link to="/tuitions/mastering-week-topics">
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
