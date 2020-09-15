@@ -2,7 +2,8 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import TuitionDropdown from "./TuitionDropdown";
+import Typography from "@material-ui/core/Typography";
+// import TuitionDropdown from "./TuitionDropdown";
 
 import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
@@ -128,7 +129,11 @@ class Navbar extends React.Component {
               {eachNav.name}
             </NavLink>
           ))}
-          <TuitionDropdown />
+          <Typography variant="inherit" className={classes.navIcons}>
+            Tuitions
+          </Typography>
+          {/* <TuitionDropdown /> */}
+          {/* TODO: Have to change here */}
           <NavLink exact className={classes.navIcons} activeClassName="active" to="/test" onClick={this.handleChange}>
             Test
           </NavLink>

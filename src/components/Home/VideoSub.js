@@ -77,13 +77,3 @@ class VideoSub extends React.Component {
 }
 
 export default withStyles(styles)(VideoSub);
-{
-  /* <iframe
-  width="853"
-  height="480"
-  src="https://www.youtube.com/embed/"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>; */
-}

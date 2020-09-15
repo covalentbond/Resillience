@@ -131,7 +131,7 @@ function Testimonials(props) {
               </Typography>
               <br />
               <Typography variant="inherit" color="primary">
-                <span alt="Star Emojis" role="Star Merit">
+                <span alt="Star Emojis" role="img" aria-label="Star Merit Rating">
                   ⭐⭐⭐⭐⭐
                 </span>
               </Typography>
