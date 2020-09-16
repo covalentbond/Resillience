@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import CounsellingImageNew from "../../images/counsellingNew.svg";
+import CounsellingImageNew from "../../compressed/counsellingNew.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
-import Tick from "../../images/tick.svg";
-import mentoringStroke from "../../images/mentoringStroke.svg";
+// import Tick from "../../compressed/tick.svg";
+// import mentoringStroke from "../../compressed/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -140,7 +140,7 @@ function Counselling() {
   return (
     <div className={classes.counselling}>
       <span onClick={handleClickOpen}>
-        <img src={mentoringStroke} alt="Stroke" className={classes.blueImage} />
+        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/mentoringStroke_doj1ve.svg" alt="Stroke" className={classes.blueImage} />
         <h1 className={classes.heading}>Book a Mentoring Session</h1>
       </span>
 
@@ -155,6 +155,7 @@ function Counselling() {
           paper: classes.paper
         }}
       >
+        {/* <img alt="Counselling" src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/counsellingNew_vrn64m.svg" className={classes.image} /> */}
         <img alt="Counselling" src={CounsellingImageNew} className={classes.image} />
         <div className={classes.section}>
           <h2 className={classes.getFree}>GET A FREE DEMO</h2>
@@ -180,7 +181,7 @@ function Counselling() {
           <div className={classes.messages}>
             {["Identify strengths and weaknesses", "Recommends a study plan for you", "One to One home/online tuition", "Mastering a weak topic"].map((message, index) => (
               <div className={classes.message} key={index}>
-                <img src={Tick} alt="tick" className={classes.tickImage} />
+                <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/tick_nz85rm.svg" alt="tick" className={classes.tickImage} />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>
               </div>
             ))}

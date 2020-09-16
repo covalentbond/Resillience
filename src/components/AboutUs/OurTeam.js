@@ -1,6 +1,6 @@
 import React from "react";
 import withStyles from "@material-ui/styles/withStyles";
-import TeacherImage from "../../images/teachersNew.svg";
+// import TeacherImage from "../../compressed/teachersNew.svg";
 
 const styles = () => ({
   teacherImage: {
@@ -16,7 +16,8 @@ function OurTeam(props) {
   const { classes } = props;
   return (
     <div style={{ margin: "auto", textAlign: "center" }}>
-      <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img>
+      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg" className={classes.teacherImage} />
+      {/* <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img> */}
     </div>
   );
 }

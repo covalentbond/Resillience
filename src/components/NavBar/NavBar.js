@@ -13,7 +13,7 @@ import SignIn from "./SignIn";
 
 const styles = () => ({
   hamburgerMenu: {
-    "@media only screen and (min-width: 770px)": {
+    "@media only screen and (min-width: 950px)": {
       display: "none"
     }
   },
@@ -22,7 +22,7 @@ const styles = () => ({
     justifyContent: "space-between",
     marginRight: "20%",
     alignItems: "center",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       marginRight: "2%"
     }
   },
@@ -31,7 +31,7 @@ const styles = () => ({
     cursor: "pointer",
     fontFamily: "rubik",
     fontSize: "26px",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       paddingLeft: "5%",
       marginTop: "8.5px",
       marginBottom: "8.5px"
@@ -48,7 +48,7 @@ const styles = () => ({
     paddingLeft: "5%",
     paddingRight: "5%",
     color: "#3672c0",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       flexDirection: "column",
       paddingLeft: "0",
       textTransform: "capitalize",
@@ -62,7 +62,7 @@ const styles = () => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       flexDirection: "column",
       justifyContent: "start",
       height: "auto",
@@ -79,7 +79,7 @@ const styles = () => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       display: "none"
     }
   },
@@ -93,7 +93,7 @@ const styles = () => ({
     "@media only screen and (max-width: 1050px)": {
       fontSize: "90%"
     },
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 950px)": {
       color: "#232127",
       fontFamily: "muli",
       fontWeight: "normal",

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
-import sakshamPhoto from "../../images/sakshamPhoto.png";
+// import sakshamPhoto from "../../compressed/sakshamPhoto.png";
 
 import list from "./testimonialList";
 
@@ -105,7 +105,7 @@ function Testimonials(props) {
       </Typography>
       <div className={classes.tSaksham}>
         <div className={classes.tImage}>
-          <img src={sakshamPhoto} style={{ display: "initial", width: "75%" }} alt="Saksham Student" />
+          <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/sakshamPhoto_fatfdp.png" style={{ display: "initial", width: "75%" }} alt="Saksham Student" />
         </div>
         <div className={classes.tDesc}>
           <Typography variant="inherit" className={classes.sakshamMessage}>

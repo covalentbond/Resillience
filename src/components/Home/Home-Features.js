@@ -2,10 +2,10 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import withStyles from "@material-ui/core/styles/withStyles";
 
-import Online1to1 from "../../images/online1to1.svg";
-// import OnlineGroup from "../../images/teacher.svg";
-import masteringChapter from "../../images/masteringChapters.svg";
-import HomeTuition from "../../images/hometuition.svg";
+// import Online1to1 from "../../compressed/online1to1.svg";
+// // import OnlineGroup from "../../compressed/teacher.svg";
+// import masteringChapter from "../../compressed/masteringChapters.svg";
+// import HomeTuition from "../../compressed/hometuition.svg";
 
 //MUI
 import Grid from "@material-ui/core/Grid";
@@ -88,7 +88,7 @@ function HomeFeatures(props) {
         <Grid container className={classes.grid} spacing={5}>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src={HomeTuition} className={classes.homeTuition} alt="Home Tuition" />
+              <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One home tuition across Mumbai
               </Typography>
@@ -101,7 +101,7 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img className={classes.oneToOne} src={Online1to1} alt="Online one to one Tuition" />
+              <img className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 One on One live online tuition
               </Typography>
@@ -114,7 +114,7 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src={masteringChapter} className={classes.onlineGroup} alt="Mastering a week chapter" />
+              <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg" className={classes.onlineGroup} alt="Mastering a week chapter" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 Mastering a weak topic as per need
                 {/* Group live online tuitions anywhere */}

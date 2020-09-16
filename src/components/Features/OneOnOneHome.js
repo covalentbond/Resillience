@@ -6,10 +6,9 @@ import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import Counselling from "./Counselling";
 
 //Images
-import liveDoubts from "../../images/Questions.svg";
-import strokeFeatures from "../../images/strokeAboutUs.svg";
-
-import oneToOne from "../../images/oneToOne.svg";
+// import liveDoubts from "../../compressed/Questions.svg";
+// import strokeFeatures from "../../compressed/strokeAboutUs.svg";
+// import oneToOne from "../../compressed/oneToOne.svg";
 
 const styles = () => ({
   featureSection: {
@@ -112,14 +111,14 @@ function Features(props) {
   return (
     <div className="page" style={{ marginTop: "80px" }}>
       <span>
-        <img alt="Bg Design" src={strokeFeatures} className={classes.stroke} />
+        <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
         <Typography variant="h3" color="primary" className={classes.featuresText}>
           Features
         </Typography>
       </span>
       <div className={classes.featureSection} id="oneToOneHomeClasses">
         <div className={classes.fImageSection}>
-          <img className={classes.fImage} alt="One to One" src={oneToOne} />
+          <img className={classes.fImage} alt="One to One" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/oneToOne_ep0qu2.svg" />
           <Counselling />
         </div>
         <div className={classes.fDescription}>
@@ -154,7 +153,7 @@ function Features(props) {
       <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection}>
         <div className={classes.fImageSection}>
-          <img className={classes.fImage} alt="Live doubts" src={liveDoubts} />
+          <img className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>

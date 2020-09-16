@@ -3,10 +3,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
 //Images
-import calculator from "../../images/calculator.svg";
-import magnet from "../../images/magnet.svg";
-import lab from "../../images/lab.svg";
-import blackboard from "../../images/blackboard.svg";
+// import calculator from "../../compressed/calculator.svg";
+// import magnet from "../../compressed/magnet.svg";
+// import lab from "../../compressed/lab.svg";
+// import blackboard from "../../compressed/blackboard.svg";
 
 //MUI
 import Paper from "@material-ui/core/Paper";
@@ -65,28 +65,28 @@ function Tests(props) {
             <Grid container className={classes.root} spacing={2}>
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src={calculator} className={classes.subjectImages} alt="Mathematics" />
+                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
                   <Typography variant="body-2">Mathematics</Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src={magnet} className={classes.subjectImages} alt="Physics" />
+                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
                   <Typography variant="body-2">Physics</Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src={lab} className={classes.subjectImages} alt="Chemsitry" />
+                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
                   <Typography variant="body-2">Chemistry</Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src={blackboard} className={classes.subjectImages} alt="Foundation Classes" />
+                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
                   <Typography variant="body-2">Foundation Classes</Typography>
                 </Paper>
               </Grid>

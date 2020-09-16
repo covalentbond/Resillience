@@ -12,7 +12,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 //Images
-import ContactUsPhone from "../../images/phoneContactUs.svg";
+// import ContactUsPhone from "../../compressed/phoneContactUs.svg";
 
 const styles = () => ({
   contactSection: {
@@ -107,7 +107,7 @@ function ContactUs(props) {
       <div className={classes.subSections}>
         {/* <img src={ContactUsLandingImage} className={classes.landingImage}></img> */}
         <div className={classes.landingImage}>
-          <img alt="ContactUs" src={ContactUsPhone} className={classes.innerImage}></img>
+          <img alt="ContactUs" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/phoneContactUs_h56bal.svg" className={classes.innerImage}></img>
         </div>
         <div className={classes.subSectionContent}>
           <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">

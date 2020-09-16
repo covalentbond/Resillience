@@ -1,6 +1,5 @@
 import React from "react";
-// import milestoneImage from "../../images/milestoneImage.svg";
-import milestoneImageDesign from "../../images/milestoneImageDesign.svg";
+// import milestoneImageDesign from "../../compressed/milestoneImageDesign.svg";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
@@ -45,7 +44,7 @@ function Milestones(props) {
   const { classes } = props;
   return (
     <div className={classes.milestoneSection}>
-      <img src={milestoneImageDesign} className={classes.milestoneImage} alt="Milestone Design" />
+      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/milestoneImageDesign_m8mcru.svg" className={classes.milestoneImage} alt="Milestone Design" />
       <Typography variant="h3" color="primary" style={{ marginBottom: "5%", textAlign: "center", letterSpacing: "-1.5px" }}>
         Milestones
       </Typography>

@@ -8,7 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Divider from "@material-ui/core/Divider";
 
 //Images
-import FAQS from "../images/faqs.svg";
+// import FAQS from "../compressed/faqs.svg";
 
 const styles = () => ({
   root: {
@@ -91,7 +91,7 @@ function Faqs(props) {
           F.A.Q
         </Typography>
         <h1 className={classes.qs}>Questions?</h1>
-        <img alt="FAQ'S" src={FAQS} className={classes.faqImage}></img>
+        <img alt="FAQ'S" src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/faqs_usvet7.svg" className={classes.faqImage}></img>
       </div>
       <div className={classes.root}>
         <Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")} className={classes.accordion}>

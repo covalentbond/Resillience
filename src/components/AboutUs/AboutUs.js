@@ -45,13 +45,6 @@ function AboutUs(props) {
       <Vision />
       <OurTeam />
       <Story />
-      {/* <Typography
-        variant="h4"
-        color="secondary"
-        style={{ textAlign: "center", marginBottom: "8px", fontStyle: "normal" }}
-      >
-        Our Team
-      </Typography> */}
       <Typography variant="h5" color="primary" className={classes.developers}>
         Website developed by:&nbsp;&nbsp; <br className={classes.break} />
         <span className={classes.hoverName} onClick={() => window.open("https://www.linkedin.com/in/arijit-kundu/", "_blank")}>

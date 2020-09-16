@@ -2,11 +2,11 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 //Images
-import TeamLandingImageWeb from "../../images/teamLanding.svg";
-import TeamLandingImagePhone from "../../images/teamLandingPhone.svg";
+import TeamLandingImageWeb from "../../compressed/teamLanding.svg";
+// import TeamLandingImagePhone from "../../compressed/teamLandingPhone.svg";
 
 import Typography from "@material-ui/core/Typography";
-import strokeAboutUs from "../../images/strokeAboutUs.svg";
+// import strokeAboutUs from "../../compressed/strokeAboutUs.svg";
 
 const styles = () => ({
   teamLanding: {
@@ -21,7 +21,7 @@ const styles = () => ({
       position: "relative",
       flexDirection: "column",
       fontSize: "16px",
-      marginBottom: "180px",
+      marginBottom: "10px",
       marginTop: "10%"
     }
   },
@@ -98,7 +98,7 @@ function LandingPage(props) {
           </Typography>
           <img
             alt="Bg Design"
-            src={strokeAboutUs}
+            src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg"
             style={{
               zIndex: "-1",
               marginLeft: "4px",
@@ -134,7 +134,7 @@ function LandingPage(props) {
         }}
       >
         <img src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
-        <img src={TeamLandingImagePhone} alt="Team Landing Page" className={classes.teamLandingImagePhone} />
+        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg" alt="Team Landing Page" className={classes.teamLandingImagePhone} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
-import DesignFooterrr from "../../images/design-footerrr1.svg";
+// import DesignFooterrr from "../../compressed/design-footerrr1.svg";
 
 //MUI Icons
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -76,14 +76,14 @@ function Footer(props) {
   const { classes } = props;
   return (
     <div className={classes.footerSection}>
-      <img src={DesignFooterrr} className={classes.designImage} alt="Design Footer" />
+      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/design-footerrr1_wlvv2d.svg" className={classes.designImage} alt="Design Footer" />
       <div>
         <Grid container spacing={3} className={classes.companyInfo} style={{ width: "100%", margin: "0" }}>
-          <Grid item sm={3} xs={12} className={classes.articles}>
+          <Grid item md={3} sm={6} xs={12} className={classes.articles}>
             <Typography variant="h5">Resillience</Typography>
             <br></br>
           </Grid>
-          <Grid item sm={3} xs={12} className={classes.articles}>
+          <Grid item md={3} sm={6} xs={12} className={classes.articles}>
             <Typography variant="h5">Quick Links</Typography>
             {[
               {
@@ -112,13 +112,13 @@ function Footer(props) {
               </Link>
             ))}
           </Grid>
-          <Grid item sm={3} xs={12} className={classes.address}>
+          <Grid item md={3} sm={6} xs={12} className={classes.address}>
             <Typography variant="h5">Correspondence Address</Typography>
             <p style={{ color: "#cccccc" }}>Twins Hallmark, Sector 19A, Kopar Khairane, Navi Mumbai, Maharashtra 400709</p>
             <Typography variant="h5">Registered Address</Typography>
             <p style={{ color: "#cccccc" }}>Plot no B81, Anand Nagar MIDC, Additional Ambernath. , Ambernath, Dist : Thane – 421506</p>
           </Grid>
-          <Grid item sm={3} xs={12}>
+          <Grid item md={3} sm={6} xs={12}>
             <Typography variant="h5">#Being RESILLIENT</Typography>
             <br></br>
             <Typography variant="h5" style={{ marginTop: "8px", marginBottom: "8px" }}>

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import TextField from "@material-ui/core/TextField";
-import loginBg from "../../images/loginBg.svg";
+// import loginBg from "../../compressed/loginBg.svg";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 
@@ -65,7 +65,7 @@ class SignIn extends React.Component {
     };
     console.log(userData);
     axios
-      .post("/signin", userData)
+      .post("student/signin", userData)
       .then((res) => {
         console.log(res);
         console.log(res.data);
@@ -134,7 +134,7 @@ class SignIn extends React.Component {
             paper: classes.paper
           }}
         >
-          <img alt="loginBg" src={loginBg} style={{ visibility: "initial", width: "580px" }} />
+          <img alt="loginBg" src="https://res.cloudinary.com/rweb1/image/upload/v1600243283/Assets/images/loginBg_olbayb.svg" style={{ visibility: "initial", width: "580px" }} />
           <div className={classes.login}>
             <Typography variant="h4" color="primary" className={classes.signIn}>
               User Log in

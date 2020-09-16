@@ -2,8 +2,8 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
-import BetterLearningChanges from "../../images/BetterLeaningImage.svg";
-import BetterLearningImagePhone from "../../images/BetterLearningImagePhone.svg";
+import BetterLearningChanges from "../../compressed/BetterLeaningImage.svg";
+// import BetterLearningImagePhone from "../../compressed/BetterLearningImagePhone.svg";
 
 const styles = () => ({
   BetterLearningSection: {
@@ -132,7 +132,7 @@ function BetterLearning(props) {
         Why RESILLIENCE ?
       </Typography>
       <img src={BetterLearningChanges} className={classes.BetterLearningImageWeb} alt="Better Learning Path" />
-      <img src={BetterLearningImagePhone} className={classes.BetterLearningImagePhone} alt="Better Learning Path" />
+      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/BetterLearningImagePhone_yibgac.svg" className={classes.BetterLearningImagePhone} alt="Better Learning Path" />
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
           <div className={classes.Title}>Personalized learning with IIT graduate faculty</div>

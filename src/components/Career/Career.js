@@ -3,14 +3,14 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
 //Components
-import careerImage from "../../images/careerImage.svg";
-import TeacherImage from "../../images/teachersNew.svg";
+// import careerImage from "../../compressed/careerImage.svg";
+// import TeacherImage from "../../compressed/teachersNew.svg";
 
 const styles = () => ({
   careerSection: {
-    paddingTop: "4.2%",
+    marginTop: "55px",
     "@media only screen and (max-width: 770px)": {
-      paddingTop: "13%"
+      marginTop: "50px"
     }
   },
   careerHeading: {
@@ -55,13 +55,15 @@ function Career(props) {
             Career
           </Typography>
         </div>
-        <img alt="Career" className={classes.careerImage} src={careerImage}></img>
+
+        <img alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
+        {/* <img alt="Career" className={classes.careerImage} src={careerImage} /> */}
       </div>
       <div className={classes.teacherSection}>
         <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
           Our Team
         </Typography>
-        <img alt="Teacher" className={classes.teacherImage} src={TeacherImage}></img>
+        <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg"></img>
       </div>
       <div style={{ padding: "5%", textAlign: "center" }}>
         <Typography variant="inherit" className={classes.text} color="primary">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Avatar from "@material-ui/core/Avatar";
@@ -45,8 +45,35 @@ const options = ["test1", "test2"];
 
 export default function SimplePaper() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(options[0]);
-  const [inputValue, setInputValue] = React.useState("");
+  const [value, setValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  // const [email, setEmail] = useState("");
+  const [dashboard, setDashboard] = useState("");
+  // const [batch, setBatch] = useState("");
+  // const [contact, setContact] = useState("");
+  // const [fname, setFname] = useState("");
+  // const [fcontact, setFcontact] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [picture, setPicture] = useState("");
+  // const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    fetch("/myprofile", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("jwt")
+      }
+    })
+      .then((res) => res.json())
+      .then((profile) => {
+        setDashboard(profile.details);
+        console.log(dashboard);
+      });
+  }, []);
+
+  // const fun = ({name}) =>{
+  //   return()
+  // }
 
   return (
     <div className={classes.card}>
@@ -74,7 +101,7 @@ export default function SimplePaper() {
           <div>
             <Grid container spacing={3}>
               <Grid item xs={10} sm={6}>
-                <Paper className={classes.paper}>Name : Apurv Gupta</Paper>
+                <Paper className={classes.paper}>Name : {}</Paper>
               </Grid>
             </Grid>
           </div>

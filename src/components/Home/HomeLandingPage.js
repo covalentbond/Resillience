@@ -1,9 +1,9 @@
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
-import logo from "../../images/Resillience-Logo.png";
-import HomePageWeb from "../../images/homeLandingImageWeb.svg";
-import HomePagePhone from "../../images/homeLandingImagePhone.svg";
-import rectangleStroke from "../../images/rectangleStroke.svg";
+// import logo from "../../compressed/Resillience-Logo.png";
+// import HomePageWeb from "../../compressed/homeLandingImageWeb.svg";
+// import HomePagePhone from "../../compressed/homeLandingImagePhone.svg";
+// import rectangleStroke from "../../compressed/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -209,10 +209,15 @@ function LandingPage(props) {
   const { classes } = props;
   return (
     <div style={{ position: "relative", marginTop: "40px", marginLeft: "2%" }}>
-      <img className={classes.homeImageWeb} src={HomePageWeb} alt="Home Page Main" style={{ position: "absolute", right: "0" }} />
-      <img className={classes.homeImagePhone} src={HomePagePhone} alt="Home Page Main" />
+      <img
+        className={classes.homeImageWeb}
+        src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/homeLandingImageWeb_wru9ee.svg"
+        alt="Home Page Main"
+        style={{ position: "absolute", right: "0" }}
+      />
+      <img className={classes.homeImagePhone} src="https://res.cloudinary.com/rweb1/image/upload/v1600243281/Assets/images/homeLandingImagePhone_djom9l.svg" alt="Home Page Main" />
       <div className={classes.content}>
-        <img src={logo} className={classes.logoImage} alt="Logo" />
+        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/Resillience-Logo_ynm1d8.png" className={classes.logoImage} alt="Logo" />
         <div className={classes.buttonPhone}>
           <WhatsAppIcon
             className={classes.clickableIcon}
@@ -229,7 +234,7 @@ function LandingPage(props) {
         <h2 className={classes.learning}>
           Learning with{" "}
           <span>
-            <img alt="Bg Design" src={rectangleStroke} className={classes.rectangleStroke} />
+            <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} />
             IITians
           </span>
         </h2>
