@@ -22,7 +22,8 @@ const styles = () => ({
       flexDirection: "column",
       fontSize: "16px",
       marginBottom: "10px",
-      marginTop: "10%"
+      marginTop: "10%",
+      height: "auto"
     }
   },
   teamLandingImageWeb: {

@@ -3,6 +3,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
 // import DesignFooterrr from "../../compressed/design-footerrr1.svg";
+import PhoneIcon from "@material-ui/icons/Phone";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 //MUI Icons
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -41,6 +43,25 @@ const styles = () => ({
     },
     cursor: "pointer"
   },
+  clickableIconCall: {
+    color: "white",
+    backgroundColor: "#0F7DC2",
+    paddingBottom: "2%",
+    borderRadius: "15px 1px 1px 15px",
+    paddingLeft: "20px",
+    paddingRight: "20%"
+  },
+  buttonPhone: {
+    top: "70px",
+    position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: "5px",
+    right: "11px",
+    "@media only screen and (min-width: 770px)": {
+      display: "none"
+    }
+  },
   companyInfo: {
     display: "flex",
     justifyContent: "space-between",
@@ -78,9 +99,21 @@ function Footer(props) {
     <div className={classes.footerSection}>
       <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/design-footerrr1_wlvv2d.svg" className={classes.designImage} alt="Design Footer" />
       <div>
+        <div className={classes.buttonPhone}>
+          <WhatsAppIcon
+            className={classes.clickableIconCall}
+            fontSize="large"
+            onClick={() => window.open("https://wa.me/919321725155?text=Hi,%20I'm%20interested%20to%20know%20more%20about%20RESILLIENCE%20and%20book%20a%20Mentoring%20Session", "_blank")}
+          />
+          <a href="tel:+919304228132">
+            <PhoneIcon color="secondary" fontSize="large" className={classes.clickableIconCall} style={{ marginTop: "10%" }} />
+          </a>
+        </div>
         <Grid container spacing={3} className={classes.companyInfo} style={{ width: "100%", margin: "0" }}>
           <Grid item md={3} sm={6} xs={12} className={classes.articles}>
-            <Typography variant="h5">Resillience</Typography>
+            <Typography variant="h5" onClick={() => (window.location.href = "/")} style={{ cursor: "pointer" }}>
+              RESILLIENCE
+            </Typography>
             <br></br>
           </Grid>
           <Grid item md={3} sm={6} xs={12} className={classes.articles}>
@@ -107,7 +140,7 @@ function Footer(props) {
                 text: "Download Section"
               }
             ].map((eachElement, index) => (
-              <Link style={{ marginTop: "16px", color: "#cccccc", textDecoration: "none" }} key={index} to={eachElement.to}>
+              <Link style={{ marginTop: "16px", color: "#cccccc", textDecoration: "none" }} key={index} to={eachElement.to} className={classes.clickableIcon}>
                 {eachElement.text}
               </Link>
             ))}

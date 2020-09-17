@@ -6,8 +6,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // import rectangleStroke from "../../compressed/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
-import PhoneIcon from "@material-ui/icons/Phone";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 const styles = () => ({
   homeImageWeb: {
@@ -174,25 +172,6 @@ const styles = () => ({
       fontSize: "1.3rem"
     }
   },
-  clickableIcon: {
-    color: "white",
-    backgroundColor: "#0F7DC2",
-    paddingBottom: "2%",
-    borderRadius: "1px 15px 15px 1px",
-    paddingLeft: "20%",
-    paddingRight: "20%"
-  },
-  buttonPhone: {
-    top: "320px",
-    position: "absolute",
-    display: " flex",
-    flexDirection: "column",
-    paddingLeft: "5px",
-    left: "-14px",
-    "@media only screen and (min-width: 770px)": {
-      display: "none"
-    }
-  },
   spanText: {
     marginBottom: "0",
     fontWeight: "bold",
@@ -218,16 +197,7 @@ function LandingPage(props) {
       <img className={classes.homeImagePhone} src="https://res.cloudinary.com/rweb1/image/upload/v1600243281/Assets/images/homeLandingImagePhone_djom9l.svg" alt="Home Page Main" />
       <div className={classes.content}>
         <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/Resillience-Logo_ynm1d8.png" className={classes.logoImage} alt="Logo" />
-        <div className={classes.buttonPhone}>
-          <WhatsAppIcon
-            className={classes.clickableIcon}
-            fontSize="large"
-            onClick={() => window.open("https://wa.me/919321725155?text=Hi,%20I'm%20interested%20to%20know%20more%20about%20RESILLIENCE%20and%20book%20a%20Mentoring%20Session", "_blank")}
-          />
-          <a href="tel:+919304228132">
-            <PhoneIcon color="secondary" fontSize="large" className={classes.clickableIcon} style={{ marginTop: "10%" }} />
-          </a>
-        </div>
+
         <Typography variant="h1" className={classes.personalized}>
           Personalized
         </Typography>

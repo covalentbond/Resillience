@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import CounsellingImageNew from "../../compressed/counsellingNew.svg";
 import CounsellingImageNewPhone from "../../compressed/counsellingNewPhone.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
-import MessageIcon from "@material-ui/icons/Message";
 // import Tick from "../../compressed/tick.svg";
 // import mentoringStroke from "../../compressed/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   counselling: {
-    display: "inline",
+    marginTop: "20px",
+    margin: "auto",
     "@media only screen and (max-width: 770px)": {
       display: "flex",
       alignItems: "center",
@@ -20,30 +20,10 @@ const useStyles = makeStyles({
       fontSize: "1rem !important"
     }
   },
-  designedText: {
-    position: "absolute",
-    marginTop: "-25px",
-    "@media only screen and (max-width: 900px)": {
-      marginTop: "-16px"
-    },
-    "@media only screen and (max-width: 770px)": {
-      position: "initial",
-      marginTop: "0px"
-    }
-  },
   blueImage: {
-    width: "340px",
-    position: "absolute",
+    width: "380px",
+    cursor: "pointer",
     zIndex: "-1",
-    "@media only screen and (max-width: 1100px)": {
-      width: "300px"
-    },
-    "@media only screen and (max-width: 950px)": {
-      width: "250px"
-    },
-    "@media only screen and (max-width: 880px)": {
-      width: "200px"
-    },
     "@media only screen and (max-width: 770px)": {
       position: "initial",
       marginTop: "-10px"
@@ -54,28 +34,14 @@ const useStyles = makeStyles({
     maxWidth: "753px"
   },
   heading: {
-    letterSpacing: "0.5px",
-    fontSize: "1.7rem",
-    color: "black",
-    width: "260px",
-    marginLeft: "42px",
-    marginTop: "27px",
+    letterSpacing: "1px",
+    fontSize: "1.2rem",
+    marginTop: "-77px",
+    marginLeft: "55px",
     cursor: "pointer",
-    "@media only screen and (max-width: 1125px)": {
-      fontSize: "1.35rem"
-    },
-    "@media only screen and (max-width: 950px)": {
-      fontSize: "1.25rem",
-      marginTop: "20px",
-      marginLeft: "35px"
-    },
-    "@media only screen and (max-width: 880px)": {
-      fontSize: "1rem",
-      marginLeft: "28px"
-    },
     "@media only screen and (max-width: 770px)": {
       width: "auto",
-      marginTop: "-21.5%",
+      marginTop: "-20.5%",
       marginLeft: "0px"
     }
   },
@@ -148,7 +114,6 @@ const useStyles = makeStyles({
     marginRight: "auto",
     display: "flex",
     alignItems: "center",
-    // justifyContent: "space-around",
     border: "1px solid",
     borderRadius: "8px",
     "@media only screen and (max-width: 770px)": {
@@ -202,66 +167,7 @@ const useStyles = makeStyles({
 
 function Counselling() {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-  const [parent, setParent] = useState("");
-  const [phone, setPhone] = useState("");
-  const [otp, setOtp] = useState("");
-  const isclicked = false;
-
-  const SendOtp = () => {
-    fetch(`/sendotp?phonenumber=+91${phone}&channel=sms`, {
-      method: "get"
-    })
-      .then((res) => res.json())
-      .then((message) => {
-        isclicked = true;
-        console.log(message);
-        if (message.error) {
-          console.log(message.error);
-        } else {
-          console.log(message.message);
-        }
-      });
-  };
-  const VerifyOtp = () => {
-    fetch(`/verify?phonenumber=+91${phone}&code=${otp}`, {
-      method: "get"
-    })
-      .then((res) => res.json())
-      .then((message) => {
-        console.log(message.valid);
-        if (message.valid === true) {
-          SendDetails();
-        }
-        if (message.error) {
-          console.log(message.error);
-        } else {
-          console.log(message.message);
-        }
-      });
-  };
-
-  const SendDetails = () => {
-    fetch("/send-mail", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        parent,
-        phone
-      })
-    })
-      .then((res) => res.json())
-      .then((message) => {
-        console.log(message);
-        if (message.error) {
-          console.log(message.error);
-        } else {
-          console.log(message.message);
-        }
-      });
-  };
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -271,18 +177,13 @@ function Counselling() {
     setOpen(false);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, 30000);
-  }, []);
-
   return (
     <div className={classes.counselling}>
-      <span onClick={handleClickOpen} className={classes.designedText}>
+      <span onClick={handleClickOpen}>
         <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/mentoringStroke_doj1ve.svg" alt="Stroke" className={classes.blueImage} />
-        <h1 className={classes.heading}>Mentoring Session</h1>
+        <h1 className={classes.heading}>Book a Mentoring Session</h1>
       </span>
+
       <Dialog
         open={open}
         onClose={handleClose}
@@ -300,22 +201,9 @@ function Counselling() {
         <div className={classes.section}>
           <h2 className={classes.getFree}>Get a Free Demo</h2>
           <h2 className={classes.mentroingSession}>Cum Mentoring Session</h2>
-
-          {/* TODO: UNCOMMENT LINE 272 TO 301 */}
           <div className={classes.subSection}>
             <PersonOutlineIcon color="secondary" className={classes.icons} />
-            <input
-              type="text"
-              name="parentName"
-              id="parentName"
-              className={`form-control ${classes.inputPhone}`}
-              placeholder="Parent's Name"
-              autoComplete="off"
-              maxLength="15"
-              required="required"
-              value={parent}
-              onChange={(e) => setParent(e.target.value)}
-            />
+            <input type="text" name="parentName" id="parentName" className={`form-control ${classes.inputPhone}`} placeholder="Parent's Name" autoComplete="off" maxLength="15" required="required" />
           </div>
           <div className={classes.subSection} style={{ marginTop: "10px" }}>
             <PhoneInTalkIcon color="secondary" className={classes.icons} />
@@ -328,52 +216,20 @@ function Counselling() {
               autoComplete="off"
               maxLength="10"
               required="required"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
+
           <div className={classes.messages}>
-            {["Identify strengths & weaknesses", "Recommends a study plan", "One to One home/online tuition", "Mastering a weak topic"].map((message, index) => (
+            {["Identify strengths and weaknesses", "Recommends a study plan for you", "One to One home/online tuition", "Mastering a weak topic"].map((message, index) => (
               <div className={classes.message} key={index}>
                 <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/tick_nz85rm.svg" alt="tick" className={classes.tickImage} />
                 <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>
               </div>
             ))}
           </div>
-          <Button variant="contained" color="secondary" disableElevation className={classes.button} size="small" onClick={() => SendOtp()}>
+          <Button variant="contained" color="secondary" disableElevation className={classes.button}>
             Proceed
           </Button>
-
-          {/* TODO: THEN UNCOMMENT LINE 305 TO 332, that's another component*/}
-
-          {/* <form>
-            <div className={classes.messages}>
-              <div className={classes.message}>
-                <h2 style={{ margin: "auto", marginTop: "20px" }}>Login with OTP</h2>
-              </div>
-              <div className={classes.message}>
-                <h3 style={{ margin: "auto", marginLeft: "10px" }}>We have sent an SMS with OTP to</h3>
-              </div>
-            </div>
-            <div className={classes.subSection} style={{ marginTop: "10px" }}>
-              <MessageIcon color="secondary" className={classes.icons} />
-              <input
-                type="tel"
-                name="otp"
-                id="verifyotp"
-                className={`form-control ${classes.inputPhone}`}
-                placeholder="Enter OTP"
-                autoComplete="off"
-                maxLength="4"
-                required="required"
-                value={otp}
-                onChange={(e) => setOtp(e.target.value)}
-              />
-            </div>
-            <Button type="submit" variant="contained" color="secondary" disableElevation className={classes.button} size="small" onClick={() => VerifyOtp()}>
-              Verify
-            </Button>
-          </form> */}
         </div>
       </Dialog>
     </div>

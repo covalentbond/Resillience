@@ -10,7 +10,11 @@ import Alert from "@material-ui/lab/Alert";
 const styles = () => ({
   email: {
     marginTop: "5%",
-    marginBottom: "5%"
+    marginBottom: "5%",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "10%",
+      marginBottom: "10%"
+    }
   },
   formButtons: {
     display: "flex",
@@ -53,6 +57,33 @@ function Email(props) {
         <div className={classes.alert}>
           <Alert variant="outlined" severity="error">
             Please add a name
+          </Alert>
+        </div>
+      );
+    }
+    if (email === "") {
+      return (
+        <div className={classes.alert}>
+          <Alert variant="outlined" severity="error">
+            Please add a email
+          </Alert>
+        </div>
+      );
+    }
+    if (phone === "") {
+      return (
+        <div className={classes.alert}>
+          <Alert variant="outlined" severity="error">
+            Please add a phone number
+          </Alert>
+        </div>
+      );
+    }
+    if (text === "") {
+      return (
+        <div className={classes.alert}>
+          <Alert variant="outlined" severity="error">
+            Message cannot be empty!
           </Alert>
         </div>
       );

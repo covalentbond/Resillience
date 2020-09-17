@@ -64,7 +64,7 @@ function Testimonials(props) {
     autoplay: true,
     infinite: true,
     speed: 4000,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 8000,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [
@@ -101,7 +101,7 @@ function Testimonials(props) {
   return (
     <div className={classes.sectionBg}>
       <Typography variant="h3" color="primary" style={{ margin: "5%", letterSpacing: "-1px" }}>
-        Our students & parents love us
+        Our Biggest Motivation
       </Typography>
       <div className={classes.tSaksham}>
         <div className={classes.tImage}>

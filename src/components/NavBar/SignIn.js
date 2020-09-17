@@ -13,6 +13,18 @@ const styles = () => ({
     backgroundColor: "transparent"
     // maxWidth: "753px"
   },
+  loginBg: {
+    visibility: "initial",
+    width: "580px",
+    "@media only screen and (max-width: 770px)": {
+      width: "410px",
+      height: "500px"
+    },
+    "@media only screen and (max-width: 430px)": {
+      width: "100%",
+      height: "500px"
+    }
+  },
   login: {
     display: "flex",
     top: "30%",
@@ -134,7 +146,9 @@ class SignIn extends React.Component {
             paper: classes.paper
           }}
         >
-          <img alt="loginBg" src="https://res.cloudinary.com/rweb1/image/upload/v1600243283/Assets/images/loginBg_olbayb.svg" style={{ visibility: "initial", width: "580px" }} />
+          {/* <img src={profile} className={classes}></img>
+          <img src={white}></img> */}
+          <img alt="loginBg" src="https://res.cloudinary.com/rweb1/image/upload/v1600243283/Assets/images/loginBg_olbayb.svg" className={classes.loginBg} />
           <div className={classes.login}>
             <Typography variant="h4" color="primary" className={classes.signIn}>
               User Log in

@@ -198,7 +198,7 @@ function Faqs(props) {
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
-              Does student need to join coaching classes along with it?
+              Does student needs to join coaching classes along with it?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -290,7 +290,7 @@ function Faqs(props) {
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
             <Typography variant="h6" color="primary" className={classes.heading}>
               <span className={classes.q}>Q: </span>
-              Does you also prepare for MHT-CET?
+              Does you also prepare students for MHT-CET?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>

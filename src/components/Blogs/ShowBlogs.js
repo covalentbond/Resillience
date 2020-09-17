@@ -17,17 +17,23 @@ import axios from "axios";
 
 const styles = () => ({
   root: {
-    margin: "0 30% 5% 30%"
+    margin: "0 25% 5% 25%",
+    backgroundColor: "#EEEEEE",
+    "@media only screen and (max-width: 770px)": {
+      margin: "5% 10% 5% 10%",
+      overflowX: "hidden"
+    }
   },
   section: {
     marginTop: "4.2%",
     "@media only screen and (max-width: 770px)": {
-      marginTop: "13%"
+      marginTop: "50px"
     }
   },
   image: {
     paddingBottom: "10%",
-    "@media only screen and (max-width: 770px)": {
+    width: "100%",
+    "@media only screen and (max-width: 970px)": {
       width: "100%"
     }
   },
@@ -70,7 +76,7 @@ class Blog extends Component {
                   alt="Scenery"
                   height="250"
                   className={classes.media}
-                  image="https://ae01.alicdn.com/kf/HTB1lRs8HVXXXXXUXFXXq6xXFXXX2/Free-shipping-scenery-wall-tapestry-The-inverted-image-of-woods-classical-design-size-20x25cm-decor-picture.jpg"
+                  image="https://res.cloudinary.com/rweb1/image/upload/v1600321493/Assets/images/abhinav-blog-cover_dabuit.png"
                   title="Contemplative Reptile"
                 />
                 <CardContent>

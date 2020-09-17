@@ -33,6 +33,10 @@ body {
   pointer-events: none;
 }
 
+.freebirdFormviewerViewCenteredContent {
+  width: 90% !important;
+}
+
 @media only screen and (max-width: 770px) {
   .active {
     font-weight: bold !important;

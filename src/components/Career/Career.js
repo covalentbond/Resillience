@@ -45,45 +45,55 @@ const styles = () => ({
   }
 });
 
-function Career(props) {
-  const { classes } = props;
-  return (
-    <div>
-      <div className={classes.careerSection}>
-        <div className={classes.content}>
-          <Typography className={classes.careerHeading} variant="h2" color="primary">
-            Career
-          </Typography>
-        </div>
+class Career extends React.Component {
+  constructor() {
+    super();
+    this.myRef = React.createRef();
+  }
+  componentDidMount = () => {
+    // console.log(this.myRef);
+  };
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <div className={classes.careerSection}>
+          <div className={classes.content}>
+            <Typography className={classes.careerHeading} variant="h2" color="primary">
+              Career
+            </Typography>
+          </div>
 
-        <img alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
-        {/* <img alt="Career" className={classes.careerImage} src={careerImage} /> */}
+          <img alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
+          {/* <img alt="Career" className={classes.careerImage} src={careerImage} /> */}
+        </div>
+        <div className={classes.teacherSection}>
+          <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
+            Our Team
+          </Typography>
+          <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg"></img>
+        </div>
+        <div style={{ padding: "5%", textAlign: "center" }}>
+          <Typography variant="inherit" className={classes.text} color="primary">
+            Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home
+          </Typography>
+          <iframe
+            ref={this.myRef}
+            title="Career Recruitment Form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc4kk50CDvPqKOeYD-gCRXouyZL4uMRjNRWbAM_ikTNBMzP9Q/viewform?embedded=true"
+            width="100%"
+            height="2745px"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            style={{ marginTop: "5%" }}
+          >
+            Loading...
+          </iframe>
+        </div>
       </div>
-      <div className={classes.teacherSection}>
-        <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
-          Our Team
-        </Typography>
-        <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg"></img>
-      </div>
-      <div style={{ padding: "5%", textAlign: "center" }}>
-        <Typography variant="inherit" className={classes.text} color="primary">
-          Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home
-        </Typography>
-        <iframe
-          title="Career Recruitment Form"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSc4kk50CDvPqKOeYD-gCRXouyZL4uMRjNRWbAM_ikTNBMzP9Q/viewform?embedded=true"
-          width="100%"
-          height="2745px"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
-          style={{ marginTop: "5%" }}
-        >
-          Loading...
-        </iframe>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default withStyles(styles)(Career);

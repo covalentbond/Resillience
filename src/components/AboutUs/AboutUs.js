@@ -38,7 +38,8 @@ function AboutUs(props) {
       style={{
         marginTop: "10%",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        justifyContent: "space-between"
       }}
     >
       <LandingPage />

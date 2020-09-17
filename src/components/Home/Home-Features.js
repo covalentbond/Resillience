@@ -90,9 +90,9 @@ function HomeFeatures(props) {
             <Paper elevation={4}>
               <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                One on One home tuition across Mumbai
+                1-on-1 Home Tuition across Mumbai
               </Typography>
-              <Link to="/tuitions/one-on-one-home-tuitions">
+              <Link to="/tuitions/one-on-one-home-tuitions" style={{ textDecoration: "none" }}>
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -103,9 +103,9 @@ function HomeFeatures(props) {
             <Paper elevation={4}>
               <img className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                One on One live online tuition
+                1-on-1 Live Online Tuition anywhere
               </Typography>
-              <Link to="/tuitions/one-on-one-live-tuitions">
+              <Link to="/tuitions/one-on-one-live-tuitions" style={{ textDecoration: "none" }}>
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>
@@ -116,10 +116,10 @@ function HomeFeatures(props) {
             <Paper elevation={4}>
               <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg" className={classes.onlineGroup} alt="Mastering a week chapter" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
-                Mastering a weak topic as per need
+                Mastering a Weak Topic as per need
                 {/* Group live online tuitions anywhere */}
               </Typography>
-              <Link to="/tuitions/mastering-week-topics">
+              <Link to="/tuitions/mastering-a-week-topic" style={{ textDecoration: "none" }}>
                 <Typography variant="body1" color="primary" className={classes.readMore}>
                   READ MORE -
                 </Typography>

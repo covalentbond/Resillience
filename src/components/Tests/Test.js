@@ -41,9 +41,12 @@ const styles = () => ({
   },
   subjectImages: {
     objectFit: "contain",
-    width: "120px",
-    height: "120px",
+    width: "100px",
+    height: "100px",
     paddingBottom: "20px"
+  },
+  subjectName: {
+    textAlign: "center"
   }
 });
 
@@ -66,33 +69,50 @@ function Tests(props) {
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
                   <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
-                  <Typography variant="body-2">Mathematics</Typography>
+                  <Typography variant="body-2" className={classes.subjectName}>
+                    Mathematics
+                  </Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
                   <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
-                  <Typography variant="body-2">Physics</Typography>
+                  <Typography variant="body-2" className={classes.subjectName}>
+                    Physics
+                  </Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
                   <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
-                  <Typography variant="body-2">Chemistry</Typography>
+                  <Typography variant="body-2" className={classes.subjectName}>
+                    Chemistry
+                  </Typography>
                 </Paper>
               </Grid>
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
                   <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
-                  <Typography variant="body-2">Foundation Classes</Typography>
+                  <Typography variant="body-2" className={classes.subjectName}>
+                    Foundation Classes
+                  </Typography>
                 </Paper>
               </Grid>
             </Grid>
           </CardContent>
         </Card>
+        <Typography variant="h5" color="secondary" style={{ textAlign: "center", marginTop: "40px" }}>
+          This page is under development{" "}
+          <span role="img" aria-label="Tool">
+            🔨
+          </span>
+        </Typography>
+        <Typography variant="h5" color="secondary" style={{ textAlign: "center", marginTop: "10px" }}>
+          Check it back soon
+        </Typography>
       </Paper>
     </div>
   );

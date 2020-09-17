@@ -30,14 +30,19 @@ const styles = () => ({
     marginLeft: "365px",
     height: "1565px",
     "@media only screen and (max-width: 1000px)": {
-      width: "80%",
+      width: "68%",
       height: "1582px",
-      marginLeft: "220px"
+      marginLeft: "285px"
     },
-    "@media only screen and (max-width: 900px)": {
-      width: "75%",
+    "@media only screen and (max-width: 950px)": {
+      width: "65%",
       height: "1582px",
-      marginLeft: "235px"
+      marginLeft: "280px"
+    },
+    "@media only screen and (max-width: 850px)": {
+      width: "60%",
+      height: "1582px",
+      marginLeft: "270px"
     },
     "@media only screen and (max-width: 770px)": {
       display: "none"
@@ -136,7 +141,7 @@ function BetterLearning(props) {
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
           <div className={classes.Title}>Personalized learning with IIT graduate faculty</div>
-          <div className={classes.Content}>Students prepares under individual attention of very assionate and empathetic IITians. The path of learning depends on the student.</div>
+          <div className={classes.Content}>Students prepare under individual attention of very assionate and empathetic IITians. The Pace of learning depends on the student.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>
@@ -166,20 +171,20 @@ function BetterLearning(props) {
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItemR}>
           <div className={classes.Title}>Training on exam strategy and smart ties</div>
-          <div className={classes.Content}>Under personal guidance, student learn how to attempt any paper with smart approach to maximize the score under any condition.</div>
+          <div className={classes.Content}>Under personal guidance, students learn how to attempt any paper with smart approach to maximize the score under any condition.</div>
         </div>
       </div>
 
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
-          <div className={classes.Title}>Personalized plan for regular updates</div>
+          <div className={classes.Title}>Personalized plan for regular improvement</div>
           <div className={classes.Content}>Our expert faculty periodically checks and plan habits to adopt for every student. It helps them improving daily at practice level.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItemR}>
           <div className={classes.Title}>Regular insights to parents</div>
-          <div className={classes.Content}>Parents are generally updated on daily progress of the student. They can reach the teacher any time.</div>
+          <div className={classes.Content}>Parents are regularly updated on daily progress of the student. They can reach the teacher any time.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>

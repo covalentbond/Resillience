@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import Counselling from "./Counselling";
+import Group14 from "../../compressed/Group14.svg";
 
 //Images
 // import liveDoubts from "../../compressed/Questions.svg";
@@ -15,8 +16,8 @@ const styles = () => ({
     paddingTop: "5%",
     height: "70%",
     display: "flex",
-    paddingLeft: "11.5%",
-    paddingRight: "11.5%",
+    paddingLeft: "9.5%",
+    paddingRight: "9.5%",
     fontSize: "22px",
     "@media only screen and (max-width: 770px)": {
       fontSize: "16px",
@@ -33,6 +34,22 @@ const styles = () => ({
     marginBottom: "0",
     "@media only screen and (max-width: 770px)": {
       marginBottom: "5%"
+    }
+  },
+  iframeSection: {
+    position: "absolute",
+    left: "42%",
+    marginTop: "14.5%"
+  },
+  iframe: {
+    width: "360px",
+    // 426px
+    height: "225px",
+    // 260px
+    margin: "auto",
+    "@media only screen and (max-width: 1025px)": {
+      width: "300px",
+      height: "150px"
     }
   },
   stroke: {
@@ -104,6 +121,9 @@ const styles = () => ({
   },
   session: {
     marginTop: "5%"
+  },
+  videoFeatures: {
+    width: "70%"
   }
 });
 function Features(props) {
@@ -113,17 +133,16 @@ function Features(props) {
       <span>
         <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
         <Typography variant="h3" color="primary" className={classes.featuresText}>
-          Features
+          Tuitions
         </Typography>
       </span>
       <div className={classes.featureSection} id="oneToOneHomeClasses">
         <div className={classes.fImageSection}>
-          <img className={classes.fImage} alt="One to One" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/oneToOne_ep0qu2.svg" />
-          <Counselling />
+          <img className={classes.fImage} alt="One to One" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/oneToOne_ep0qu2.svg" /> <Counselling />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            1-on-1 Home Tuition in Mumbai
+            1-on-1 <span style={{ color: "#0d669e" }}>Home</span> Tuition in <span style={{ color: "#0d669e" }}>Mumbai</span>
           </Typography>
           <Typography variant="h5" color="primary" className={classes.subHeading}>
             IIT JEE (Main + Advanced), NEET
@@ -132,10 +151,10 @@ function Features(props) {
           <div className={classes.content}>
             {[
               "If the student has potential but unable to get desired results?",
-              "If the student is curious but introvert and forced to leave natural way of learning because of large classroom size and fast pace?",
-              "If daily doubts remain unsolved, Remember that ‘clearing each and every doubts’ is key to good result?",
-              "Already have many backlogs and wasted a lot of time in trying to cope up with classroom learning?",
-              "Self study is going well but anyhow unable to get expected marks?",
+              "If the student is curious but introvert and unable to keep pace with large classrooms?",
+              "If daily doubts remain unsolved?",
+              "Already have many backlogs, unable to cope up?",
+              "Self study is going well but unable to get expected marks?",
               "Unable to manage time and pressure in exams and making silly mistakes every time?"
             ].map((vision, index) => (
               <span className={classes.eachVision} key={index}>
@@ -149,6 +168,23 @@ function Features(props) {
           </div>
         </div>
       </div>
+      <div style={{ textAlign: "center", marginTop: "80px", marginBottom: "40px" }}>
+        <div className={classes.iframeSection}>
+          <iframe
+            title="Youtube"
+            aria-hidden="true"
+            className={classes.iframe}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            src="https://www.youtube.com/embed/jMVoreUzBhc?autoplay=1&mute=1&loop=1"
+            // srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jMVoreUzBhc/?autoplay=1&muted=1><img src=https://img.youtube.com/vi/jMVoreUzBhc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+          ></iframe>
+        </div>
+        <img src={Group14} className={classes.videoFeatures}></img>
+      </div>
 
       <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection}>
@@ -157,7 +193,7 @@ function Features(props) {
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Get an instant solution to every doubt via Chat & Call
+            Get solution to your every doubt via Call & Chat
           </Typography>
           <div className={classes.content}>
             <Typography variant="inherit" className={classes.text} color="primary">
