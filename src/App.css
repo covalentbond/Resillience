@@ -37,7 +37,7 @@ body {
   width: 90% !important;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 950px) {
   .active {
     font-weight: bold !important;
     color: #0F7DC2 !important;

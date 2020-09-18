@@ -1,72 +1,124 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Collapse from "@material-ui/core/Collapse";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import { Typography } from "@material-ui/core";
 
-const useStyles = makeStyles({
-  list: {
-    width: 250
-  },
-  fullList: {
-    width: "auto"
-  }
-});
-
-function TuitionDropdown(anchor) {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    top: false
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
-      return;
+const useStyles = makeStyles((theme) => ({
+  root1: {
+    width: "auto",
+    display: "flex",
+    flexDirection: "column",
+    height: "40px",
+    letterSpacing: "1.2px",
+    textTransform: "uppercase",
+    alignItems: "center",
+    color: "#3672c0",
+    "@media only screen and (max-width: 950px)": {
+      height: "20px",
+      textTransform: "capitalize"
     }
+  },
+  idk: {
+    paddingLeft: "0px",
+    paddingRight: "0px",
+    "@media only screen and (max-width: 950px)": {
+      paddingTop: "0px",
+      paddingBottom: "0px"
+    }
+  },
+  nested: {
+    paddingLeft: theme.spacing(3),
+    backgroundColor: "#ececec"
+  },
+  navtext: {
+    color: "#3672c0",
+    textDecoration: "none",
+    display: "flex",
+    fontWeight: "bolder",
+    alignItems: "center",
+    cursor: "pointer",
+    "@media only screen and (max-width: 1050px)": {
+      fontSize: "90%"
+    },
+    "@media only screen and (max-width: 950px)": {
+      color: "#232127",
+      fontWeight: "normal"
+    }
+  },
+  text: {
+    fontSize: "84%",
+    cursor: "pointer",
+    fontWeight: "bolder",
+    "@media only screen and (max-width: 950px)": {
+      color: "#232127",
+      fontFamily: "muli",
+      fontWeight: "normal",
+      padding: "11px 0px"
+    }
+  },
+  root: {
+    fontWeight: "800"
+  }
+}));
 
-    setState({ ...state, [anchor]: open });
+export default function Tuitions() {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
   };
 
   return (
-    <div role="presentation" onClick={toggleDrawer(anchor, false)} onKeyDown={toggleDrawer(anchor, false)}>
-      Tuition
-    </div>
+    <List className={classes.root1}>
+      <ListItem button onClick={handleClick} className={classes.idk}>
+        <Typography className={classes.navtext}>Tuitions {open ? <ExpandLess /> : <ExpandMore />}</Typography>
+      </ListItem>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List component="div">
+          <ListItem button className={classes.nested}>
+            <ListItemText>
+              <Typography
+                className={classes.text}
+                onClick={() => {
+                  window.location.href = "/tuitions/one-on-one-home-tuitions";
+                }}
+              >
+                One On One Home Tuition
+              </Typography>
+            </ListItemText>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+            <ListItemText>
+              <Typography
+                className={classes.text}
+                onClick={() => {
+                  window.location.href = "/tuitions/one-on-one-live-tuitions";
+                }}
+              >
+                One On One Live Tuition
+              </Typography>
+            </ListItemText>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+            <ListItemText>
+              <Typography
+                className={classes.text}
+                onClick={() => {
+                  window.location.href = "/tuitions/mastering-a-week-topic";
+                }}
+              >
+                Mastering a week chapter
+              </Typography>
+            </ListItemText>
+          </ListItem>
+        </List>
+      </Collapse>
+    </List>
   );
 }
-
-export default TuitionDropdown;
-// import React from 'react';
-// import Button from '@material-ui/core/Button';
-// import Menu from '@material-ui/core/Menu';
-// import MenuItem from '@material-ui/core/MenuItem';
-
-// export default function SimpleMenu() {
-//   const [anchorEl, setAnchorEl] = React.useState(null);
-
-//   const handleClick = (event) => {
-//     setAnchorEl(event.currentTarget);
-//   };
-
-//   const handleClose = () => {
-//     setAnchorEl(null);
-//   };
-
-//   return (
-//     <div>
-//       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-//         Open Menu
-//       </Button>
-//       <Menu
-//         id="simple-menu"
-//         anchorEl={anchorEl}
-//         keepMounted
-//         open={Boolean(anchorEl)}
-//         onClose={handleClose}
-//       >
-//         <MenuItem onClick={handleClose}>Profile</MenuItem>
-//         <MenuItem onClick={handleClose}>My account</MenuItem>
-//         <MenuItem onClick={handleClose}>Logout</MenuItem>
-//       </Menu>
-//     </div>
-//   );
-// }

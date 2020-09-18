@@ -4,7 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import Counselling from "./Counselling";
-import Group15 from "../../compressed/Group15.svg";
 
 //Images
 // import onlineOneToOne from "../../compressed/onlineOneToOne.svg";
@@ -44,13 +43,38 @@ const styles = () => ({
     marginTop: "14.5%"
   },
   iframe: {
-    width: "360px",
-    // 426px
-    height: "225px",
-    // 260px
-    margin: "auto",
-    "@media only screen and (max-width: 1025px)": {
-      width: "300px",
+    width: "473px",
+    height: "266px",
+    "@media only screen and (max-width: 1200px)": {
+      width: "426px",
+      height: "240px"
+    },
+    "@media only screen and (max-width: 1074px)": {
+      width: "387px",
+      height: "218px"
+    },
+    "@media only screen and (max-width: 950px)": {
+      width: "340px",
+      height: "192px"
+    },
+    "@media only screen and (max-width: 850px)": {
+      width: "304px",
+      height: "171px"
+    },
+    "@media only screen and (max-width: 770px)": {
+      width: "426px",
+      height: "240px"
+    },
+    "@media only screen and (max-width: 650px)": {
+      width: "387px",
+      height: "218px"
+    },
+    "@media only screen and (max-width: 550px)": {
+      width: "340px",
+      height: "192px"
+    },
+    "@media only screen and (max-width: 450px)": {
+      width: "266px",
       height: "150px"
     }
   },
@@ -82,6 +106,20 @@ const styles = () => ({
       // visibility: "hidden"
     }
   },
+  fImageSectionVideo: {
+    width: "40%",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: "2%",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "16px",
+      order: "0",
+      width: "70%"
+      // visibility: "hidden"
+    }
+  },
   fImage: {
     width: "100%"
   },
@@ -98,7 +136,10 @@ const styles = () => ({
   descHeading: {
     textAlign: "center",
     marginTop: "3%",
-    letterSpacing: "-0.5px"
+    letterSpacing: "-0.5px",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "10%"
+    }
   },
   subHeading: {
     textAlign: "center",
@@ -108,6 +149,11 @@ const styles = () => ({
   content: {
     padding: "5%",
     fontSize: "20px"
+  },
+  contentVideo: {
+    padding: "5%",
+    fontSize: "20px",
+    marginLeft: "8%"
   },
   text: {
     letterSpacing: "0.02px",
@@ -125,7 +171,10 @@ const styles = () => ({
   },
   eachVision: {
     marginTop: "1.5%",
-    display: "flex"
+    display: "flex",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "2.5%"
+    }
   },
   session: {
     marginTop: "5%"
@@ -178,8 +227,28 @@ function OneOnOneLive(props) {
         </div>
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "80px", marginBottom: "40px" }}>
-        <div className={classes.iframeSection}>
+      <div className={classes.featureSection} id="oneToOneHomeClasses">
+        <div className={classes.fDescription}>
+          <Typography variant="h4" color="secondary" className={classes.descHeading}>
+            Benefits of 1-on-1 Live Online Tuition
+          </Typography>
+          <Typography variant="h5" color="primary" className={classes.subHeading}>
+            Book your mentoring session today
+          </Typography>
+
+          <div className={classes.contentVideo}>
+            {["Save your travelling time", "Intensive practice sessions", "Instant doubt support", "Regular personalized test", "Training on exam strategy"].map((vision, index) => (
+              <span className={classes.eachVision} key={index}>
+                <CheckRoundedIcon color="secondary" style={{ marginRight: "5px" }} />
+                <Typography variant="inherit" className={classes.text} color="primary">
+                  {vision}
+                </Typography>
+                <br />
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className={classes.fImageSectionVideo}>
           <iframe
             title="Youtube"
             aria-hidden="true"
@@ -191,9 +260,8 @@ function OneOnOneLive(props) {
             mozallowfullscreen="true"
             src="https://www.youtube.com/embed/ElLUlnEALAE?autoplay=1&mute=1&loop=1"
             // srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jMVoreUzBhc/?autoplay=1&muted=1><img src=https://img.youtube.com/vi/jMVoreUzBhc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
-          ></iframe>
+          />
         </div>
-        <img src={Group15} className={classes.videoFeatures}></img>
       </div>
 
       <Divider variant="middle" className={classes.divider} />

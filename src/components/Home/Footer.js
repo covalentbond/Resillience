@@ -176,13 +176,13 @@ function Footer(props) {
         <Divider variant="middle" />
         <div className={classes.copyright}>
           <span className={classes.footerInfo}>
-            <p className={classes.clickableIcon} onClick={() => window.open("/sitemap", "_blank")}>
+            <p className={classes.clickableIcon} onClick={() => (window.location.href = "/sitemap")}>
               Sitemap |
             </p>
-            <p className={classes.clickableIcon} onClick={() => window.open("/privacypolicy", "_blank")}>
+            <p className={classes.clickableIcon} onClick={() => (window.location.href = "/privacypolicy")}>
               &nbsp; Privacy Policy |
             </p>
-            <p className={classes.clickableIcon} onClick={() => window.open("/termsofservice", "_blank")}>
+            <p className={classes.clickableIcon} onClick={() => (window.location.href = "/termsofservice")}>
               {" "}
               &nbsp; Terms of service
             </p>

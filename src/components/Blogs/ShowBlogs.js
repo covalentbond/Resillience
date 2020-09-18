@@ -111,13 +111,3 @@ class Blog extends Component {
 }
 
 export default withStyles(styles)(Blog);
-
-//delta, content, source
-// const text = editor.getText(html);
-// console.log("Only Text", text);
-// editor.getContents(html);
-// console.log(delta);
-
-// claps: 0,
-// comments: [], //[{"Arijit": "Amazing blog"},{"Apurv": "Enjoyed a lot"}],
-// blogLink: "" //"https://resillience.in/blogs/resillience%20journey"

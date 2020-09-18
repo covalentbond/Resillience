@@ -52,8 +52,7 @@ const styles = () => ({
     display: "flex",
     flexDirection: "column",
     textAlign: "left",
-    // margin: "auto",
-    paddingLeft: "3%",
+    paddingLeft: "8%",
     paddingRight: "3%",
     "@media only screen and (max-width: 770px)": {
       paddingLeft: "0%",

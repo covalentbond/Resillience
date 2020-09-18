@@ -31,7 +31,7 @@ const Error = lazy(() => import("./components/Error"));
 const PostBlog = lazy(() => import("./components/Blogs/Admin/PostBlogs"));
 const ShowBlogs = lazy(() => import("./components/Blogs/ShowBlogs"));
 const ParticularBlog = lazy(() => import("./components/Blogs/ParticularBlog/ParticularBlog"));
-const StudentProfile = lazy(() => import("./components/Student/StudentProfile"));
+// const StudentProfile = lazy(() => import("./components/Student/StudentProfile"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Career = lazy(() => import("./components/Career/Career"));
 const PrivacyPolicy = lazy(() => import("./components/Miscellaneous/PrivacyPolicy"));
@@ -74,7 +74,7 @@ const CareerComponent = withTitle({ component: Career, title: "Career | RESILLIE
 const PostBlogComponent = withTitle({ component: PostBlog, title: "Post Blog | RESILLIENCE" });
 const ShowBlogsComponent = withTitle({ component: ShowBlogs, title: "Blogs | RESILLIENCE" });
 const ParticularBlogComponent = withTitle({ component: ParticularBlog, title: "Blogs | RESILLIENCE" });
-const StudentProfileComponent = withTitle({ component: StudentProfile, title: "Dashboard | RESILLIENCE" });
+// const StudentProfileComponent = withTitle({ component: StudentProfile, title: "Dashboard | RESILLIENCE" });
 const PrivacyPolicyComponent = withTitle({ component: PrivacyPolicy, title: "Privacy Policy | RESILLIENCE" });
 // const TermsOfServiceComponent = withTitle({ component: TermsOfService, title: "Terms of service | RESILLIENCE" });
 // const SitemapComponent = withTitle({ component: Sitemap, title: "Sitemap | RESILLIENCE" });
@@ -132,7 +132,7 @@ class App extends Component {
                   <Route path="/admin/createblogs" component={PostBlogComponent} />
                   <Route exact path="/blogs" component={ShowBlogsComponent} />
                   <Route exact path="/blogs/:id" component={ParticularBlogComponent} />
-                  <Route path="/dashboard" component={StudentProfileComponent} />
+                  {/* <Route path="/dashboard" component={StudentProfileComponent} /> */}
                   <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
                   {/* <Route path="/termsofservice" component={TermsOfService} />
                   <Route path="/sitemap" component={SitemapComponent} /> */}
@@ -150,17 +150,3 @@ class App extends Component {
 }
 
 export default withRouter(App);
-
-// theme.typography.h3 = {
-//   "@media (max-width:767px)": {
-//     fontSize: "2rem"
-//   }
-// };
-
-// theme.typography.body1 = {
-//   fontSize: '1.2rem',
-
-//   [theme.breakpoints.up('md')]: {
-//     fontSize: '2rem',
-//   },
-// };

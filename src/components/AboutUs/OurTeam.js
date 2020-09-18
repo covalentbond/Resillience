@@ -16,7 +16,7 @@ function OurTeam(props) {
   const { classes } = props;
   return (
     <div style={{ margin: "auto", textAlign: "center" }}>
-      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg" className={classes.teacherImage} />
+      <img alt="Teacher" src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg" className={classes.teacherImage} />
       {/* <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img> */}
     </div>
   );
