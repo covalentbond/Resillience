@@ -63,10 +63,7 @@ const styles = () => ({
     }
   },
   fHeading: {
-    padding: "0 7% 7% 7%",
-    "&:hover": {
-      color: "#6b6b6b"
-    }
+    padding: "0 7% 7% 7%"
   },
   readMore: {
     paddingBottom: "5%",

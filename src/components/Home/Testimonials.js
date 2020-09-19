@@ -74,6 +74,7 @@ function Testimonials(props) {
         settings: {
           autoplay: true,
           slidesToShow: 2,
+          autoplaySpeed: 5000,
           slidesToScroll: 2,
           infinite: true,
           dots: true
@@ -84,6 +85,7 @@ function Testimonials(props) {
         settings: {
           autoplay: true,
           slidesToShow: 1,
+          autoplaySpeed: 2000,
           slidesToScroll: 1,
           initialSlide: 1
         }
