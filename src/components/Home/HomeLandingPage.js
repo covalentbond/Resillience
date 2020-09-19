@@ -1,6 +1,6 @@
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
-// import logo from "../../compressed/Resillience-Logo.png";
+import ResillienceLogo from "../../compressed/Resillience-Logo.png";
 // import HomePageWeb from "../../compressed/homeLandingImageWeb.svg";
 // import HomePagePhone from "../../compressed/homeLandingImagePhone.svg";
 // import rectangleStroke from "../../compressed/rectangleStroke.svg";
@@ -201,7 +201,7 @@ function LandingPage(props) {
       />
       <img className={classes.homeImagePhone} src="https://res.cloudinary.com/rweb1/image/upload/v1600243281/Assets/images/homeLandingImagePhone_djom9l.svg" alt="Home Page Main" />
       <div className={classes.content}>
-        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/Resillience-Logo_ynm1d8.png" className={classes.logoImage} alt="Logo" />
+        <img src={ResillienceLogo} className={classes.logoImage} alt="Logo" />
 
         <Typography variant="h1" className={classes.personalized}>
           Personalized

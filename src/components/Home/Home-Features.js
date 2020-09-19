@@ -23,6 +23,15 @@ const styles = () => ({
       paddingTop: "80px"
     }
   },
+  tuitionText: {
+    margin: "5%",
+    marginBottom: "2%",
+    letterSpacing: "-1px",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "25px",
+      marginBottom: "30px"
+    }
+  },
   grid: {
     justifyContent: "center",
     alignItems: "center",
@@ -33,6 +42,9 @@ const styles = () => ({
   card: {
     "@media only screen and (max-width: 1190px)": {
       minWidth: "30%"
+    },
+    "@media only screen and (max-width: 770px)": {
+      padding: "20px 45px !important"
     }
   },
   homeTuition: {
@@ -79,7 +91,7 @@ function HomeFeatures(props) {
   return (
     <div>
       <section className={classes.sectionBg}>
-        <Typography variant="h3" color="primary" style={{ margin: "5%", marginBottom: "2%", letterSpacing: "-1px" }}>
+        <Typography variant="h3" color="primary" className={classes.tuitionText}>
           Tuitions
         </Typography>
         <Grid container className={classes.grid} spacing={5}>

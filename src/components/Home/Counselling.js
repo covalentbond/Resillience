@@ -291,7 +291,7 @@ function Counselling() {
   useEffect(() => {
     setTimeout(() => {
       setOpen(true);
-    }, 25000);
+    }, 30000);
   }, []);
 
   return (
