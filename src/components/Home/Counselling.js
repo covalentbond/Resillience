@@ -310,10 +310,14 @@ function Counselling() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setOpen(true);
     }, 30000);
+    return () => clearTimeout(timer);
   }, []);
+
+  //Its important to clean the function
+  //Empty brackets so that it is called once only when it mounts
 
   return (
     <div className={classes.counselling}>
