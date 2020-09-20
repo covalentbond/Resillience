@@ -28,17 +28,18 @@ const styles = () => ({
   },
   sakshamPhoto770: {
     display: "none",
+    "@media only screen and (max-width: 1000px)": {
+      cursor: "pointer",
+      display: "initial",
+      width: "50%"
+    },
     "@media only screen and (max-width: 770px)": {
-      width: "75%",
-      display: "initial"
+      width: "75%"
     }
   },
   sakshamPhoto: {
     display: "initial",
     "@media only screen and (max-width: 1000px)": {
-      width: "50%"
-    },
-    "@media only screen and (max-width: 770px)": {
       display: "none"
     }
   },
@@ -143,9 +144,9 @@ function Testimonials(props) {
               onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}
               alt="Saksham Student"
               title="Saksham Video"
-              href="/"
-              coords="271,278,272,334,315,307"
+              coords="157,226,157,298,213,263"
               shape="poly"
+              style={{ cursor: "pointer" }}
             />
           </map>
         </div>

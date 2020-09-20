@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import CounsellingImageNew from "../../compressed/counsellingNew.svg";
@@ -13,41 +13,23 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   counselling: {
-    display: "inline",
+    marginTop: "20px",
     "@media only screen and (max-width: 770px)": {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: "1rem !important",
-      marginLeft: "-2%"
-    }
-  },
-  designedText: {
-    position: "absolute",
-    marginTop: "-25px",
-    "@media only screen and (max-width: 900px)": {
-      marginTop: "-16px"
-    },
-    "@media only screen and (max-width: 770px)": {
-      position: "initial",
-      marginTop: "0px"
+      fontSize: "1rem !important"
     }
   },
   blueImage: {
-    width: "340px",
-    position: "absolute",
+    width: "380px",
+    cursor: "pointer",
     zIndex: "-1",
-    "@media only screen and (max-width: 1100px)": {
-      width: "300px"
-    },
-    "@media only screen and (max-width: 950px)": {
-      width: "250px"
-    },
-    "@media only screen and (max-width: 880px)": {
-      width: "225px"
+    "@media only screen and (max-width: 982px)": {
+      width: "280px"
     },
     "@media only screen and (max-width: 770px)": {
-      width: "350px",
+      width: "380px",
       position: "initial",
       marginTop: "-10px"
     }
@@ -57,24 +39,16 @@ const useStyles = makeStyles({
     maxWidth: "753px"
   },
   heading: {
-    letterSpacing: "0.5px",
-    fontSize: "1.7rem",
-    color: "black",
-    width: "260px",
-    marginLeft: "42px",
-    marginTop: "27px",
+    letterSpacing: "1px",
+    fontSize: "1.1rem",
+    marginTop: "-77px",
     cursor: "pointer",
-    "@media only screen and (max-width: 1125px)": {
-      fontSize: "1.35rem"
+    "@media only screen and (max-width: 1100px)": {
+      marginLeft: "25px"
     },
-    "@media only screen and (max-width: 950px)": {
-      fontSize: "1.25rem",
-      marginTop: "18px",
-      marginLeft: "35px"
-    },
-    "@media only screen and (max-width: 880px)": {
-      fontSize: "1.05rem",
-      marginLeft: "28px"
+    "@media only screen and (max-width: 982px)": {
+      marginTop: "-70px",
+      marginLeft: "0px"
     },
     "@media only screen and (max-width: 770px)": {
       width: "auto",
@@ -146,7 +120,6 @@ const useStyles = makeStyles({
       display: "initial"
     }
   },
-
   subSection: {
     position: "relative",
     height: "30px",
@@ -207,12 +180,6 @@ const useStyles = makeStyles({
       marginTop: "0px"
     }
   },
-  bookAFree: {
-    display: "none",
-    "@media only screen and (max-width: 770px)": {
-      display: "initial"
-    }
-  },
   circularProgress: {
     marginTop: "40px",
     height: "6rem",
@@ -227,7 +194,7 @@ const useStyles = makeStyles({
 
 function Counselling() {
   const classes = useStyles();
-  const tuition = "Overall Tuitions";
+  const tuition = "1-on-1 Live Online Tuition";
   const [open, setOpen] = useState(false);
   const [parentname, setParent] = useState("");
   const [phone, setPhone] = useState("");
@@ -257,7 +224,6 @@ function Counselling() {
         });
     }
   };
-
   const VerifyOtp = () => {
     fetch(`/verify?phonenumber=+91${phone}&code=${otp}`, {
       method: "get"
@@ -309,20 +275,13 @@ function Counselling() {
     setOpen(false);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, 30000);
-  }, []);
-
   return (
     <div className={classes.counselling}>
-      <span onClick={handleClickOpen} className={classes.designedText}>
+      <span onClick={handleClickOpen}>
         <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/mentoringStroke_doj1ve.svg" alt="Stroke" className={classes.blueImage} />
-        <h1 className={classes.heading}>
-          <span className={classes.bookAFree}>Book a FREE </span>Mentoring Session
-        </h1>
+        <h1 className={classes.heading}>Book a Free Mentoring Session</h1>
       </span>
+
       <Dialog
         open={open}
         onClose={handleClose}
@@ -353,7 +312,7 @@ function Counselling() {
                   placeholder="Parent's Name"
                   autoComplete="off"
                   maxLength="15"
-                  required={true}
+                  required="required"
                   value={parentname}
                   onChange={(e) => setParent(e.target.value)}
                 />
@@ -368,7 +327,7 @@ function Counselling() {
                   placeholder="Enter Mobile number"
                   autoComplete="off"
                   maxLength="10"
-                  required={true}
+                  required="required"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />

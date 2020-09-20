@@ -185,6 +185,7 @@ const useStyles = makeStyles({
 
 function Counselling() {
   const classes = useStyles();
+  const tuition = "Mastering Weak Topic as per need";
   const [open, setOpen] = useState(false);
   const [parentname, setParent] = useState("");
   const [phone, setPhone] = useState("");
@@ -194,14 +195,12 @@ function Counselling() {
   const [valid, setValid] = useState("");
 
   const SendOtp = () => {
-    if ((parentname !== "") & (phone.length === 10) & (/^\d+$/.test(phone) === true)) {
+    if (parentname !== "" && phone.length === 10 && /^\d+$/.test(phone) === true) {
       setLoading(true);
       fetch(`/sendotp?phonenumber=+91${phone}&channel=sms`, {
         method: "get"
       })
-        .then((res) => {
-          res.json();
-        })
+        .then((res) => res.json())
         .then((message) => {
           console.log(message);
           setStatus(message.status);
@@ -244,7 +243,8 @@ function Counselling() {
       },
       body: JSON.stringify({
         parentname,
-        phone
+        phone,
+        tuition
       })
     })
       .then((res) => res.json())

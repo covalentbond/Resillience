@@ -71,7 +71,7 @@ class Career extends React.Component {
           <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
             Our Team
           </Typography>
-          <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600235900/Assets/images/teachersCompress_ni54eh.svg"></img>
+          <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
         </div>
         <div style={{ padding: "5%", textAlign: "center" }}>
           <Typography variant="inherit" className={classes.text} color="primary">
