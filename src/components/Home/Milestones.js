@@ -8,8 +8,12 @@ import Typography from "@material-ui/core/Typography";
 const styles = () => ({
   milestoneSection: {
     textAlign: "center",
+    "@media only screen and (max-width: 1000px)": {
+      fontSize: "90%"
+    },
     "@media only screen and (max-width: 770px)": {
-      marginBottom: "40px"
+      marginBottom: "40px",
+      fontSize: "100%"
     }
   },
   milestoneImage: {

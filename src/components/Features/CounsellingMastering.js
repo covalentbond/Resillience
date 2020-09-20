@@ -6,6 +6,7 @@ import CounsellingImageNewPhone from "../../compressed/counsellingNewPhone.svg";
 import PhoneInTalkIcon from "@material-ui/icons/PhoneInTalk";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import MessageIcon from "@material-ui/icons/Message";
+import CircularProgress from "@material-ui/core/CircularProgress";
 // import Tick from "../../compressed/tick.svg";
 // import mentoringStroke from "../../compressed/mentoringStroke.svg";
 import { makeStyles } from "@material-ui/core/styles";
@@ -169,6 +170,16 @@ const useStyles = makeStyles({
     "@media only screen and (max-width: 770px)": {
       marginTop: "0px"
     }
+  },
+  circularProgress: {
+    marginTop: "40px",
+    height: "6rem",
+    width: "6rem",
+    "@media only screen and (max-width: 770px)": {
+      marginTop: "50px",
+      height: "4rem",
+      width: "4rem"
+    }
   }
 });
 
@@ -179,22 +190,31 @@ function Counselling() {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
   const [valid, setValid] = useState("");
 
   const SendOtp = () => {
-    fetch(`/sendotp?phonenumber=+91${phone}&channel=sms`, {
-      method: "get"
-    })
-      .then((res) => res.json())
-      .then((message) => {
-        // console.log(message);
-        setStatus(message.status);
-        if (message.error) {
-          console.log(message.error);
-        } else {
-          console.log(message.message);
-        }
-      });
+    if ((parentname !== "") & (phone.length === 10) & (/^\d+$/.test(phone) === true)) {
+      setLoading(true);
+      fetch(`/sendotp?phonenumber=+91${phone}&channel=sms`, {
+        method: "get"
+      })
+        .then((res) => {
+          res.json();
+        })
+        .then((message) => {
+          console.log(message);
+          setStatus(message.status);
+          if (message.status === "pending") {
+            setLoading(false);
+          }
+          if (message.error) {
+            console.log(message.error);
+          } else {
+            console.log(message.message);
+          }
+        });
+    }
   };
   const VerifyOtp = () => {
     fetch(`/verify?phonenumber=+91${phone}&code=${otp}`, {
@@ -270,7 +290,8 @@ function Counselling() {
         <div className={classes.section}>
           <h2 className={classes.getFree}>Get a Free Demo</h2>
           <h2 className={classes.mentroingSession}>Cum Mentoring Session</h2>
-          {status === "" && (
+          {loading === true && <CircularProgress color="secondary" className={classes.circularProgress} thickness={2.4} />}
+          {status === "" && loading === false && (
             <div>
               <div className={classes.subSection}>
                 <PersonOutlineIcon color="secondary" className={classes.icons} />
