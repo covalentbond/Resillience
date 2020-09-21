@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // import Online1to1 from "../../compressed/online1to1.svg";

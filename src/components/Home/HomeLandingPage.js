@@ -6,8 +6,6 @@ import ResillienceLogo from "../../compressed/Resillience-Logo.png";
 // import rectangleStroke from "../../compressed/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
-import Typed from "react-typed";
-// import "react-typed/dist/animatedCursor.css";
 
 const styles = () => ({
   homeImageWeb: {
@@ -215,14 +213,8 @@ function LandingPage(props) {
             IITians
           </span>
         </h2>
-
-        <h1 className={classes.iitians}>
-          <Typed strings={["IIT JEE (Mains + Advanced)", "NEET Coaching", "Foundation (8th - 10th)"]} typeSpeed={70} backSpeed={60} loop></Typed>
-        </h1>
-
-        {/* <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
-        <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1> */}
-
+        <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
+        <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1>
         <div className={classes.firstLine}>
           <Typography variant="inherit" className={classes.spanText}>
             <span className={classes.bookAFreeText}>Book a FREE</span>
