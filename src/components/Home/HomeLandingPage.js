@@ -6,6 +6,8 @@ import ResillienceLogo from "../../compressed/Resillience-Logo.png";
 // import rectangleStroke from "../../compressed/rectangleStroke.svg";
 import Counselling from "./Counselling";
 import Typography from "@material-ui/core/Typography";
+import Typed from "react-typed";
+// import "react-typed/dist/animatedCursor.css";
 
 const styles = () => ({
   homeImageWeb: {
@@ -54,7 +56,7 @@ const styles = () => ({
     flexDirection: "column",
     marginTop: "12.3%",
     "@media only screen and (max-width: 770px)": {
-      marginTop: "0",
+      marginTop: "-5px",
       textAlign: "center"
     }
   },
@@ -134,33 +136,33 @@ const styles = () => ({
     }
   },
 
-  rectangleStroke: {
-    zIndex: "-1",
-    marginTop: "38px",
-    marginLeft: "4px",
-    position: "absolute",
+  // rectangleStroke: {
+  //   zIndex: "-1",
+  //   marginTop: "38px",
+  //   marginLeft: "4px",
+  //   position: "absolute",
 
-    "@media only screen and (max-width: 1150px)": {
-      width: "15%",
-      marginLeft: "5px"
-    },
-    "@media only screen and (max-width: 1000px)": {
-      display: "none"
-    },
-    "@media only screen and (max-width: 770px)": {
-      display: "initial",
-      marginTop: "19px",
-      marginLeft: "-8px",
-      width: "125px",
-      height: "12px"
-    },
-    "@media only screen and (max-width: 373px)": {
-      marginTop: "55px",
-      marginLeft: "-180px",
-      width: "125px",
-      height: "12px"
-    }
-  },
+  //   "@media only screen and (max-width: 1150px)": {
+  //     width: "15%",
+  //     marginLeft: "5px"
+  //   },
+  //   "@media only screen and (max-width: 1000px)": {
+  //     display: "none"
+  //   },
+  //   "@media only screen and (max-width: 770px)": {
+  //     display: "initial",
+  //     marginTop: "19px",
+  //     marginLeft: "-8px",
+  //     width: "125px",
+  //     height: "12px"
+  //   },
+  //   "@media only screen and (max-width: 373px)": {
+  //     marginTop: "55px",
+  //     marginLeft: "-180px",
+  //     width: "125px",
+  //     height: "12px"
+  //   }
+  // },
 
   firstLine: {
     fontSize: "1.55rem",
@@ -209,13 +211,17 @@ function LandingPage(props) {
         <h2 className={classes.learning}>
           Learning with{" "}
           <span>
-            <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} />
+            {/* <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} /> */}
             IITians
           </span>
         </h2>
 
-        <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
-        <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1>
+        <h1 className={classes.iitians}>
+          <Typed strings={["IIT JEE (Mains + Advanced)", "NEET Coaching", "Foundation (8th - 10th)"]} typeSpeed={70} backSpeed={60} loop></Typed>
+        </h1>
+
+        {/* <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
+        <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1> */}
 
         <div className={classes.firstLine}>
           <Typography variant="inherit" className={classes.spanText}>
