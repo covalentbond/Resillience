@@ -50,6 +50,9 @@ const useStyles = makeStyles({
       width: "350px",
       position: "initial",
       marginTop: "-10px"
+    },
+    "@media only screen and (max-width: 770px)": {
+      width: "320px"
     }
   },
   paper: {

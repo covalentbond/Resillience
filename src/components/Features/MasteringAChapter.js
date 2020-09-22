@@ -139,7 +139,10 @@ const styles = () => ({
   content: {
     padding: "5%",
     fontSize: "20px",
-    marginLeft: "8%"
+    marginLeft: "8%",
+    "@media only screen and (max-width: 770px)": {
+      marginLeft: "0%"
+    }
   },
   contentVideo: {
     padding: "5%",
