@@ -54,7 +54,7 @@ const styles = () => ({
     flexDirection: "column",
     marginTop: "12.3%",
     "@media only screen and (max-width: 770px)": {
-      marginTop: "-5px",
+      marginTop: "-15px",
       textAlign: "center"
     }
   },

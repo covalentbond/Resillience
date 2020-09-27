@@ -94,7 +94,7 @@ const styles = () => ({
     "@media only screen and (max-width: 390px)": {
       fontSize: "90%"
     },
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 290px)": {
       fontSize: "80%"
     }
   }

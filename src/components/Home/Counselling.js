@@ -51,7 +51,7 @@ const useStyles = makeStyles({
       position: "initial",
       marginTop: "-10px"
     },
-    "@media only screen and (max-width: 770px)": {
+    "@media only screen and (max-width: 320px)": {
       width: "320px"
     }
   },

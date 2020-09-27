@@ -141,7 +141,7 @@ function BetterLearning(props) {
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
           <div className={classes.Title}>Personalized learning with IIT graduate faculty</div>
-          <div className={classes.Content}>Students prepare under individual attention of very assionate and empathetic IITians. The Pace of learning depends on the student.</div>
+          <div className={classes.Content}>Students prepare under individual attention of very passionate and empathetic IITians. The Pace of learning depends on the student.</div>
         </div>
       </div>
       <div className={classes.LearningBody}>

@@ -95,6 +95,9 @@ const styles = () => ({
       fontSize: "16px",
       order: "0",
       width: "60%"
+    },
+    "@media only screen and (max-width: 390px)": {
+      marginLeft: "-35px"
     }
   },
   fImageSectionVideo: {
