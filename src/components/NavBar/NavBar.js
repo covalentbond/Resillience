@@ -141,7 +141,7 @@ class Navbar extends React.Component {
             {/* <Typography variant="inherit" className={classes.navIcons}>
             Tuitions
           </Typography> */}
-            <TuitionDropdown />
+            <TuitionDropdown handleChange />
             {/* TODO: Have to change here */}
             <NavLink exact className={classes.navIcons} activeClassName="active" to="/test" onClick={this.handleChange}>
               Test

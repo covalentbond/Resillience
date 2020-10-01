@@ -3,7 +3,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import Counselling from "./CounsellingOneOnOneLive";
+import { Link } from "react-router-dom";
 
 //Images
 // import onlineOneToOne from "../../compressed/onlineOneToOne.svg";
@@ -35,6 +38,54 @@ const styles = () => ({
     marginBottom: "0",
     "@media only screen and (max-width: 770px)": {
       marginBottom: "5%"
+    }
+  },
+  nextPageL: {
+    position: "fixed",
+    top: "48%",
+    left: "0",
+    height: "70px",
+    width: "45px",
+    borderRadius: "0 150px 150px 0",
+    textAlign: "center",
+    backgroundColor: "white",
+    boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+    "@media only screen and (max-width: 450px)": {
+      top: "45%",
+      height: "50px",
+      width: "30px"
+    }
+  },
+  nextPageLIcon: {
+    marginTop: "17px",
+    marginRight: "10px",
+    "@media only screen and (max-width: 450px)": {
+      marginTop: "10px",
+      marginLeft: "-5px"
+    }
+  },
+  nextPageR: {
+    position: "fixed",
+    top: "48%",
+    right: "0",
+    height: "70px",
+    width: "45px",
+    borderRadius: "150px 0 0 150px",
+    textAlign: "center",
+    backgroundColor: "white",
+    boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+    "@media only screen and (max-width: 450px)": {
+      top: "45%",
+      height: "50px",
+      width: "30px"
+    }
+  },
+  nextPageRIcon: {
+    marginTop: "17px",
+    marginLeft: "10px",
+    "@media only screen and (max-width: 450px)": {
+      marginTop: "10px",
+      marginLeft: "0"
     }
   },
   iframeSection: {
@@ -187,15 +238,26 @@ function OneOnOneLive(props) {
   const { classes } = props;
   return (
     <div className="page" style={{ marginTop: "80px" }}>
+      <Link to="/tuitions/one-on-one-home-tuitions">
+        <div className={classes.nextPageL}>
+          <NavigateBeforeIcon color="primary" fontSize="large" className={classes.nextPageLIcon} />
+        </div>
+      </Link>
+      <Link to="/tuitions/mastering-a-week-topic">
+        <div className={classes.nextPageR}>
+          <NavigateNextIcon color="primary" fontSize="large" className={classes.nextPageRIcon} />
+        </div>
+      </Link>
+
       <span>
-        <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
+        <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
         <Typography variant="h3" color="primary" className={classes.featuresText}>
           Tuitions
         </Typography>
       </span>
       <div className={classes.featureSection} id="oneToOneOnlineClasses">
         <div className={classes.fImageSection}>
-          <img className={classes.fImage} alt="Online One to One Classes" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/onlineOneToOne_jomuvz.svg" />
+          <img loading="lazy" className={classes.fImage} alt="Online One to One Classes" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/onlineOneToOne_jomuvz.svg" />
           <Counselling />
         </div>
         <div className={classes.fDescription}>
@@ -255,7 +317,7 @@ function OneOnOneLive(props) {
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
             src="https://www.youtube.com/embed/ElLUlnEALAE?autoplay=1&mute=1&loop=1"
-            // srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jMVoreUzBhc/?autoplay=1&muted=1><img src=https://img.youtube.com/vi/jMVoreUzBhc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
+            // srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jMVoreUzBhc/?autoplay=1&muted=1><img loading="lazy" src=https://img.youtube.com/vi/jMVoreUzBhc/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>`}
           />
         </div>
       </div>
@@ -263,7 +325,7 @@ function OneOnOneLive(props) {
       <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection}>
         <div className={classes.fImageSection}>
-          <img className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
+          <img loading="lazy" className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
         </div>
         <div className={classes.fDescription}>
           <Typography variant="h4" color="secondary" className={classes.descHeading}>

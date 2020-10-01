@@ -26,7 +26,10 @@ const styles = () => ({
     }
   },
   hoverName: {
-    cursor: "pointer"
+    cursor: "pointer",
+    "&:hover": {
+      color: "#0F7DC2"
+    }
   }
 });
 

@@ -12,7 +12,6 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import themeObject from "./theme";
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { TitleComponent } from "./components/Title/TitleComponent";
 
 import "./ReactTransitions.css";
@@ -43,7 +42,7 @@ const TermsOfService = lazy(() => import("./components/Miscellaneous/TermsOfServ
 const theme = createMuiTheme(themeObject);
 
 //Proxy only works in developmemt so need to tell this
-axios.defaults.baseURL = location.protocol + "//resillience.in/api";
+axios.defaults.baseURL = window.location.protocol + "//resillience.in/api";
 
 // withTitle function
 const withTitle = ({ component: Component, title }) => {
@@ -80,67 +79,33 @@ const TermsOfServiceComponent = withTitle({ component: TermsOfService, title: "T
 const ErrorComponent = withTitle({ component: Error, title: "Not Found | RESILLIENCE" });
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      prevDepth: this.getPathDepth(this.props.location)
-    };
-  }
-
-  UNSAFE_componentWillReceiveProps() {
-    this.setState({ prevDepth: this.getPathDepth(this.props.location) });
-  }
-
-  getPathDepth(location) {
-    let pathArr = location.pathname.split("/");
-    pathArr = pathArr.filter((n) => n !== "");
-    return pathArr.length;
-  }
-
   render() {
-    const { location } = this.props;
-
-    const currentKey = location.pathname.split("/")[1] || "/";
-    const timeout = { enter: 800, exit: 800 };
-
     return (
       <MuiThemeProvider theme={theme}>
         <Suspense fallback={<LinearProgress color="secondary" style={{ paddingTop: "0.2%" }} />}>
-          <TransitionGroup component="div" className="App">
-            <CSSTransition key={currentKey} timeout={timeout} classNames="pageSlider" mountOnEnter={false} unmountOnExit={true}>
-              <div
-                className={
-                  this.getPathDepth(location) - this.state.prevDepth >= 0
-                    ? "left" //left means right to left
-                    : "right" //right means towards right
-                }
-              >
-                <Navbar />
-                <ScrollToTop />
-                <Switch location={location}>
-                  <Route exact path="/" component={HomeComponent} />
-                  <Route path="/aboutus" component={AboutUsComponent} />
-                  <Route path="/tuitions/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
-                  <Route path="/tuitions/one-on-one-online-tuitions" component={OneOnOneLiveComponent} />
-                  <Route path="/tuitions/mastering-a-week-topic" component={MasteringAChapterComponent} />
-                  <Route path="/test" component={TestComponent} />
-                  <Route path="/faqs" component={FaqsComponent} />
-                  <Route path="/contact-us" component={ContactUsComponent} />
-                  <Route path="/career" component={CareerComponent} />
-                  <Route path="/admin/createblogs" component={PostBlogComponent} />
-                  <Route exact path="/blogs" component={ShowBlogsComponent} />
-                  <Route exact path="/blogs/:id" component={ParticularBlogComponent} />
-                  {/* <Route path="/dashboard" component={StudentProfileComponent} /> */}
-                  <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
-                  <Route path="/termsofservice" component={TermsOfServiceComponent} />
-                  {/* <Route path="/sitemap" component={SitemapComponent} /> */}
-                  <Route component={ErrorComponent} />
-                  {/* <Route path="/room" component={RoomComponent} /> */}
-                </Switch>
-                <Footer />
-              </div>
-            </CSSTransition>
-          </TransitionGroup>
+          <Navbar />
+          <ScrollToTop />
+          <Switch>
+            <Route exact path="/" component={HomeComponent} />
+            <Route path="/aboutus" component={AboutUsComponent} />
+            <Route path="/tuitions/one-on-one-home-tuitions" component={OneOnOneHomeComponent} />
+            <Route path="/tuitions/one-on-one-online-tuitions" component={OneOnOneLiveComponent} />
+            <Route path="/tuitions/mastering-a-week-topic" component={MasteringAChapterComponent} />
+            <Route path="/test" component={TestComponent} />
+            <Route path="/faqs" component={FaqsComponent} />
+            <Route path="/contact-us" component={ContactUsComponent} />
+            <Route path="/career" component={CareerComponent} />
+            <Route path="/admin/createblogs" component={PostBlogComponent} />
+            <Route exact path="/blogs" component={ShowBlogsComponent} />
+            <Route exact path="/blogs/:id" component={ParticularBlogComponent} />
+            {/* <Route path="/dashboard" component={StudentProfileComponent} /> */}
+            <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
+            <Route path="/termsofservice" component={TermsOfServiceComponent} />
+            {/* <Route path="/sitemap" component={SitemapComponent} /> */}
+            <Route component={ErrorComponent} />
+            {/* <Route path="/room" component={RoomComponent} /> */}
+          </Switch>
+          <Footer />
         </Suspense>
       </MuiThemeProvider>
     );

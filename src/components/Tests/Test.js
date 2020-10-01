@@ -68,7 +68,7 @@ function Tests(props) {
             <Grid container className={classes.root} spacing={2}>
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Mathematics
                   </Typography>
@@ -77,7 +77,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Physics
                   </Typography>
@@ -86,7 +86,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Chemistry
                   </Typography>
@@ -95,7 +95,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Foundation Classes
                   </Typography>

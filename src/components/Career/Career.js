@@ -57,14 +57,14 @@ class Career extends React.Component {
             </Typography>
           </div>
 
-          <img alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
-          {/* <img alt="Career" className={classes.careerImage} src={careerImage} /> */}
+          <img loading="lazy" alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
+          {/* <img loading="lazy" alt="Career" className={classes.careerImage} src={careerImage} /> */}
         </div>
         <div className={classes.teacherSection}>
           <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
             Founders
           </Typography>
-          <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
+          <img loading="lazy" alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
         </div>
         <div style={{ padding: "5%", textAlign: "center" }}>
           <Typography variant="inherit" className={classes.text} color="primary">

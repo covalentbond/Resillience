@@ -97,7 +97,7 @@ function HomeFeatures(props) {
         <Grid container className={classes.grid} spacing={5}>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
+              <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 1-on-1 Home Tuition across Mumbai
               </Typography>
@@ -110,7 +110,7 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
+              <img loading="lazy" className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 1-on-1 Live Online Tuition anywhere
               </Typography>
@@ -123,7 +123,12 @@ function HomeFeatures(props) {
           </Grid>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
             <Paper elevation={4}>
-              <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg" className={classes.onlineGroup} alt="Mastering a week chapter" />
+              <img
+                loading="lazy"
+                src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg"
+                className={classes.onlineGroup}
+                alt="Mastering a week chapter"
+              />
               <Typography variant="h6" color="primary" className={classes.fHeading}>
                 Mastering a Weak Topic as per need
                 {/* Group live online tuitions anywhere */}

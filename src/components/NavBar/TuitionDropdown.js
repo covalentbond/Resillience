@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Tuitions() {
+export default function Tuitions(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -112,7 +112,7 @@ export default function Tuitions() {
           <Typography className={classes.navtext}>Tuitions {open ? <ExpandLess /> : <ExpandMore />}</Typography>
         </List>
         <Collapse in={open} timeout="auto" unmountOnExit className={classes.collapseMenu}>
-          <List component="div">
+          <List component="div" onClick={props.handleChange}>
             <ListItem className={classes.nested}>
               <ListItemText>
                 <NavLink to="/tuitions/one-on-one-home-tuitions" className={classes.text} onClick={handleClick} activeClassName="activeDropdown">

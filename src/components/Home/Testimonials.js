@@ -126,19 +126,20 @@ function Testimonials(props) {
       </Typography>
       <div className={classes.tSaksham}>
         <div className={classes.tImage}>
-          {/* <img
+          {/* <img loading="lazy"
             src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/sakshamPhoto_fatfdp.png"
             style={{ display: "initial", width: "75%" }}
             alt="Saksham Student"
           /> */}
           <img
+            loading="lazy"
             src={sakshamPhoto}
             useMap="#image-map"
             alt="Saksham Student"
             onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}
             className={classes.sakshamPhoto770}
           />
-          <img src={sakshamPhoto} useMap="#image-map" alt="Saksham Student" className={classes.sakshamPhoto} />
+          <img loading="lazy" src={sakshamPhoto} useMap="#image-map" alt="Saksham Student" className={classes.sakshamPhoto} />
           <map name="image-map">
             <area
               onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}

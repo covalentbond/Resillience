@@ -98,6 +98,7 @@ function LandingPage(props) {
             About Us
           </Typography>
           <img
+            loading="lazy"
             alt="Bg Design"
             src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg"
             style={{
@@ -134,8 +135,13 @@ function LandingPage(props) {
           }
         }}
       >
-        <img src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
-        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg" alt="Team Landing Page" className={classes.teamLandingImagePhone} />
+        <img loading="lazy" src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
+        <img
+          loading="lazy"
+          src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg"
+          alt="Team Landing Page"
+          className={classes.teamLandingImagePhone}
+        />
       </div>
     </div>
   );

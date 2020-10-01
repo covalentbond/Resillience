@@ -146,9 +146,9 @@ class SignIn extends React.Component {
             paper: classes.paper
           }}
         >
-          {/* <img src={profile} className={classes}></img>
-          <img src={white}></img> */}
-          <img alt="loginBg" src="https://res.cloudinary.com/rweb1/image/upload/v1600243283/Assets/images/loginBg_olbayb.svg" className={classes.loginBg} />
+          {/* <img loading="lazy" src={profile} className={classes}></img>
+          <img loading="lazy" src={white}></img> */}
+          <img loading="lazy" alt="loginBg" src="https://res.cloudinary.com/rweb1/image/upload/v1600243283/Assets/images/loginBg_olbayb.svg" className={classes.loginBg} />
           <div className={classes.login}>
             <Typography variant="h4" color="primary" className={classes.signIn}>
               User Log in

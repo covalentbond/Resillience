@@ -91,7 +91,7 @@ function Faqs(props) {
           F.A.Q
         </Typography>
         <h1 className={classes.qs}>Questions?</h1>
-        <img alt="FAQ'S" src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/faqs_usvet7.svg" className={classes.faqImage}></img>
+        <img loading="lazy" alt="FAQ'S" src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/faqs_usvet7.svg" className={classes.faqImage}></img>
       </div>
       <div className={classes.root}>
         <Accordion expanded={expanded === "panel1"} onChange={handleChange("panel1")} className={classes.accordion}>

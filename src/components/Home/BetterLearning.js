@@ -136,8 +136,13 @@ function BetterLearning(props) {
       <Typography variant="h3" color="primary" className={classes.whyResillience}>
         Why RESILLIENCE ?
       </Typography>
-      <img src={BetterLearningChanges} className={classes.BetterLearningImageWeb} alt="Better Learning Path" />
-      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/BetterLearningImagePhone_yibgac.svg" className={classes.BetterLearningImagePhone} alt="Better Learning Path" />
+      <img loading="lazy" src={BetterLearningChanges} className={classes.BetterLearningImageWeb} alt="Better Learning Path" />
+      <img
+        loading="lazy"
+        src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/BetterLearningImagePhone_yibgac.svg"
+        className={classes.BetterLearningImagePhone}
+        alt="Better Learning Path"
+      />
       <div className={classes.LearningBody}>
         <div className={classes.DescriptionItem}>
           <div className={classes.Title}>Personalized learning with IIT graduate faculty</div>

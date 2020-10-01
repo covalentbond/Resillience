@@ -103,7 +103,7 @@ function Footer(props) {
   const { classes } = props;
   return (
     <div className={classes.footerSection}>
-      <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/design-footerrr1_wlvv2d.svg" className={classes.designImage} alt="Design Footer" />
+      <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/design-footerrr1_wlvv2d.svg" className={classes.designImage} alt="Design Footer" />
       <div>
         <div className={classes.buttonPhone}>
           <WhatsAppIcon

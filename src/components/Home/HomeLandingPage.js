@@ -194,14 +194,15 @@ function LandingPage(props) {
   return (
     <div style={{ position: "relative", marginTop: "40px", marginLeft: "2%" }}>
       <img
+        loading="lazy"
         className={classes.homeImageWeb}
         src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/homeLandingImageWeb_wru9ee.svg"
         alt="Home Page Main"
         style={{ position: "absolute", right: "0" }}
       />
-      <img className={classes.homeImagePhone} src="https://res.cloudinary.com/rweb1/image/upload/v1600243281/Assets/images/homeLandingImagePhone_djom9l.svg" alt="Home Page Main" />
+      <img loading="lazy" className={classes.homeImagePhone} src="https://res.cloudinary.com/rweb1/image/upload/v1600243281/Assets/images/homeLandingImagePhone_djom9l.svg" alt="Home Page Main" />
       <div className={classes.content}>
-        <img src={ResillienceLogo} className={classes.logoImage} alt="Logo" />
+        <img loading="lazy" src={ResillienceLogo} className={classes.logoImage} alt="Logo" />
 
         <Typography variant="h1" className={classes.personalized}>
           Personalized
@@ -209,7 +210,7 @@ function LandingPage(props) {
         <h2 className={classes.learning}>
           Learning with{" "}
           <span>
-            {/* <img alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} /> */}
+            {/* <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} /> */}
             IITians
           </span>
         </h2>

@@ -109,9 +109,9 @@ function ContactUs(props) {
   return (
     <div className={classes.contactSection}>
       <div className={classes.subSections}>
-        {/* <img src={ContactUsLandingImage} className={classes.landingImage}></img> */}
+        {/* <img loading="lazy" src={ContactUsLandingImage} className={classes.landingImage}></img> */}
         <div className={classes.landingImage}>
-          <img alt="ContactUs" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/phoneContactUs_h56bal.svg" className={classes.innerImage}></img>
+          <img loading="lazy" alt="ContactUs" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/phoneContactUs_h56bal.svg" className={classes.innerImage}></img>
         </div>
         <div className={classes.subSectionContent}>
           <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
