@@ -115,7 +115,7 @@ function Milestones(props) {
         </div>
         <div className={classes.eachMilestone}>
           <h1>
-            <CountUp start={focus ? 0 : null} end={150} duration={4} redraw={true}>
+            <CountUp start={focus ? 0 : null} end={300} duration={4} redraw={true}>
               {({ countUpRef }) => (
                 <VisibilitySensor
                   onChange={(isVisible) => {
