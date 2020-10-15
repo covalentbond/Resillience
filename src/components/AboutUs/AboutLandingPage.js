@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 //Images
@@ -94,10 +95,14 @@ function LandingPage(props) {
     <div className={classes.teamLanding}>
       <div className={classes.infoAbout}>
         <span className={classes.aboutUs}>
-          <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
-            About Us
-          </Typography>
+          <Fade top>
+            <Typography variant="h3" style={{ textAlign: "center", marginBottom: "5%" }} color="primary">
+              About Us
+            </Typography>
+          </Fade>
+
           <img
+            loading="lazy"
             alt="Bg Design"
             src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg"
             style={{
@@ -109,22 +114,23 @@ function LandingPage(props) {
             }}
           />
         </span>
-
-        <div className={classes.title}>
-          <Typography variant="inherit" className={classes.text} color="primary" style={{ marginTop: "20px" }}>
-            We are a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation. We believe:
-          </Typography>
-          <Typography variant="inherit" color="secondary" className={classes.visionText}>
-            “ Everyone can learn and excel but the ways will be different. ”
-          </Typography>
-          <Typography variant="inherit" color="primary" className={classes.text} style={{ margintop: "5px" }}>
-            <i> ~ Team RESILLIENCE</i>
-          </Typography>
-          <Typography variant="inherit" color="primary" className={classes.text}>
-            Focusing on each and every student, is not possible in big classrooms. To provide personal attention to each and every student we are here with our solution of "Personalized Learning with
-            IITians" backed with advanced technical support.
-          </Typography>
-        </div>
+        <Fade>
+          <div className={classes.title}>
+            <Typography variant="inherit" className={classes.text} color="primary" style={{ marginTop: "20px" }}>
+              We are a team of IIT graduate mentors, and dedicated professionals with a single goal to provide perfect and result oriented solution for IIT/NEET preparation. We believe:
+            </Typography>
+            <Typography variant="inherit" color="secondary" className={classes.visionText}>
+              “ Everyone can learn and excel but the ways will be different. ”
+            </Typography>
+            <Typography variant="inherit" color="primary" className={classes.text} style={{ margintop: "5px" }}>
+              <i> ~ Team RESILLIENCE</i>
+            </Typography>
+            <Typography variant="inherit" color="primary" className={classes.text}>
+              Focusing on each and every student, is not possible in big classrooms. To provide personal attention to each and every student we are here with our solution of "Personalized Learning
+              with IITians" backed with advanced technical support.
+            </Typography>
+          </div>
+        </Fade>
       </div>
       <div
         style={{
@@ -134,8 +140,13 @@ function LandingPage(props) {
           }
         }}
       >
-        <img src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
-        <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg" alt="Team Landing Page" className={classes.teamLandingImagePhone} />
+        <img loading="eager" src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
+        <img
+          loading="eager"
+          src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg"
+          alt="Team Landing Page"
+          className={classes.teamLandingImagePhone}
+        />
       </div>
     </div>
   );

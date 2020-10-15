@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import CounsellingImageNew from "../../compressed/counsellingNew.svg";
@@ -13,28 +13,46 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   counselling: {
-    marginTop: "20px",
+    display: "inline",
     "@media only screen and (max-width: 770px)": {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: "1rem !important"
+      fontSize: "1rem !important",
+      marginLeft: "-2%"
+    }
+  },
+  designedText: {
+    position: "absolute",
+    marginTop: "-25px",
+    "@media only screen and (max-width: 900px)": {
+      marginTop: "-16px"
+    },
+    "@media only screen and (max-width: 770px)": {
+      position: "initial",
+      marginTop: "0px"
     }
   },
   blueImage: {
-    width: "380px",
-    cursor: "pointer",
+    width: "340px",
+    position: "absolute",
     zIndex: "-1",
-    "@media only screen and (max-width: 982px)": {
-      width: "280px"
+    "@media only screen and (max-width: 1100px)": {
+      width: "300px"
+    },
+    "@media only screen and (max-width: 950px)": {
+      width: "250px"
+    },
+    "@media only screen and (max-width: 880px)": {
+      width: "225px"
     },
     "@media only screen and (max-width: 770px)": {
-      width: "380px",
+      width: "350px",
       position: "initial",
       marginTop: "-10px"
     },
-    "@media only screen and (max-width: 350px)": {
-      width: "285px"
+    "@media only screen and (max-width: 320px)": {
+      width: "320px"
     }
   },
   paper: {
@@ -42,16 +60,24 @@ const useStyles = makeStyles({
     maxWidth: "753px"
   },
   heading: {
-    letterSpacing: "1px",
-    fontSize: "1.1rem",
-    marginTop: "-77px",
+    letterSpacing: "0.5px",
+    fontSize: "1.7rem",
+    color: "black",
+    width: "260px",
+    marginLeft: "42px",
+    marginTop: "27px",
     cursor: "pointer",
-    "@media only screen and (max-width: 1100px)": {
-      marginLeft: "25px"
+    "@media only screen and (max-width: 1125px)": {
+      fontSize: "1.35rem"
     },
-    "@media only screen and (max-width: 982px)": {
-      marginTop: "-70px",
-      marginLeft: "0px"
+    "@media only screen and (max-width: 950px)": {
+      fontSize: "1.25rem",
+      marginTop: "18px",
+      marginLeft: "35px"
+    },
+    "@media only screen and (max-width: 880px)": {
+      fontSize: "1.05rem",
+      marginLeft: "28px"
     },
     "@media only screen and (max-width: 770px)": {
       width: "auto",
@@ -123,6 +149,7 @@ const useStyles = makeStyles({
       display: "initial"
     }
   },
+
   subSection: {
     position: "relative",
     height: "30px",
@@ -183,6 +210,12 @@ const useStyles = makeStyles({
       marginTop: "0px"
     }
   },
+  bookAFree: {
+    display: "none",
+    "@media only screen and (max-width: 770px)": {
+      display: "initial"
+    }
+  },
   circularProgress: {
     marginTop: "40px",
     height: "6rem",
@@ -195,9 +228,9 @@ const useStyles = makeStyles({
   }
 });
 
-function Counselling() {
+function CounsellingWithTimer() {
   const classes = useStyles();
-  const tuition = "1-on-1 Home Tuition";
+  const tuition = "Overall Tuitions";
   const [open, setOpen] = useState(false);
   const [parentname, setParent] = useState("");
   const [phone, setPhone] = useState("");
@@ -227,6 +260,7 @@ function Counselling() {
   //       });
   //   }
   // };
+
   // const VerifyOtp = () => {
   //   fetch(`/verify?phonenumber=+91${phone}&code=${otp}`, {
   //     method: "get"
@@ -281,13 +315,24 @@ function Counselling() {
     setOpen(false);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 30000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  //Its important to clean the function
+  //Empty brackets so that it is called once only when it mounts
+
   return (
     <div className={classes.counselling}>
-      <span onClick={handleClickOpen}>
+      <span onClick={handleClickOpen} className={classes.designedText}>
         <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/mentoringStroke_doj1ve.svg" alt="Stroke" className={classes.blueImage} />
-        <h1 className={classes.heading}>Book a Free Mentoring Session</h1>
+        <h1 className={classes.heading}>
+          <span className={classes.bookAFree}>Book a FREE </span>Mentoring Session
+        </h1>
       </span>
-
       <Dialog
         open={open}
         onClose={handleClose}
@@ -306,8 +351,8 @@ function Counselling() {
           <h2 className={classes.getFree}>Get a Free Demo</h2>
           <h2 className={classes.mentroingSession}>Cum Mentoring Session</h2>
           {/* {loading === true && <CircularProgress color="secondary" className={classes.circularProgress} thickness={2.4} />} */}
-          {status === "" && (
-            /*loading === false &&*/ <div>
+          {status === "" /*&& loading === false*/ && (
+            <div>
               <div className={classes.subSection}>
                 <PersonOutlineIcon color="secondary" className={classes.icons} />
                 <input
@@ -318,7 +363,7 @@ function Counselling() {
                   placeholder="Parent's Name"
                   autoComplete="off"
                   maxLength="15"
-                  required="required"
+                  required={true}
                   value={parentname}
                   onChange={(e) => setParent(e.target.value)}
                 />
@@ -333,7 +378,7 @@ function Counselling() {
                   placeholder="Enter Mobile number"
                   autoComplete="off"
                   maxLength="10"
-                  required="required"
+                  required={true}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -377,7 +422,7 @@ function Counselling() {
                   onChange={(e) => setOtp(e.target.value)}
                 />
               </div>
-              {/*valid === false && */ <h4 style={{ margin: "auto", marginLeft: "10px", color: "red", marginBottom: "10px" }}>The OTP entered is incorrect, Try again</h4>}
+              {/*valid === false  &&*/ <h4 style={{ margin: "auto", marginLeft: "10px", color: "red", marginBottom: "10px" }}>The OTP entered is incorrect, Try again</h4>}
               <div style={{ display: "flex", margin: "auto", justifyContent: "center" }}>
                 <Button
                   type="submit"
@@ -412,4 +457,4 @@ function Counselling() {
   );
 }
 
-export default Counselling;
+export default CounsellingWithTimer;

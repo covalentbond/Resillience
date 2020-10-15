@@ -66,7 +66,7 @@ class Blog extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.section}>
-        <img alt="BlogsBold" src={Image} className={classes.image}></img>
+        <img loading="lazy" alt="BlogsBold" src={Image} className={classes.image}></img>
         <div className={classes.grid}>
           {this.state.blogArray.map((eachBlog, index) => (
             <Card className={classes.root} key={index}>
@@ -97,6 +97,7 @@ class Blog extends Component {
                   color="secondary"
                   onClick={() => {
                     window.location.href = `/blogs/${eachBlog._id}`;
+                    // window.location.href = `/blogs/${eachBlog.heading}`;
                   }}
                 >
                   Read More...

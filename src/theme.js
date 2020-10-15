@@ -25,28 +25,28 @@ export default {
   typography: {
     fontFamily: ["muli", "sans-serif"].join(","),
     h1: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     },
     h2: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     },
     h3: {
-      fontFamily: "Rubik",
+      fontFamily: "Rubik,sans-serif",
       "@media only screen and (max-width: 770px)": {
         fontSize: "2rem"
       }
     },
     h4: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     },
     h5: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     },
     h6: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     },
     button: {
-      fontFamily: "Rubik"
+      fontFamily: "Rubik,sans-serif"
     }
   }
 };

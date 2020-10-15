@@ -16,8 +16,8 @@ function OurTeam(props) {
   const { classes } = props;
   return (
     <div style={{ margin: "auto", textAlign: "center" }}>
-      <img alt="Teacher" src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg" className={classes.teacherImage} />
-      {/* <img alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img> */}
+      <img loading="eager" alt="Teacher" src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg" className={classes.teacherImage} />
+      {/* <img loading="lazy" alt="Teacher" src={TeacherImage} className={classes.teacherImage}></img> */}
     </div>
   );
 }

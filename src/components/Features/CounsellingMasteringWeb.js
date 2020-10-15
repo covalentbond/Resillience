@@ -14,28 +14,15 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   counselling: {
     marginTop: "20px",
+    margin: "auto",
     "@media only screen and (max-width: 770px)": {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "1rem !important"
+      display: "none"
     }
   },
   blueImage: {
     width: "380px",
     cursor: "pointer",
-    zIndex: "-1",
-    "@media only screen and (max-width: 982px)": {
-      width: "280px"
-    },
-    "@media only screen and (max-width: 770px)": {
-      width: "380px",
-      position: "initial",
-      marginTop: "-10px"
-    },
-    "@media only screen and (max-width: 350px)": {
-      width: "285px"
-    }
+    zIndex: "-1"
   },
   paper: {
     backgroundColor: "transparent",
@@ -43,51 +30,18 @@ const useStyles = makeStyles({
   },
   heading: {
     letterSpacing: "1px",
-    fontSize: "1.1rem",
+    fontSize: "1.2rem",
     marginTop: "-77px",
-    cursor: "pointer",
-    "@media only screen and (max-width: 1100px)": {
-      marginLeft: "25px"
-    },
-    "@media only screen and (max-width: 982px)": {
-      marginTop: "-70px",
-      marginLeft: "0px"
-    },
-    "@media only screen and (max-width: 770px)": {
-      width: "auto",
-      marginTop: "-20.5%",
-      marginLeft: "0px"
-    }
+    marginLeft: "55px",
+    cursor: "pointer"
   },
   getFree: {
     marginTop: "0px",
-    marginBottom: "0px",
-    "@media only screen and (max-width: 670px)": {
-      fontSize: "160%",
-      marginTop: "0px",
-      marginBottom: "initial"
-    },
-    "@media only screen and (max-width: 470px)": {
-      fontSize: "150%"
-    },
-    "@media only screen and (max-width: 330px)": {
-      fontSize: "80%"
-    }
+    marginBottom: "0px"
   },
   mentroingSession: {
     marginBottom: "20px",
-    marginTop: "12px",
-    "@media only screen and (max-width: 670px)": {
-      fontSize: "160%",
-      marginTop: "6px"
-    },
-    "@media only screen and (max-width: 470px)": {
-      marginBottom: "5px",
-      fontSize: "150%"
-    },
-    "@media only screen and (max-width: 330px)": {
-      fontSize: "80%"
-    }
+    marginTop: "12px"
   },
   section: {
     position: "absolute",
@@ -95,33 +49,14 @@ const useStyles = makeStyles({
     left: "12%",
     right: "40%",
     bottom: "10%",
-    textAlign: "center",
-    "@media only screen and (max-width: 770px)": {
-      top: "20%"
-    },
-    "@media only screen and (max-width: 670px)": {
-      top: "10%",
-      fontSize: "8px !important",
-      left: "10%"
-    },
-    "@media only screen and (max-width: 330px)": {
-      top: "15%"
-    }
+    textAlign: "center"
   },
   imageWeb: {
-    visibility: "initial",
-    "@media only screen and (max-width: 670px)": {
-      display: "none",
-      height: "300px"
-    }
+    visibility: "initial"
   },
   image: {
     visibility: "initial",
-    display: "none",
-    "@media only screen and (max-width: 670px)": {
-      height: "300px",
-      display: "initial"
-    }
+    display: "none"
   },
   subSection: {
     position: "relative",
@@ -132,11 +67,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     border: "1px solid",
-    borderRadius: "8px",
-    "@media only screen and (max-width: 770px)": {
-      width: "auto",
-      height: "auto"
-    }
+    borderRadius: "8px"
   },
   icons: {
     marginLeft: "5%"
@@ -146,58 +77,31 @@ const useStyles = makeStyles({
     borderTopStyle: "hidden",
     borderRightStyle: "hidden",
     borderLeftStyle: "hidden",
-    borderBottomStyle: "hidden",
-    "@media only screen and (max-width: 670px)": {
-      fontSize: "10px",
-      width: "110px",
-      paddingLeft: "6%"
-    }
+    borderBottomStyle: "hidden"
   },
   messages: {
     marginLeft: "30px",
-    marginTop: "25px",
-    "@media only screen and (max-width: 670px)": {
-      marginLeft: "0px",
-      marginTop: "0px",
-      fontSize: "10px",
-      paddingTop: "9%",
-      width: "160%"
-    }
+    marginTop: "25px"
   },
   message: {
     display: "flex",
     alignItems: "center",
-    marginBottom: "10px",
-    "@media only screen and (max-width: 330px)": {
-      fontSize: "80%"
-    }
+    marginBottom: "10px"
   },
-  tickImage: {
-    "@media only screen and (max-width: 770px)": {
-      width: "13px"
-    }
-  },
+
   button: {
-    marginTop: "15px",
-    "@media only screen and (max-width: 770px)": {
-      marginTop: "0px"
-    }
+    marginTop: "15px"
   },
   circularProgress: {
     marginTop: "40px",
     height: "6rem",
-    width: "6rem",
-    "@media only screen and (max-width: 770px)": {
-      marginTop: "50px",
-      height: "4rem",
-      width: "4rem"
-    }
+    width: "6rem"
   }
 });
 
 function Counselling() {
   const classes = useStyles();
-  const tuition = "1-on-1 Home Tuition";
+  const tuition = "Mastering Weak Topic as per need";
   const [open, setOpen] = useState(false);
   const [parentname, setParent] = useState("");
   const [phone, setPhone] = useState("");
@@ -285,7 +189,7 @@ function Counselling() {
     <div className={classes.counselling}>
       <span onClick={handleClickOpen}>
         <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/mentoringStroke_doj1ve.svg" alt="Stroke" className={classes.blueImage} />
-        <h1 className={classes.heading}>Book a Free Mentoring Session</h1>
+        <h1 className={classes.heading}>Book a Mentoring Session</h1>
       </span>
 
       <Dialog

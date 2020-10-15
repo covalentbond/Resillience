@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import BlogContent from "./BlogContent";
-import Grid from "@material-ui/core/Grid";
 import SidebarAbout from "./SidebarAbout";
 import SidebarSocial from "./SidebarSocial";
 
+//Material Ui
 import Card from "@material-ui/core/Card";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+
+//React-quill
 import "react-quill/dist/quill.snow.css"; // ES6
 import "../textEditor.css";
-
-//Material Ui
 
 import axios from "axios";
 
@@ -26,7 +27,6 @@ const styles = () => ({
   },
   section: {
     backgroundColor: "white"
-    // width: "70%"
   },
   heading: {
     paddingTop: "2%",
@@ -40,7 +40,6 @@ const styles = () => ({
   sidebar: {
     display: "flex",
     flexDirection: "column"
-    // width: "28%"
   }
 });
 
@@ -52,6 +51,9 @@ class ParticularBlog extends Component {
   };
 
   componentDidMount = () => {
+    // const customHeading = this.props.match.params.heading; // Get heading handle from the route parameter.
+    // const heading = customHeading.replace("%20", " ");
+    // axios.get(`/blogs/${heading}`).then((res) => {
     const id = this.props.match.params.id; // Get id handle from the route parameter.
     axios.get(`/blogs/${id}`).then((res) => {
       // console.log(res.data.blog.content);

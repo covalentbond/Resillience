@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
@@ -52,24 +53,30 @@ class Career extends React.Component {
       <div>
         <div className={classes.careerSection}>
           <div className={classes.content}>
-            <Typography className={classes.careerHeading} variant="h2" color="primary">
-              Career
-            </Typography>
+            <Fade top>
+              <Typography className={classes.careerHeading} variant="h2" color="primary">
+                Career
+              </Typography>
+            </Fade>
           </div>
 
-          <img alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
-          {/* <img alt="Career" className={classes.careerImage} src={careerImage} /> */}
+          <img loading="eager" alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
+          {/* <img loading="lazy" alt="Career" className={classes.careerImage} src={careerImage} /> */}
         </div>
         <div className={classes.teacherSection}>
-          <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
-            Founders
-          </Typography>
+          <Fade top>
+            <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
+              Founders
+            </Typography>
+          </Fade>
           <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
         </div>
         <div style={{ padding: "5%", textAlign: "center" }}>
-          <Typography variant="inherit" className={classes.text} color="primary">
-            Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home
-          </Typography>
+          <Fade>
+            <Typography variant="inherit" className={classes.text} color="primary">
+              Come and work together for in the vision of empowering every corner of India by providing "Affordable and Quality" personalized attention in education at home
+            </Typography>
+          </Fade>
           <iframe
             title="Career Recruitment Form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSc4kk50CDvPqKOeYD-gCRXouyZL4uMRjNRWbAM_ikTNBMzP9Q/viewform?embedded=true"

@@ -37,7 +37,11 @@ const styles = () => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "20px"
+    padding: "20px",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "1.2rem",
+      maxHeight: "140px"
+    }
   },
   subjectImages: {
     objectFit: "contain",
@@ -47,6 +51,13 @@ const styles = () => ({
   },
   subjectName: {
     textAlign: "center"
+  },
+  underDevelopment: {
+    textAlign: "center",
+    marginTop: "40px",
+    "@media only screen and (max-width: 770px)": {
+      fontSize: "1.2rem"
+    }
   }
 });
 
@@ -68,7 +79,7 @@ function Tests(props) {
             <Grid container className={classes.root} spacing={2}>
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243278/Assets/images/calculator_bx1b29.svg" className={classes.subjectImages} alt="Mathematics" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Mathematics
                   </Typography>
@@ -77,7 +88,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/magnet_sn2lhb.svg" className={classes.subjectImages} alt="Physics" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Physics
                   </Typography>
@@ -86,7 +97,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/lab_mbzxcr.svg" className={classes.subjectImages} alt="Chemsitry" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Chemistry
                   </Typography>
@@ -95,7 +106,7 @@ function Tests(props) {
 
               <Grid className="subjectGrid" item xs={6} sm={3}>
                 <Paper className={classes.subjects} elevation={2}>
-                  <img src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
+                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243276/Assets/images/blackboard_radrjv.svg" className={classes.subjectImages} alt="Foundation Classes" />
                   <Typography variant="body2" className={classes.subjectName}>
                     Foundation Classes
                   </Typography>
@@ -104,13 +115,13 @@ function Tests(props) {
             </Grid>
           </CardContent>
         </Card>
-        <Typography variant="h5" color="secondary" style={{ textAlign: "center", marginTop: "40px" }}>
+        <Typography variant="h5" color="secondary" className={classes.underDevelopment}>
           This page is under development{" "}
           <span role="img" aria-label="Tool">
             🔨
           </span>
         </Typography>
-        <Typography variant="h5" color="secondary" style={{ textAlign: "center", marginTop: "10px" }}>
+        <Typography variant="h5" color="secondary" style={{ marginTop: "10px" }} className={classes.underDevelopment}>
           Check it back soon
         </Typography>
       </Paper>

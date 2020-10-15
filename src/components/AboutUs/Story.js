@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 
@@ -44,9 +45,11 @@ function Story(props) {
 
   return (
     <div className={classes.vision}>
-      <Typography variant="h4" color="secondary" className={classes.text} style={{ textAlign: "center", marginBottom: "8px", fontStyle: "normal" }}>
-        Our Story:
-      </Typography>
+      <Fade top>
+        <Typography variant="h4" color="secondary" className={classes.text} style={{ textAlign: "center", marginBottom: "8px", fontStyle: "normal" }}>
+          Our Story:
+        </Typography>
+      </Fade>
       <div className={classes.visionContent}>
         <div className={classes.eachVision}>
           <Typography variant="inherit" className={classes.visionText} color="primary" style={{ textAlign: "left" }}>

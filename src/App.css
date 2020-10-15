@@ -3,6 +3,11 @@ html {
   /* background-color: #f8fafc !important; */
 }
 
+@font-face {
+  font-family: "Rubik";
+  src: url(Rubik-Bold.ttf);
+}
+
 body {
   font-family: muli, sans-serif;
   font-weight: 400;
