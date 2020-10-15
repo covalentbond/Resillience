@@ -140,15 +140,9 @@ function LandingPage(props) {
           }
         }}
       >
-<<<<<<< HEAD:src/components/AboutUs/AboutLandingPage.js
-        <img loading="lazy" src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
-        <img
-          loading="lazy"
-=======
         <img loading="eager" src={TeamLandingImageWeb} alt="Team Landing Page" className={classes.teamLandingImageWeb} />
         <img
           loading="eager"
->>>>>>> 896b3a8:client/src/components/AboutUs/AboutLandingPage.js
           src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/teamLandingPhone_tp5sfj.svg"
           alt="Team Landing Page"
           className={classes.teamLandingImagePhone}

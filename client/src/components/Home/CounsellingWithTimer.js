@@ -350,48 +350,6 @@ function CounsellingWithTimer() {
         <div className={classes.section}>
           <h2 className={classes.getFree}>Get a Free Demo</h2>
           <h2 className={classes.mentroingSession}>Cum Mentoring Session</h2>
-<<<<<<< HEAD:src/components/Home/Counselling.js
-          {/* {loading === true && <CircularProgress color="secondary" className={classes.circularProgress} thickness={2.4} />}
-          {status === "" && loading === false && ( */}
-          <div>
-            <div className={classes.subSection}>
-              <PersonOutlineIcon color="secondary" className={classes.icons} />
-              <input
-                type="text"
-                name="parentname"
-                id="parentname"
-                className={`form-control ${classes.inputPhone}`}
-                placeholder="Parent's Name"
-                autoComplete="off"
-                maxLength="15"
-                required={true}
-                value={parentname}
-                onChange={(e) => setParent(e.target.value)}
-              />
-            </div>
-            <div className={classes.subSection} style={{ marginTop: "10px" }}>
-              <PhoneInTalkIcon color="secondary" className={classes.icons} />
-              <input
-                type="tel"
-                name="number"
-                id="mobileNumber"
-                className={`form-control ${classes.inputPhone}`}
-                placeholder="Enter Mobile number"
-                autoComplete="off"
-                maxLength="10"
-                required={true}
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-            <div className={classes.messages}>
-              {["Identify strengths & weaknesses", "Recommends a study plan", "One to One home/online tuition", "Mastering a weak topic"].map((message, index) => (
-                <div className={classes.message} key={index}>
-                  <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243272/Assets/images/tick_nz85rm.svg" alt="tick" className={classes.tickImage} />
-                  <h4 style={{ margin: "auto", marginLeft: "10px" }}>{message}</h4>
-                </div>
-              ))}
-=======
           {/* {loading === true && <CircularProgress color="secondary" className={classes.circularProgress} thickness={2.4} />} */}
           {status === "" /*&& loading === false*/ && (
             <div>
@@ -436,7 +394,6 @@ function CounsellingWithTimer() {
               <Button variant="contained" color="secondary" disableElevation className={classes.button} size="small" onClick={() => SendDetails()}>
                 Proceed
               </Button>
->>>>>>> 896b3a8:client/src/components/Home/CounsellingWithTimer.js
             </div>
           )}
 

@@ -4,12 +4,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-<<<<<<< HEAD:src/components/Features/MasteringAChapter.js
-import Counselling from "./CounsellingMastering";
-=======
 import CounsellingWeb from "./CounsellingMasteringWeb";
 import CounsellingTablet from "./CounsellingMasteringTablet";
->>>>>>> 896b3a8:client/src/components/Features/MasteringAChapter.js
 import { Link } from "react-router-dom";
 
 //Images
@@ -217,14 +213,6 @@ function MasteringAChapter(props) {
           <NavigateBeforeIcon color="primary" fontSize="large" className={classes.nextPageLIcon} />
         </div>
       </Link>
-<<<<<<< HEAD:src/components/Features/MasteringAChapter.js
-      <span>
-        <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
-        <Typography variant="h3" color="primary" className={classes.featuresText}>
-          Tuitions
-        </Typography>
-      </span>
-=======
       <Fade top>
         <span>
           <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
@@ -233,15 +221,11 @@ function MasteringAChapter(props) {
           </Typography>
         </span>
       </Fade>
->>>>>>> 896b3a8:client/src/components/Features/MasteringAChapter.js
 
       <div className={classes.featureSection}>
         <div className={classes.fImageSection}>
           <img loading="lazy" className={classes.fImage} alt="Mastering Chapter" src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg" />
-<<<<<<< HEAD:src/components/Features/MasteringAChapter.js
-=======
           <CounsellingTablet />
->>>>>>> 896b3a8:client/src/components/Features/MasteringAChapter.js
         </div>
 
         <div className={classes.fDescription}>
@@ -316,29 +300,9 @@ function MasteringAChapter(props) {
       </div>
 
       <div className={classes.featureSection}>
-<<<<<<< HEAD:src/components/Features/MasteringAChapter.js
-        <div className={classes.fImageSectionVideo}>
-          <img loading="lazy" className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
-        </div>
-        <div className={classes.fDescription}>
-          <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Get solution to your every doubt via Call & Chat
-          </Typography>
-          <div className={classes.contentVideo}>
-            <Typography variant="inherit" className={classes.text} color="primary">
-              None of your doubts will go unanswered.
-              <br />
-              Clearing each and every doubt related to preperation is key to good result.
-              <br />
-              We will instantly reply and resolve all your doubts.
-              <br />
-              Don’t worry, we are ready to help until you’ve completely understood them.
-            </Typography>
-=======
         <Fade>
           <div className={classes.fImageSectionVideo}>
             <img loading="lazy" className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
->>>>>>> 896b3a8:client/src/components/Features/MasteringAChapter.js
           </div>
           <div className={classes.fDescription}>
             <Fade top>

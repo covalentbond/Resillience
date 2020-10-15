@@ -100,22 +100,11 @@ function HomeFeatures(props) {
 
         <Grid container className={classes.grid} spacing={5}>
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
-<<<<<<< HEAD:src/components/Home/Home-Features.js
-            <Paper elevation={4}>
-              <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
-              <Typography variant="h6" color="primary" className={classes.fHeading}>
-                1-on-1 Home Tuition across Mumbai
-              </Typography>
-              <Link to="/tuitions/one-on-one-home-tuitions" style={{ textDecoration: "none" }}>
-                <Typography variant="body1" color="primary" className={classes.readMore}>
-                  READ MORE -
-=======
             <Fade>
               <Paper elevation={4}>
                 <img loading="lazy" src="https://res.cloudinary.com/rweb1/image/upload/v1600243282/Assets/images/hometuition_xxjfdl.svg" className={classes.homeTuition} alt="Home Tuition" />
                 <Typography variant="h6" color="primary" className={classes.fHeading}>
                   1-on-1 Home Tuition across Mumbai
->>>>>>> 896b3a8:client/src/components/Home/Home-Features.js
                 </Typography>
                 <Link to="/tuitions/one-on-one-home-tuitions" style={{ textDecoration: "none" }}>
                   <Typography variant="body1" color="primary" className={classes.readMore}>
@@ -127,22 +116,11 @@ function HomeFeatures(props) {
           </Grid>
 
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
-<<<<<<< HEAD:src/components/Home/Home-Features.js
-            <Paper elevation={4}>
-              <img loading="lazy" className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
-              <Typography variant="h6" color="primary" className={classes.fHeading}>
-                1-on-1 Live Online Tuition anywhere
-              </Typography>
-              <Link to="/tuitions/one-on-one-online-tuitions" style={{ textDecoration: "none" }}>
-                <Typography variant="body1" color="primary" className={classes.readMore}>
-                  READ MORE -
-=======
             <Fade>
               <Paper elevation={4}>
                 <img loading="lazy" className={classes.oneToOne} src="https://res.cloudinary.com/rweb1/image/upload/v1600243286/Assets/images/online1to1_mlyjk1.svg" alt="Online one to one Tuition" />
                 <Typography variant="h6" color="primary" className={classes.fHeading}>
                   1-on-1 Live Online Tuition anywhere
->>>>>>> 896b3a8:client/src/components/Home/Home-Features.js
                 </Typography>
                 <Link to="/tuitions/one-on-one-online-tuitions" style={{ textDecoration: "none" }}>
                   <Typography variant="body1" color="primary" className={classes.readMore}>
@@ -154,22 +132,6 @@ function HomeFeatures(props) {
           </Grid>
 
           <Grid item md={3} sm={5} xs={12} className={classes.card}>
-<<<<<<< HEAD:src/components/Home/Home-Features.js
-            <Paper elevation={4}>
-              <img
-                loading="lazy"
-                src="https://res.cloudinary.com/rweb1/image/upload/v1600243284/Assets/images/masteringChapters_xbfyjq.svg"
-                className={classes.onlineGroup}
-                alt="Mastering a week chapter"
-              />
-              <Typography variant="h6" color="primary" className={classes.fHeading}>
-                Mastering a Weak Topic as per need
-                {/* Group live online tuitions anywhere */}
-              </Typography>
-              <Link to="/tuitions/mastering-a-week-topic" style={{ textDecoration: "none" }}>
-                <Typography variant="body1" color="primary" className={classes.readMore}>
-                  READ MORE -
-=======
             <Fade>
               <Paper elevation={4}>
                 <img
@@ -181,7 +143,6 @@ function HomeFeatures(props) {
                 <Typography variant="h6" color="primary" className={classes.fHeading}>
                   Mastering a Weak Topic as per need
                   {/* Group live online tuitions anywhere */}
->>>>>>> 896b3a8:client/src/components/Home/Home-Features.js
                 </Typography>
                 <Link to="/tuitions/mastering-a-week-topic" style={{ textDecoration: "none" }}>
                   <Typography variant="body1" color="primary" className={classes.readMore}>

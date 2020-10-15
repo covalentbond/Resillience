@@ -134,17 +134,11 @@ function BetterLearning(props) {
   const { classes } = props;
   return (
     <section className={classes.BetterLearningSection}>
-<<<<<<< HEAD:src/components/Home/BetterLearning.js
-      <Typography variant="h3" color="primary" className={classes.whyResillience}>
-        Why RESILLIENCE ?
-      </Typography>
-=======
       <Fade top>
         <Typography variant="h3" color="primary" className={classes.whyResillience}>
           Why RESILLIENCE ?
         </Typography>
       </Fade>
->>>>>>> 896b3a8:client/src/components/Home/BetterLearning.js
       <img loading="lazy" src={BetterLearningChanges} className={classes.BetterLearningImageWeb} alt="Better Learning Path" />
       <img
         loading="lazy"

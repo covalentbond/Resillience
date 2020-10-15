@@ -250,15 +250,6 @@ function OneOnOneLive(props) {
           <NavigateNextIcon color="primary" fontSize="large" className={classes.nextPageRIcon} />
         </div>
       </Link>
-<<<<<<< HEAD:src/components/Features/OneOnOneLive.js
-
-      <span>
-        <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
-        <Typography variant="h3" color="primary" className={classes.featuresText}>
-          Tuitions
-        </Typography>
-      </span>
-=======
       <Fade top>
         <span>
           <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/strokeAboutUs_kc7js9.svg" className={classes.stroke} />
@@ -267,7 +258,6 @@ function OneOnOneLive(props) {
           </Typography>
         </span>
       </Fade>
->>>>>>> 896b3a8:client/src/components/Features/OneOnOneLive.js
       <div className={classes.featureSection} id="oneToOneOnlineClasses">
         <div className={classes.fImageSection}>
           <img loading="lazy" className={classes.fImage} alt="Online One to One Classes" src="https://res.cloudinary.com/rweb1/image/upload/v1600243270/Assets/images/onlineOneToOne_jomuvz.svg" />
@@ -343,29 +333,9 @@ function OneOnOneLive(props) {
 
       <Divider variant="middle" className={classes.divider} />
       <div className={classes.featureSection}>
-<<<<<<< HEAD:src/components/Features/OneOnOneLive.js
-        <div className={classes.fImageSection}>
-          <img loading="lazy" className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
-        </div>
-        <div className={classes.fDescription}>
-          <Typography variant="h4" color="secondary" className={classes.descHeading}>
-            Get solution to your every doubt via Call & Chat
-          </Typography>
-          <div className={classes.content}>
-            <Typography variant="inherit" className={classes.text} color="primary">
-              None of your doubts will go unanswered.
-              <br />
-              Clearing each and every doubt related to preperation is key to good result.
-              <br />
-              We will instantly reply and resolve all your doubts.
-              <br />
-              Don’t worry, we are ready to help until you’ve completely understood them.
-            </Typography>
-=======
         <Fade>
           <div className={classes.fImageSection}>
             <img loading="lazy" className={classes.fImage} alt="Live doubts" src="https://res.cloudinary.com/rweb1/image/upload/v1600243271/Assets/images/Questions_e1ejpe.svg" />
->>>>>>> 896b3a8:client/src/components/Features/OneOnOneLive.js
           </div>
           <div className={classes.fDescription}>
             <Fade top>

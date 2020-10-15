@@ -128,37 +128,17 @@ function Testimonials(props) {
         </Typography>
       </Fade>
       <div className={classes.tSaksham}>
-<<<<<<< HEAD:src/components/Home/Testimonials.js
-        <div className={classes.tImage}>
-          {/* <img loading="lazy"
-=======
         <Fade>
           <div className={classes.tImage}>
             {/* <img loading="lazy"
->>>>>>> 896b3a8:client/src/components/Home/Testimonials.js
             src="https://res.cloudinary.com/rweb1/image/upload/v1600243275/Assets/images/sakshamPhoto_fatfdp.png"
             style={{ display: "initial", width: "75%" }}
             alt="Saksham Student"
           /> */}
-<<<<<<< HEAD:src/components/Home/Testimonials.js
-          <img
-            loading="lazy"
-            src={sakshamPhoto}
-            useMap="#image-map"
-            alt="Saksham Student"
-            onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}
-            className={classes.sakshamPhoto770}
-          />
-          <img loading="lazy" src={sakshamPhoto} useMap="#image-map" alt="Saksham Student" className={classes.sakshamPhoto} />
-          <map name="image-map">
-            <area
-              onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}
-=======
             <img
               loading="lazy"
               src={sakshamPhoto}
               useMap="#image-map"
->>>>>>> 896b3a8:client/src/components/Home/Testimonials.js
               alt="Saksham Student"
               onClick={() => window.open("https://www.youtube.com/watch?v=EN8mugXYzyY&t=62s&ab_channel=RESILLIENCE")}
               className={classes.sakshamPhoto770}

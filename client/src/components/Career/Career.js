@@ -60,16 +60,6 @@ class Career extends React.Component {
             </Fade>
           </div>
 
-<<<<<<< HEAD:src/components/Career/Career.js
-          <img loading="lazy" alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
-          {/* <img loading="lazy" alt="Career" className={classes.careerImage} src={careerImage} /> */}
-        </div>
-        <div className={classes.teacherSection}>
-          <Typography variant="h3" color="primary" style={{ textAlign: "center" }}>
-            Founders
-          </Typography>
-          <img loading="lazy" alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
-=======
           <img loading="eager" alt="Career" className={classes.careerImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600243280/Assets/images/careerImageCompress_wtpgbj.svg" />
           {/* <img loading="lazy" alt="Career" className={classes.careerImage} src={careerImage} /> */}
         </div>
@@ -80,7 +70,6 @@ class Career extends React.Component {
             </Typography>
           </Fade>
           <img alt="Teacher" className={classes.teacherImage} src="https://res.cloudinary.com/rweb1/image/upload/v1600566177/Assets/images/teachersCompress_l1e5lt.svg"></img>
->>>>>>> 896b3a8:client/src/components/Career/Career.js
         </div>
         <div style={{ padding: "5%", textAlign: "center" }}>
           <Fade>
