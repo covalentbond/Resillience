@@ -32,6 +32,7 @@ const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Career = lazy(() => import("./components/Career/Career"));
 const PrivacyPolicy = lazy(() => import("./components/Miscellaneous/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./components/Miscellaneous/TermsOfService"));
+const RoomForward = lazy(() => import("./components/Miscellaneous/RoomForward"));
 // const Sitemap = lazy(() => import("./components/Miscellaneous/Sitemap"));
 
 // const Room = lazy(() => import("./components/Room"));
@@ -123,12 +124,12 @@ class App extends Component {
             <Route path="/admin/createblogs" component={PostBlogComponent} />
             <Route exact path="/blogs" component={ShowBlogsComponent} />
             <Route exact path="/blogs/:id" component={ParticularBlogComponent} />
+            <Route exact path="/room" component={RoomForward} />
             {/* <Route path="/dashboard" component={StudentProfileComponent} /> */}
             <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
             <Route path="/termsofservice" component={TermsOfServiceComponent} />
             {/* <Route path="/sitemap" component={SitemapComponent} /> */}
             <Route component={ErrorComponent} />
-            {/* <Route path="/room" component={RoomComponent} /> */}
           </Switch>
           <Footer />
         </Suspense>
