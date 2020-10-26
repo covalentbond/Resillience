@@ -32,6 +32,7 @@ const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Career = lazy(() => import("./components/Career/Career"));
 const PrivacyPolicy = lazy(() => import("./components/Miscellaneous/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./components/Miscellaneous/TermsOfService"));
+const ReferralScheme = lazy(() => import("./components/Miscellaneous/ReferralScheme"));
 const RoomForward = lazy(() => import("./components/Miscellaneous/RoomForward"));
 // const Sitemap = lazy(() => import("./components/Miscellaneous/Sitemap"));
 
@@ -99,6 +100,7 @@ const ShowBlogsComponent = withTitle({ component: ShowBlogs, title: "Blogs | RES
 const ParticularBlogComponent = withTitle({ component: ParticularBlog, title: "Blogs | RESILLIENCE" });
 // const StudentProfileComponent = withTitle({ component: StudentProfile, title: "Dashboard | RESILLIENCE" });
 const PrivacyPolicyComponent = withTitle({ component: PrivacyPolicy, title: "Privacy Policy | RESILLIENCE" });
+const ReferralSchemeComponent = withTitle({ component: ReferralScheme, title: "Referral Scheme | RESILLIENCE", description: "Help others being RESILLIENT!" });
 const TermsOfServiceComponent = withTitle({ component: TermsOfService, title: "Terms of service | RESILLIENCE" });
 // const SitemapComponent = withTitle({ component: Sitemap, title: "Sitemap | RESILLIENCE" });
 
@@ -128,6 +130,7 @@ class App extends Component {
             {/* <Route path="/dashboard" component={StudentProfileComponent} /> */}
             <Route path="/privacypolicy" component={PrivacyPolicyComponent} />
             <Route path="/termsofservice" component={TermsOfServiceComponent} />
+            <Route path="/referralscheme" component={ReferralSchemeComponent} />
             {/* <Route path="/sitemap" component={SitemapComponent} /> */}
             <Route component={ErrorComponent} />
           </Switch>

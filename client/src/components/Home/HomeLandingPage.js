@@ -162,7 +162,6 @@ const styles = () => ({
   spanText: {
     marginBottom: "0",
     fontWeight: "bold",
-    color: "#0F7DC2",
     "@media only screen and (max-width: 500px)": {
       display: "flex",
       alignItems: "center",

@@ -29,6 +29,7 @@ Resillience/
 |   |   |     ├── NavBar/
 |   |   |     ├── Tests/
 |   |   |     ├── Title/
+|   |   |     ├── Miscellaneous/
 |   |   |     ├── Error.js
 |   |   |     └── Faqs.js
 |   |   ├── compressed/

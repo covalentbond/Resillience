@@ -142,8 +142,8 @@ function Footer(props) {
                 text: "Our Story"
               },
               {
-                to: "/downloadsection",
-                text: "Download Section"
+                to: "/referralscheme",
+                text: "Referral Scheme"
               }
             ].map((eachElement, index) => (
               <Link style={{ marginTop: "16px", color: "#cccccc", textDecoration: "none" }} key={index} to={eachElement.to} className={classes.clickableIcon}>
@@ -153,9 +153,9 @@ function Footer(props) {
           </Grid>
           <Grid item md={3} sm={6} xs={12} className={classes.address}>
             <Typography variant="h5">Correspondence Address</Typography>
-            <p style={{ color: "#cccccc" }}>Twins Hallmark, Sector 19A, Kopar Khairane, Navi Mumbai, Maharashtra 400709</p>
+            <p style={{ color: "#cccccc", lineHeight: 1.4 }}>Twins Hallmark, Sector 19A, Kopar Khairane, Navi Mumbai, Maharashtra 400709</p>
             <Typography variant="h5">Registered Address</Typography>
-            <p style={{ color: "#cccccc" }}>Plot no B81, Anand Nagar MIDC, Additional Ambernath. , Ambernath, Dist : Thane – 421506</p>
+            <p style={{ color: "#cccccc", lineHeight: 1.4 }}>Plot no B81, Anand Nagar MIDC, Additional Ambernath. , Ambernath, Dist : Thane – 421506</p>
           </Grid>
           <Grid item md={3} sm={6} xs={12}>
             <Typography variant="h5">#Being RESILLIENT</Typography>
