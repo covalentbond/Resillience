@@ -24,6 +24,9 @@ const styles = () => ({
     height: "110vh",
     marginLeft: "41.45%",
     right: "0px",
+    "@media only screen and (min-width: 1600px)": {
+      height: "60vh"
+    },
     "@media only screen and (max-width: 1300px)": {
       height: "100vh"
     },
@@ -103,8 +106,10 @@ const styles = () => ({
   },
 
   learning: {
-    fontSize: "64px",
-    margin: "-4px 0 0 0",
+    fontSize: "60px",
+    fontFamily: "Poppins",
+    color: "#151414",
+    margin: "-20px 0 -2px 0",
     "@media only screen and (max-width: 1300px)": {
       fontSize: "60px"
     },
@@ -124,8 +129,14 @@ const styles = () => ({
       fontSize: "35px"
     },
     "@media only screen and (max-width: 770px)": {
-      fontSize: "35px",
-      margin: "2%"
+      margin: "1%",
+      marginTop: "-5px"
+    },
+    "@media only screen and (max-width: 430px)": {
+      fontSize: "34px"
+    },
+    "@media only screen and (max-width: 320px)": {
+      lineHeight: 1.1
     }
   },
 
@@ -222,15 +233,15 @@ function LandingPage(props) {
         </Fade>
         <Fade bottom delay={1200}>
           <h2 className={classes.learning}>
-            Learning with{" "}
-            <span>
-              {/* <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} /> */}
-              IITians
-            </span>
+            Learning with IITians
+            {/* <span> */}
+            {/* <img loading="lazy" alt="Bg Design" src="https://res.cloudinary.com/rweb1/image/upload/v1600243273/Assets/images/rectangleStroke_lejmjd.svg" className={classes.rectangleStroke} /> */}
+            {/* IITians */}
+            {/* </span> */}
           </h2>
         </Fade>
         <div className={classes.fadePhone}>
-          <Fade delay={1500}>
+          <Fade delay={1800}>
             <h1 className={classes.iitians}>IIT JEE&nbsp;(Mains + Advanced) &nbsp; NEET </h1>
             <h1 className={classes.iitians}> Foundation&nbsp;(8th - 10th) </h1>
             <div className={classes.firstLine}>

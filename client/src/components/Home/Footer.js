@@ -94,7 +94,7 @@ const styles = () => ({
     "@media only screen and (max-width: 390px)": {
       fontSize: "90%"
     },
-    "@media only screen and (max-width: 290px)": {
+    "@media only screen and (max-width: 320px)": {
       fontSize: "80%"
     }
   }
@@ -182,7 +182,7 @@ function Footer(props) {
         <Divider variant="middle" />
         <div className={classes.copyright}>
           <span className={classes.footerInfo}>
-            <p className={classes.clickableIcon} onClick={() => (window.location.href = "/sitemap")}>
+            <p className={classes.clickableIcon} onClick={() => window.open("/sitemap.xml", "_blank")}>
               Sitemap |
             </p>
             <p className={classes.clickableIcon} onClick={() => (window.location.href = "/privacypolicy")}>

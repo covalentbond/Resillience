@@ -6,7 +6,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
-const { MONGOURL } = require("./config/keys");
+const { MONGOURI } = require("./config/keys");
 
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
@@ -71,7 +71,7 @@ io.on("connection", (socket) => {
 });
 
 //ilSRqlpJkJKuorJa
-mongoose.connect(MONGOURL, {
+mongoose.connect(MONGOURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true

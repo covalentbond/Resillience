@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Fade from "react-reveal/Fade";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
@@ -108,6 +109,9 @@ const styles = () => ({
     marginTop: "38px",
     marginLeft: "42%",
     position: "absolute",
+    "@media only screen and (min-width: 1600px)": {
+      display: "none"
+    },
     "@media only screen and (max-width: 1100px)": {
       display: "none"
     }
@@ -208,6 +212,9 @@ function MasteringAChapter(props) {
   const { classes } = props;
   return (
     <div className="page" style={{ marginTop: "80px" }}>
+      <Helmet>
+        <link rel="icon" href="https://res.cloudinary.com/rweb1/image/upload/v1600243274/Assets/images/Resillience-Logo-Small_tslub5.png" />
+      </Helmet>
       <Link to="/tuitions/one-on-one-online-tuitions">
         <div className={classes.nextPageL}>
           <NavigateBeforeIcon color="primary" fontSize="large" className={classes.nextPageLIcon} />
@@ -235,7 +242,7 @@ function MasteringAChapter(props) {
             </Typography>
           </Fade>
           <Typography variant="h5" color="primary" className={classes.subHeading}>
-            IIT JEE (Main + Advanced), NEET
+            IIT JEE (Main + Advanced), &nbsp;NEET, &nbsp;MHC-CET
           </Typography>
           <Typography variant="h5" color="primary" className={classes.subHeading} style={{ opacity: "0.6" }}>
             Both Home & Online Mode
@@ -312,13 +319,21 @@ function MasteringAChapter(props) {
             </Fade>
             <div className={classes.contentVideo}>
               <Typography variant="inherit" className={classes.text} color="primary">
-                None of your doubts will go unanswered.
-                <br />
-                Clearing each and every doubt related to preperation is key to good result.
-                <br />
-                We will instantly reply and resolve all your doubts.
-                <br />
-                Don’t worry, we are ready to help until you’ve completely understood them.
+                {[
+                  "None of your doubts will go unanswered.",
+                  "Clearing each and every doubt related to preperation is key to good result.",
+                  "Instant doubt support",
+                  "We will instantly reply and resolve all your doubts.",
+                  "Don’t worry, we are ready to help until you’ve completely understood them."
+                ].map((vision, index) => (
+                  <span className={classes.eachVision} key={index}>
+                    <CheckRoundedIcon color="secondary" style={{ marginRight: "5px" }} />
+                    <Typography variant="inherit" className={classes.text} color="primary">
+                      {vision}
+                    </Typography>
+                    <br />
+                  </span>
+                ))}
               </Typography>
             </div>
           </div>

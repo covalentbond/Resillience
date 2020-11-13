@@ -1,5 +1,5 @@
 module.exports = {
-  MONGOURL: process.env.MONGOURL,
+  MONGOURI: process.env.MONGOURI,
   //jwt verifications
   JWT_ADMIN: process.env.JWT_A,
   JWT_USER: process.env.JWT_U,

@@ -23,17 +23,17 @@ const requireAdmin = require("../middleware/requireAdmin");
 const bcrypt = require("bcryptjs");
 
 //node mailer
-const nodemailer = require('nodemailer');
-const { EMAIL,PASS } = require("../config/keys");
+const nodemailer = require("nodemailer");
+const { EMAIL, PASS } = require("../config/keys");
 const { ConnectionPolicyInstance } = require("twilio/lib/rest/voice/v1/connectionPolicy");
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: EMAIL,
-        pass: PASS
-    }
-})
+  service: "gmail",
+  auth: {
+    user: EMAIL,
+    pass: PASS
+  }
+});
 
 router.post("/send-mail", (req, res) => {
   const { parentname, phone, tuition } = req.body;
@@ -68,7 +68,7 @@ router.post("/send-mail", (req, res) => {
     });
 });
 
-router.post('/send-message', (req,res)=>{
+router.post("/send-message", (req, res) => {
   const { name, email, phone, text } = req.body;
   if (!name) {
     return res.status(422).json({ name: "Please enter name" });
@@ -84,25 +84,25 @@ router.post('/send-message', (req,res)=>{
     email,
     phone,
     text
-  })
-    message
-      .save()
-      .then((message)=>{
-        transporter.sendMail({
-          to:'resillience.in@gmail.com',
-          from: EMAIL,
-          subject:`A new message from ${name}, and ${email}`,
-          html:`Hey, ${text}<br /> from phone no: ${phone}`
-        })
-        res.json({ message: "Team Resillience will contact you soon!" });
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json({ error: err });
+  });
+  message
+    .save()
+    .then((message) => {
+      transporter.sendMail({
+        to: "resillience.in@gmail.com",
+        from: EMAIL,
+        subject: `A new message from ${name}, and ${email}`,
+        html: `Hey, ${text}<br /> from phone no: ${phone}`
       });
-})
+      res.json({ message: "Team Resillience will contact you soon!" });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+});
 
-router.post('/admin/signup', (req,res) => {
+router.post("/admin/signup", (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name) {
@@ -115,7 +115,7 @@ router.post('/admin/signup', (req,res) => {
     return res.status(422).json({ password: "Please add password" });
   }
 
-  Admin.findOne({email}).then((savedAdmin) => {
+  Admin.findOne({ email }).then((savedAdmin) => {
     if (savedAdmin) {
       return res.status(422).json({ error: "This Admin already exists" });
     }
@@ -139,7 +139,7 @@ router.post('/admin/signup', (req,res) => {
   });
 });
 
-router.post('/user/signup', (req,res) => {
+router.post("/user/signup", (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name) {
@@ -151,7 +151,7 @@ router.post('/user/signup', (req,res) => {
   if (!password) {
     return res.status(422).json({ password: "Please add password" });
   }
-  User.findOne({email}).then((savedUser) => {
+  User.findOne({ email }).then((savedUser) => {
     if (savedUser) {
       return res.status(422).json({ error: "This User already exists" });
     }
@@ -175,7 +175,7 @@ router.post('/user/signup', (req,res) => {
   });
 });
 
-router.post('/student/signup', (req,res)=>{
+router.post("/student/signup", (req, res) => {
   const { name, email, password, batch, contact, parentContact, fname, address, picture, phy, chem, math, bio } = req.body;
   if (!name) {
     return res.status(422).json({ name: "Please add name" });
@@ -189,9 +189,9 @@ router.post('/student/signup', (req,res)=>{
   if (!contact) {
     return res.status(422).json({ contact: "Please add mobile number" });
   }
-  Student.findOne({email}).then((savedStudent) =>{
-    if(savedStudent){
-      return res.status(422).json({error: "The student already exists"});
+  Student.findOne({ email }).then((savedStudent) => {
+    if (savedStudent) {
+      return res.status(422).json({ error: "The student already exists" });
     }
     bcrypt.hash(password, 12).then((encryptedPassword) => {
       const student = new Student({
@@ -212,16 +212,16 @@ router.post('/student/signup', (req,res)=>{
 
       student
         .save()
-        .then((student)=> { 
-          // sending enrollment mail to student 
+        .then((student) => {
+          // sending enrollment mail to student
           transporter.sendMail({
             to: student.email,
             from: EMAIL,
-            subject:"Enrollment Successful!",
+            subject: "Enrollment Successful!",
             html: `<h2>Hello ${student.name},</h2>
                   you're successfully enrolled for batch ${student.batch}. <br />Regards!,
                   <br />Team Resillience.`
-          })
+          });
           res.json({ message: "Student added!" });
         })
         .catch((err) => {
@@ -232,7 +232,7 @@ router.post('/student/signup', (req,res)=>{
   });
 });
 
-router.post('/admin/signin', (req,res) => {
+router.post("/admin/signin", (req, res) => {
   const { email, password } = req.body;
 
   if (!email) {
@@ -244,14 +244,14 @@ router.post('/admin/signin', (req,res) => {
   Admin.findOne({ email }).then((savedAdmin) => {
     if (!savedAdmin) {
       return res.status(422).json({ error: "Invalid email or password" });
-    } 
+    }
     bcrypt
       .compare(password, savedAdmin.password)
       .then((doMatch) => {
         if (doMatch) {
           // res.json({message:"Signin Successful!"})
           const token = jwt.sign({ _id: savedAdmin._id }, JWT_ADMIN);
-          res.json({ token: token ,message: "Admin signed in successfully"});
+          res.json({ token: token, message: "Admin signed in successfully" });
         } else {
           return res.status(422).json({ error: "Invalid email or password" });
         }
@@ -263,7 +263,7 @@ router.post('/admin/signin', (req,res) => {
   });
 });
 
-router.post('/user/signin', (req,res) => {
+router.post("/user/signin", (req, res) => {
   const { email, password } = req.body;
 
   if (email == "") {
@@ -294,7 +294,7 @@ router.post('/user/signin', (req,res) => {
   });
 });
 
-router.post('/student/signin', (req,res) => {
+router.post("/student/signin", (req, res) => {
   const { email, password } = req.body;
 
   if (email == "") {
@@ -303,7 +303,7 @@ router.post('/student/signin', (req,res) => {
   if (password == "") {
     return res.status(422).json({ password: "Please add password" });
   }
-  Student.findOne({email}).then((savedStudent) => {
+  Student.findOne({ email }).then((savedStudent) => {
     if (!savedStudent) {
       return res.status(422).json({ error: "Invalid email or password" });
     }
@@ -314,8 +314,7 @@ router.post('/student/signin', (req,res) => {
           // res.json({message:"Signin Successful!"})
           const token = jwt.sign({ _id: savedStudent._id }, JWT_STUDENT);
           res.json({ token: token, message: "Student signed in successfully" });
-        } 
-        else {
+        } else {
           return res.status(422).json({ error: "Invalid email or password" });
         }
       })
