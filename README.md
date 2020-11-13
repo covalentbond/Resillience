@@ -18,7 +18,7 @@
 </a>
 <a href="https://www.facebook.com/resillience.in">
   <img align="left" alt="Resillience Facebook" width="24px" src="https://res.cloudinary.com/rweb1/image/upload/v1605273217/Assets/images/facebook-readme_xvfafg.png" />
-</a>
+</a></br>
 
 ## About
 Resillience is a team of IIT graduate mentors, and dedicated professionals with a single goal to provide personalized 1-on-1 coaching for IIT/NEET/MHC-CET Engineering Entrance Exam preparation.
@@ -28,7 +28,7 @@ We believe: “Everyone can learn and excel but the ways will be different”
 ## Key Features ✨
 1. Platform for teachers to conduct live online classes with students
 2. Online Examination System for teachers to upload subject/chapter-wise questions
-3. Interactive test platform for students and corresponding result generation with analysis
+3. Interactive test platform for students and corresponding test result with analysis in the form of graphs 
 4. Allowing parents to book free counselling session based on different services provided
 4. Dynamically allowing admin to create blogs for website
 

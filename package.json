@@ -1,5 +1,5 @@
 {
-  "name": "resillience-deploy",
+  "name": "resillience",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,9 @@
     "production": "run-p production:** server",
     "production:build": "cd client && npm run build",
     "server": "cd server && npm run start",
+    "install-all": "run-s frontend backend",
+    "frontend": "cd client && npm install",
+    "backend": "cd server && npm install",
     "dev": "pm2 startOrReload ecosystem.json --env development",
     "prod": "pm2 startOrReload prod-ecosystem.json --env production"
   },
